@@ -17,13 +17,13 @@ namespace prjWantWantWinForm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TaskList()
         {
-            this.ApplicationLists = new HashSet<ApplicationList>();
             this.CaseSkills = new HashSet<CaseSkill>();
             this.ExpertApplications = new HashSet<ExpertApplication>();
             this.ExpertTasks = new HashSet<ExpertTask>();
             this.MemberCollections = new HashSet<MemberCollection>();
             this.TaskKeywordLists = new HashSet<TaskKeywordList>();
             this.OrderDetails = new HashSet<OrderDetail>();
+            this.ApplicationLists = new HashSet<ApplicationList>();
         }
     
         public int CaseID { get; set; }
@@ -62,8 +62,6 @@ namespace prjWantWantWinForm
         public string PublishOrNot { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ApplicationList> ApplicationLists { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CaseSkill> CaseSkills { get; set; }
         public virtual CaseStatusList CaseStatusList { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -83,5 +81,7 @@ namespace prjWantWantWinForm
         public virtual WorkingTime WorkingTime { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ApplicationList> ApplicationLists { get; set; }
     }
 }

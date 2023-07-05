@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace rjWantWantWinForm
+namespace prjWantWantWinForm
 {
    
     public partial class ucProducts : UserControl

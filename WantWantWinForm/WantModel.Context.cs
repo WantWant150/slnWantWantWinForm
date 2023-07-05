@@ -25,7 +25,6 @@ namespace prjWantWantWinForm
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ApplicationList> ApplicationLists { get; set; }
         public virtual DbSet<CaseSkill> CaseSkills { get; set; }
         public virtual DbSet<CaseStatusList> CaseStatusLists { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
@@ -77,5 +76,6 @@ namespace prjWantWantWinForm
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<ServiceContact> ServiceContacts { get; set; }
+        public virtual DbSet<ApplicationList> ApplicationLists { get; set; }
     }
 }

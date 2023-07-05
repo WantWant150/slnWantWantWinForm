@@ -14,17 +14,20 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace prjWantWantWinForm
 {
-    public partial class FrmMember : Form
+    public partial class FrmBackMember : Form
     {
-        public FrmMember()
+        public FrmBackMember()
         {
             InitializeComponent();
             loadData();
             loadReason();
-            loadAccountStatus();
         }
+
+
         NewIspanProjectEntities dbContext = new NewIspanProjectEntities();
 
+
+        #region 讀取資料
         private void loadData()
         {
             this.dataGridView1.Controls.Clear();
@@ -40,14 +43,11 @@ namespace prjWantWantWinForm
 
             this.dataGridView1.DataSource = q.ToList();
         }
+        #endregion
 
-        private void loadAccountStatus()
-        {
-            comboBox1.Items.Add("停權");
-            comboBox1.Items.Add("啟用");
-        }
 
-        private void loadReason() // 載入停權原因
+        #region 載入停權原因
+        private void loadReason()
         {
             try
             {
@@ -65,9 +65,11 @@ namespace prjWantWantWinForm
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
 
-        public void checkSearch(string serach) //搜尋僅能使用英文、數字、特殊自元
+        #region 搜尋僅能使用英文、數字、特殊自元
+        public void checkSearch(string serach)
         {
             Regex regex = new Regex(@"^[a-zA-Z0-9\p{P}\p{S}]+$");
             if (!regex.IsMatch(serach))
@@ -75,11 +77,12 @@ namespace prjWantWantWinForm
                 MessageBox.Show("請填入英文數字特殊字元");
             }
         }
+        #endregion
 
 
-
+        #region 搜尋按鈕
         private void btnSerach_Click(object sender, EventArgs e)
-        {            
+        {
             try
             {
                 this.dataGridView2.Controls.Clear();
@@ -108,100 +111,95 @@ namespace prjWantWantWinForm
                 MessageBox.Show(ex.Message);
             }
         }
+        #endregion
 
 
-        private void saveAccountStatus()
+        #region 儲存按鈕
+        private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                int selectID = (int)this.dataGridView2.CurrentRow.Cells["會員編號"].Value;
-                var q = this.dbContext.MemberAccounts.Where(m => m.AccountID == selectID).FirstOrDefault();
-                if (q != null)
-                {
-                    if (comboBox1.Text == "啟用")
-                    {
-                        q.AccountStatus = true;
-                    }
-                    else if (comboBox1.Text == "停權")
-                    {
-                        q.AccountStatus = false;
-                    }
+                int selectID;
 
-                    this.dbContext.SaveChanges();
-                    loadData();
-                    MessageBox.Show("已更新");
+                if (dataGridView2.Columns.Count == 0)
+                {
+                    return;
+                }
+                else
+                {
+                    // 取得 dataGridView2資料列的會員訊息編號
+                    selectID = (int)this.dataGridView2.CurrentRow.Cells["會員編號"].Value;
+                }
+
+                // 1. 限制「理由選單一定要有選項」
+                if (comboBox1.Text.Length > 0 && comboBox2.Text.Length > 0)
+                {
+                    // 2.把狀態member AcoountStatus 0或1 Update 到資料表member account 裡面
+                    int SCReasonID = (from s in dbContext.StatusChangeReasons
+                                          // 取得comboBox2的停權原因
+                                      where s.StatusChangeReason1 == comboBox2.Text
+                                      select s.StatusChangeReasonID).FirstOrDefault();
+
+                    // 3. 把資料insert 進 member states change list              
+                    MemberStatusList memberStatusList = new MemberStatusList
+                    {
+                        AccountID = selectID,
+                        UpdateUser = CMember.AccountID,
+                        UpdateTime = DateTime.Now,
+                        StatusChangeReasonID = SCReasonID
+                    };
+
+                    this.dbContext.MemberStatusLists.Add(memberStatusList);
+
+                    #region 做完要跳更新成功，更新到dataGridView1
+
+                    var q = this.dbContext.MemberAccounts.Where(m => m.AccountID == selectID).FirstOrDefault();
+                    if (q != null)
+                    {
+                        if (comboBox1.Text == "啟用")
+                        {
+                            q.AccountStatus = true;
+                        }
+                        else if (comboBox1.Text == "停權")
+                        {
+                            q.AccountStatus = false;
+                        }
+
+                        this.dbContext.SaveChanges();
+                        loadData();
+                        MessageBox.Show("已更新");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("請選取下拉式選單");
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            #endregion
         }
+        #endregion       
 
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            int selectID;
-
-            if (dataGridView2.Columns.Count == 0)
-            {
-                return;
-            }
-            else
-            {
-                selectID = (int)this.dataGridView2.CurrentRow.Cells["會員編號"].Value;
-            }
-
-            // 1.限制「理由選單一定要有選項」
-            if (comboBox1.Text.Length > 0 && comboBox2.Text.Length > 0)
-            {
-                //var product = (from p in this.dbContext.Products
-                //               where p.ProductName.Contains("Test")
-                //               select p).FirstOrDefault();
-
-
-                // 2.把資料insert 進 member states change list
-
-                // 3.把狀態member AcoountStatus 0或1 Update 到資料表member account 裡面
-                int SCReasonID = (from s in dbContext.StatusChangeReasons
-                                  where s.StatusChangeReason1 == comboBox2.Text
-                                  select s.StatusChangeReasonID).FirstOrDefault();
-
-                MemberStatusList memberStatusList = new MemberStatusList
-                {
-                    AccountID = selectID,
-                    //TODO: CMember.AccountID
-                    UpdateUser = CMember.AccountID,
-                    UpdateTime = DateTime.Now,
-                    StatusChangeReasonID = SCReasonID
-                };
-
-                this.dbContext.MemberStatusLists.Add(memberStatusList);
-
-                // 4.做完要跳更新成功
-                // 5.更新到datagrid view
-                saveAccountStatus();
-            }
-            else
-            {
-                MessageBox.Show("請選取下拉式選單");
-            }
-        }
-        private void loadLoginStatus()
+        #region 讀取登入狀態資料表
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
         {
             int selectID = (int)this.dataGridView2.CurrentRow.Cells["會員編號"].Value;
             var q = from l in dbContext.LoginHistories
-                     where l.AccountID == selectID
-                     select new
-                     {
-                         登入編號 = l.LoginID,
-                         會員名稱 = l.MemberAccount.Name,
-                         登入狀態 = l.LoginS_F ? "成功登入" : "登入失敗",
-                         登入時間 = l.LoginTime,
-                         密碼失敗次數 = l.PasswordFailCount,
-                         是否填寫基本資料 = l.MemberInfoFinished ? "已填寫基本資料" : "未填寫基本資料",
-
-                     };
+                    where l.AccountID == selectID
+                    select new
+                    {
+                        登入編號 = l.LoginID,
+                        會員名稱 = l.MemberAccount.Name,
+                        登入狀態 = l.LoginS_F ? "成功登入" : "登入失敗",
+                        登入時間 = l.LoginTime,
+                        密碼失敗次數 = l.PasswordFailCount,
+                        是否填寫基本資料 = l.MemberInfoFinished ? "已填寫基本資料" : "未填寫基本資料",
+                    };
 
             this.dataGridView3.DataSource = q.ToList();
             var q2 = from s in dbContext.MemberStatusLists
@@ -213,13 +211,9 @@ namespace prjWantWantWinForm
                          客服更新時間 = s.UpdateTime,
                          狀態變更理由 = s.StatusChangeReason.StatusChangeReason1,
                      };
+
             this.dataGridView4.DataSource = q2.ToList();
-
         }
-
-        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
-        {
-            loadLoginStatus();
-        }
+        #endregion
     }
 }

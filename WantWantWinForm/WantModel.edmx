@@ -10,7 +10,7 @@
             <PropertyRef Name="ApplicationListID" />
           </Key>
           <Property Name="ResumeID" Type="int" />
-          <Property Name="ApplicationListID" Type="int" Nullable="false" />
+          <Property Name="ApplicationListID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CaseID" Type="int" />
           <Property Name="CaseStatusID" Type="int" />
           <Property Name="RatingID" Type="int" />
@@ -417,6 +417,7 @@
           <Property Name="AccountID" Type="int" Nullable="false" />
           <Property Name="ComplaintTitle" Type="nvarchar" MaxLength="50" />
           <Property Name="ComplaintContent" Type="nvarchar(max)" />
+          <Property Name="ProcessStatus" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Skill">
           <Key>
@@ -1692,7 +1693,6 @@
     <edmx:ConceptualModels>
       <Schema Namespace="NewIspanProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="NewIspanProjectEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="ApplicationLists" EntityType="NewIspanProjectModel.ApplicationList" />
           <EntitySet Name="CaseSkills" EntityType="NewIspanProjectModel.CaseSkill" />
           <EntitySet Name="CaseStatusLists" EntityType="NewIspanProjectModel.CaseStatusList" />
           <EntitySet Name="Categories" EntityType="NewIspanProjectModel.Category" />
@@ -1741,22 +1741,6 @@
           <EntitySet Name="Towns" EntityType="NewIspanProjectModel.Town" />
           <EntitySet Name="WorkingTimes" EntityType="NewIspanProjectModel.WorkingTime" />
           <EntitySet Name="HumanLists" EntityType="NewIspanProjectModel.HumanList" />
-          <AssociationSet Name="FK_ApplicationList_CaseStatusList" Association="NewIspanProjectModel.FK_ApplicationList_CaseStatusList">
-            <End Role="CaseStatusList" EntitySet="CaseStatusLists" />
-            <End Role="ApplicationList" EntitySet="ApplicationLists" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ApplicationList_Rating" Association="NewIspanProjectModel.FK_ApplicationList_Rating">
-            <End Role="Rating" EntitySet="Ratings" />
-            <End Role="ApplicationList" EntitySet="ApplicationLists" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ApplicationList_Resume" Association="NewIspanProjectModel.FK_ApplicationList_Resume">
-            <End Role="Resume" EntitySet="Resumes" />
-            <End Role="ApplicationList" EntitySet="ApplicationLists" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ApplicationList_TaskList" Association="NewIspanProjectModel.FK_ApplicationList_TaskList">
-            <End Role="TaskList" EntitySet="TaskLists" />
-            <End Role="ApplicationList" EntitySet="ApplicationLists" />
-          </AssociationSet>
           <AssociationSet Name="FK_CaseSkill_Skill" Association="NewIspanProjectModel.FK_CaseSkill_Skill">
             <End Role="Skill" EntitySet="Skills" />
             <End Role="CaseSkill" EntitySet="CaseSkills" />
@@ -2028,21 +2012,24 @@
             <End Role="TaskList" EntitySet="TaskLists" />
             <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
+          <EntitySet Name="ApplicationLists" EntityType="NewIspanProjectModel.ApplicationList" />
+          <AssociationSet Name="FK_ApplicationList_CaseStatusList" Association="NewIspanProjectModel.FK_ApplicationList_CaseStatusList">
+            <End Role="CaseStatusList" EntitySet="CaseStatusLists" />
+            <End Role="ApplicationList" EntitySet="ApplicationLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ApplicationList_Rating" Association="NewIspanProjectModel.FK_ApplicationList_Rating">
+            <End Role="Rating" EntitySet="Ratings" />
+            <End Role="ApplicationList" EntitySet="ApplicationLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ApplicationList_Resume" Association="NewIspanProjectModel.FK_ApplicationList_Resume">
+            <End Role="Resume" EntitySet="Resumes" />
+            <End Role="ApplicationList" EntitySet="ApplicationLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ApplicationList_TaskList" Association="NewIspanProjectModel.FK_ApplicationList_TaskList">
+            <End Role="TaskList" EntitySet="TaskLists" />
+            <End Role="ApplicationList" EntitySet="ApplicationLists" />
+          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="ApplicationList">
-          <Key>
-            <PropertyRef Name="ApplicationListID" />
-          </Key>
-          <Property Name="ResumeID" Type="Int32" />
-          <Property Name="ApplicationListID" Type="Int32" Nullable="false" />
-          <Property Name="CaseID" Type="Int32" />
-          <Property Name="CaseStatusID" Type="Int32" />
-          <Property Name="RatingID" Type="Int32" />
-          <NavigationProperty Name="CaseStatusList" Relationship="NewIspanProjectModel.FK_ApplicationList_CaseStatusList" FromRole="ApplicationList" ToRole="CaseStatusList" />
-          <NavigationProperty Name="Rating" Relationship="NewIspanProjectModel.FK_ApplicationList_Rating" FromRole="ApplicationList" ToRole="Rating" />
-          <NavigationProperty Name="Resume" Relationship="NewIspanProjectModel.FK_ApplicationList_Resume" FromRole="ApplicationList" ToRole="Resume" />
-          <NavigationProperty Name="TaskList" Relationship="NewIspanProjectModel.FK_ApplicationList_TaskList" FromRole="ApplicationList" ToRole="TaskList" />
-        </EntityType>
         <EntityType Name="CaseSkill">
           <Key>
             <PropertyRef Name="CaseSkillID" />
@@ -2059,9 +2046,9 @@
           </Key>
           <Property Name="CaseStatusID" Type="Int32" Nullable="false" />
           <Property Name="CaseStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_CaseStatusList" FromRole="CaseStatusList" ToRole="ApplicationList" />
           <NavigationProperty Name="ExpertApplications" Relationship="NewIspanProjectModel.FK_ExpertApplication_CaseStatusList" FromRole="CaseStatusList" ToRole="ExpertApplication" />
           <NavigationProperty Name="TaskLists" Relationship="NewIspanProjectModel.FK_TaskList_CaseStatusList" FromRole="CaseStatusList" ToRole="TaskList" />
+          <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_CaseStatusList" FromRole="CaseStatusList" ToRole="ApplicationList" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -2399,13 +2386,13 @@
           <Property Name="RatingStar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RatingContent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RatingDate" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_Rating" FromRole="Rating" ToRole="ApplicationList" />
           <NavigationProperty Name="ExpertApplications" Relationship="NewIspanProjectModel.FK_ExpertApplication_Rating" FromRole="Rating" ToRole="ExpertApplication" />
           <Property Name="SourceRoleID" Type="Int32" />
           <Property Name="SourceAccountID" Type="Int32" />
           <Property Name="TargetRoleID" Type="Int32" />
           <Property Name="TargetAccountID" Type="Int32" />
           <NavigationProperty Name="ExpertApplications1" Relationship="NewIspanProjectModel.FK_ExpertApplication_Rating1" FromRole="Rating" ToRole="ExpertApplication" />
+          <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_Rating" FromRole="Rating" ToRole="ApplicationList" />
         </EntityType>
         <EntityType Name="Resume">
           <Key>
@@ -2419,7 +2406,6 @@
           <Property Name="WorkingHoursID" Type="Int32" />
           <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="OnTop" Type="Int32" />
-          <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_Resume" FromRole="Resume" ToRole="ApplicationList" />
           <NavigationProperty Name="ExpertResume" Relationship="NewIspanProjectModel.FK_ExpertResume_Resume" FromRole="Resume" ToRole="ExpertResume" />
           <NavigationProperty Name="MemberCollections" Relationship="NewIspanProjectModel.FK_MemberCollection_Resume" FromRole="Resume" ToRole="MemberCollection" />
           <NavigationProperty Name="Town" Relationship="NewIspanProjectModel.FK_Resume_Town" FromRole="Resume" ToRole="Town" />
@@ -2432,6 +2418,7 @@
           <NavigationProperty Name="TaskNameList" Relationship="NewIspanProjectModel.FK_Resume_TaskNameList" FromRole="Resume" ToRole="TaskNameList" />
           <NavigationProperty Name="MemberAccount" Relationship="NewIspanProjectModel.FK_Resume_MemberAccount" FromRole="Resume" ToRole="MemberAccount" />
           <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_Resume" FromRole="Resume" ToRole="OrderDetail" />
+          <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_Resume" FromRole="Resume" ToRole="ApplicationList" />
         </EntityType>
         <EntityType Name="ResumeApplication">
           <Key>
@@ -2574,7 +2561,6 @@
           <Property Name="DataCreateDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DataModifyDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DataModifyPerson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_TaskList" FromRole="TaskList" ToRole="ApplicationList" />
           <NavigationProperty Name="CaseSkills" Relationship="NewIspanProjectModel.FK_CaseSkill_TaskList" FromRole="TaskList" ToRole="CaseSkill" />
           <NavigationProperty Name="CaseStatusList" Relationship="NewIspanProjectModel.FK_TaskList_CaseStatusList" FromRole="TaskList" ToRole="CaseStatusList" />
           <NavigationProperty Name="ExpertApplications" Relationship="NewIspanProjectModel.FK_ExpertApplication_TaskList" FromRole="TaskList" ToRole="ExpertApplication" />
@@ -2591,6 +2577,7 @@
           <Property Name="WorkPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PublishOrNot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_TaskList" FromRole="TaskList" ToRole="OrderDetail" />
+          <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_TaskList" FromRole="TaskList" ToRole="ApplicationList" />
         </EntityType>
         <EntityType Name="TaskNameList">
           <Key>
@@ -2651,54 +2638,6 @@
           <Property Name="ApplicantID" Type="Int32" />
           <Property Name="SenderID" Type="Int32" />
         </EntityType>
-        <Association Name="FK_ApplicationList_CaseStatusList">
-          <End Type="NewIspanProjectModel.CaseStatusList" Role="CaseStatusList" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.ApplicationList" Role="ApplicationList" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="CaseStatusList">
-              <PropertyRef Name="CaseStatusID" />
-            </Principal>
-            <Dependent Role="ApplicationList">
-              <PropertyRef Name="CaseStatusID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ApplicationList_Rating">
-          <End Type="NewIspanProjectModel.Rating" Role="Rating" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.ApplicationList" Role="ApplicationList" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Rating">
-              <PropertyRef Name="RatingID" />
-            </Principal>
-            <Dependent Role="ApplicationList">
-              <PropertyRef Name="RatingID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ApplicationList_Resume">
-          <End Type="NewIspanProjectModel.Resume" Role="Resume" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.ApplicationList" Role="ApplicationList" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Resume">
-              <PropertyRef Name="ResumeID" />
-            </Principal>
-            <Dependent Role="ApplicationList">
-              <PropertyRef Name="ResumeID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_ApplicationList_TaskList">
-          <End Type="NewIspanProjectModel.TaskList" Role="TaskList" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.ApplicationList" Role="ApplicationList" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TaskList">
-              <PropertyRef Name="CaseID" />
-            </Principal>
-            <Dependent Role="ApplicationList">
-              <PropertyRef Name="CaseID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_CaseSkill_Skill">
           <End Type="NewIspanProjectModel.Skill" Role="Skill" Multiplicity="0..1" />
           <End Type="NewIspanProjectModel.CaseSkill" Role="CaseSkill" Multiplicity="*" />
@@ -3432,6 +3371,7 @@
           <Property Name="ComplaintTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ComplaintContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="MemberAccount" Relationship="NewIspanProjectModel.FK_ServiceContact_MemberAccount" FromRole="ServiceContact" ToRole="MemberAccount" />
+          <Property Name="ProcessStatus" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_Order_TradeType">
           <End Type="NewIspanProjectModel.Category" Role="Category" Multiplicity="0..1" />
@@ -3553,23 +3493,74 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="ApplicationList">
+          <Key>
+            <PropertyRef Name="ApplicationListID" />
+          </Key>
+          <Property Name="ResumeID" Type="Int32" />
+          <Property Name="ApplicationListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CaseID" Type="Int32" />
+          <Property Name="CaseStatusID" Type="Int32" />
+          <Property Name="RatingID" Type="Int32" />
+          <NavigationProperty Name="CaseStatusList" Relationship="NewIspanProjectModel.FK_ApplicationList_CaseStatusList" FromRole="ApplicationList" ToRole="CaseStatusList" />
+          <NavigationProperty Name="Rating" Relationship="NewIspanProjectModel.FK_ApplicationList_Rating" FromRole="ApplicationList" ToRole="Rating" />
+          <NavigationProperty Name="Resume" Relationship="NewIspanProjectModel.FK_ApplicationList_Resume" FromRole="ApplicationList" ToRole="Resume" />
+          <NavigationProperty Name="TaskList" Relationship="NewIspanProjectModel.FK_ApplicationList_TaskList" FromRole="ApplicationList" ToRole="TaskList" />
+        </EntityType>
+        <Association Name="FK_ApplicationList_CaseStatusList">
+          <End Type="NewIspanProjectModel.CaseStatusList" Role="CaseStatusList" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.ApplicationList" Role="ApplicationList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CaseStatusList">
+              <PropertyRef Name="CaseStatusID" />
+            </Principal>
+            <Dependent Role="ApplicationList">
+              <PropertyRef Name="CaseStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ApplicationList_Rating">
+          <End Type="NewIspanProjectModel.Rating" Role="Rating" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.ApplicationList" Role="ApplicationList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rating">
+              <PropertyRef Name="RatingID" />
+            </Principal>
+            <Dependent Role="ApplicationList">
+              <PropertyRef Name="RatingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ApplicationList_Resume">
+          <End Type="NewIspanProjectModel.Resume" Role="Resume" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.ApplicationList" Role="ApplicationList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resume">
+              <PropertyRef Name="ResumeID" />
+            </Principal>
+            <Dependent Role="ApplicationList">
+              <PropertyRef Name="ResumeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ApplicationList_TaskList">
+          <End Type="NewIspanProjectModel.TaskList" Role="TaskList" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.ApplicationList" Role="ApplicationList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskList">
+              <PropertyRef Name="CaseID" />
+            </Principal>
+            <Dependent Role="ApplicationList">
+              <PropertyRef Name="CaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="NewIspanProjectModelStoreContainer" CdmEntityContainer="NewIspanProjectEntities">
-          <EntitySetMapping Name="ApplicationLists">
-            <EntityTypeMapping TypeName="NewIspanProjectModel.ApplicationList">
-              <MappingFragment StoreEntitySet="ApplicationList">
-                <ScalarProperty Name="RatingID" ColumnName="RatingID" />
-                <ScalarProperty Name="CaseStatusID" ColumnName="CaseStatusID" />
-                <ScalarProperty Name="CaseID" ColumnName="CaseID" />
-                <ScalarProperty Name="ApplicationListID" ColumnName="ApplicationListID" />
-                <ScalarProperty Name="ResumeID" ColumnName="ResumeID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CaseSkills">
             <EntityTypeMapping TypeName="NewIspanProjectModel.CaseSkill">
               <MappingFragment StoreEntitySet="CaseSkill">
@@ -4134,10 +4125,22 @@
           <EntitySetMapping Name="ServiceContacts">
             <EntityTypeMapping TypeName="NewIspanProjectModel.ServiceContact">
               <MappingFragment StoreEntitySet="ServiceContact">
+                <ScalarProperty Name="ProcessStatus" ColumnName="ProcessStatus" />
                 <ScalarProperty Name="ComplaintContent" ColumnName="ComplaintContent" />
                 <ScalarProperty Name="ComplaintTitle" ColumnName="ComplaintTitle" />
                 <ScalarProperty Name="AccountID" ColumnName="AccountID" />
                 <ScalarProperty Name="ServiceContactID" ColumnName="ServiceContactID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationLists">
+            <EntityTypeMapping TypeName="NewIspanProjectModel.ApplicationList">
+              <MappingFragment StoreEntitySet="ApplicationList">
+                <ScalarProperty Name="RatingID" ColumnName="RatingID" />
+                <ScalarProperty Name="CaseStatusID" ColumnName="CaseStatusID" />
+                <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+                <ScalarProperty Name="ApplicationListID" ColumnName="ApplicationListID" />
+                <ScalarProperty Name="ResumeID" ColumnName="ResumeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

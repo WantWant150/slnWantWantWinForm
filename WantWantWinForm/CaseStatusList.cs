@@ -17,19 +17,19 @@ namespace prjWantWantWinForm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CaseStatusList()
         {
-            this.ApplicationLists = new HashSet<ApplicationList>();
             this.ExpertApplications = new HashSet<ExpertApplication>();
             this.TaskLists = new HashSet<TaskList>();
+            this.ApplicationLists = new HashSet<ApplicationList>();
         }
     
         public int CaseStatusID { get; set; }
         public string CaseStatus { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ApplicationList> ApplicationLists { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExpertApplication> ExpertApplications { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TaskList> TaskLists { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ApplicationList> ApplicationLists { get; set; }
     }
 }

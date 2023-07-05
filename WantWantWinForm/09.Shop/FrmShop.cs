@@ -14,7 +14,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-namespace rjWantWantWinForm
+namespace prjWantWantWinForm
 {
     public partial class FrmShop : Form
     {

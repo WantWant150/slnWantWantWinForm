@@ -57,18 +57,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="01.index\FrmServiceContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.index\FrmServiceContact.designer.cs">
+      <DependentUpon>FrmServiceContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="02.BackStage\Back.cs" />
+    <Compile Include="02.BackStage\FrmBackServiceContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.BackStage\FrmBackServiceContact.designer.cs">
+      <DependentUpon>FrmBackServiceContact.cs</DependentUpon>
+    </Compile>
     <Compile Include="02.BackStage\FrmBackStage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="02.BackStage\FrmBackStage.Designer.cs">
       <DependentUpon>FrmBackStage.cs</DependentUpon>
     </Compile>
-    <Compile Include="02.BackStage\FrmMember.cs">
+    <Compile Include="02.BackStage\FrmBackMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="02.BackStage\FrmMember.Designer.cs">
-      <DependentUpon>FrmMember.cs</DependentUpon>
+    <Compile Include="02.BackStage\FrmBackMember.Designer.cs">
+      <DependentUpon>FrmBackMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.BackStage\FrmGraphAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.BackStage\FrmGraphAnalysis.designer.cs">
+      <DependentUpon>FrmGraphAnalysis.cs</DependentUpon>
     </Compile>
     <Compile Include="03.MemberAccount\FrmChangePassword.cs">
       <SubType>Form</SubType>
@@ -575,11 +593,20 @@
     <Compile Include="WorkingTime.cs">
       <DependentUpon>WantModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="01.index\FrmServiceContact.resx">
+      <DependentUpon>FrmServiceContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.BackStage\FrmBackServiceContact.resx">
+      <DependentUpon>FrmBackServiceContact.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="02.BackStage\FrmBackStage.resx">
       <DependentUpon>FrmBackStage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="02.BackStage\FrmMember.resx">
-      <DependentUpon>FrmMember.cs</DependentUpon>
+    <EmbeddedResource Include="02.BackStage\FrmBackMember.resx">
+      <DependentUpon>FrmBackMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.BackStage\FrmGraphAnalysis.resx">
+      <DependentUpon>FrmGraphAnalysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="03.MemberAccount\FrmChangePassword.resx">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>

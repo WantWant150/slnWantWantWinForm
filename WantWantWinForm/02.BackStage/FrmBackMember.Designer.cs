@@ -1,6 +1,6 @@
 ﻿namespace prjWantWantWinForm
 {
-    partial class FrmMember
+    partial class FrmBackMember
     {
         /// <summary>
         /// Required designer variable.

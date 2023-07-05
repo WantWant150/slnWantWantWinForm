@@ -123,13 +123,12 @@ namespace prjWantWantWinForm
         private void toolStripButtonTask_Click(object sender, EventArgs e)
         {
             FrmTool frmtool = new FrmTool();
-
             ShowForm(frmtool);
         }
         private void 發任務ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Form3Task frm = new Form3Task();
-            //ShowForm(frm);
+            FrmTool frmtool = new FrmTool();
+            ShowForm(frmtool);
         }
         #endregion
 
@@ -163,29 +162,41 @@ namespace prjWantWantWinForm
 
         #region 點數商城
         private void toolStripButtonPoint_Click(object sender, EventArgs e)
-        {
-            //Form2Point frm = new Form2Point();
-            //ShowForm(frm);
+        {      
             FrmShopOut frm = new FrmShopOut();
             ShowForm(frm);
         }
         private void 點數商城ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //FrmShop frm = new FrmShop();
-            //ShowForm(frm);
+            FrmShopOut frm = new FrmShopOut();
+            ShowForm(frm);
         }
         #endregion
 
 
-        #region 主控台
+        #region 聯絡客服
         private void toolStripButtonService_Click(object sender, EventArgs e)
         {
-            FrmBackStage frm = new FrmBackStage();
+            FrmServiceContact frm = new FrmServiceContact();
             ShowForm(frm);
         }
         private void 聯絡客服ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmBackStage frm = new FrmBackStage();
+            FrmServiceContact frm = new FrmServiceContact();
+            ShowForm(frm);
+        }
+        #endregion
+
+
+        #region 討論區
+        private void toolStripButtonForum_Click(object sender, EventArgs e)
+        {
+            Frm_ForumMain frm = new Frm_ForumMain();
+            ShowForm(frm);
+        }
+        private void 討論區ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_ForumMain frm = new Frm_ForumMain();
             ShowForm(frm);
         }
         #endregion
@@ -227,18 +238,6 @@ namespace prjWantWantWinForm
         }
         #endregion
 
-        #region 討論區
-        private void toolStripButtonForum_Click(object sender, EventArgs e)
-        {
-            Frm_ForumMain frm = new Frm_ForumMain();
-            ShowForm(frm);
-        }
-        private void 討論區ToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Frm_ForumMain frm = new Frm_ForumMain();
-            ShowForm(frm);
-        }
-        #endregion
 
     }
 }

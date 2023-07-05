@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace rjWantWantWinForm
+namespace prjWantWantWinForm
 {
     public partial class FrmProductUpdate : Form
     {

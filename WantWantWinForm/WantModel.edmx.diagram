@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="4db6e467ce04405f946bec1d614c98ae" Name="Diagram1" ZoomLevel="53">
-        <EntityTypeShape EntityType="NewIspanProjectModel.ApplicationList" Width="1.5" PointX="5.25" PointY="14" />
         <EntityTypeShape EntityType="NewIspanProjectModel.CaseSkill" Width="1.5" PointX="11.25" PointY="14.375" />
         <EntityTypeShape EntityType="NewIspanProjectModel.CaseStatusList" Width="1.5" PointX="0.75" PointY="14.375" />
         <EntityTypeShape EntityType="NewIspanProjectModel.Category" Width="1.5" PointX="3.75" PointY="32.875" />
@@ -54,10 +53,6 @@
         <EntityTypeShape EntityType="NewIspanProjectModel.Town" Width="1.5" PointX="0.75" PointY="6.125" />
         <EntityTypeShape EntityType="NewIspanProjectModel.WorkingTime" Width="1.5" PointX="0.75" PointY="3" />
         <EntityTypeShape EntityType="NewIspanProjectModel.HumanList" Width="1.5" PointX="13.75" PointY="12.875" />
-        <AssociationConnector Association="NewIspanProjectModel.FK_ApplicationList_CaseStatusList" />
-        <AssociationConnector Association="NewIspanProjectModel.FK_ApplicationList_Rating" />
-        <AssociationConnector Association="NewIspanProjectModel.FK_ApplicationList_Resume" />
-        <AssociationConnector Association="NewIspanProjectModel.FK_ApplicationList_TaskList" />
         <AssociationConnector Association="NewIspanProjectModel.FK_CaseSkill_Skill" />
         <AssociationConnector Association="NewIspanProjectModel.FK_CaseSkill_TaskList" />
         <AssociationConnector Association="NewIspanProjectModel.FK_ExpertApplication_CaseStatusList" />
@@ -128,6 +123,11 @@
         <AssociationConnector Association="NewIspanProjectModel.FK_OrderDetail_Product" />
         <AssociationConnector Association="NewIspanProjectModel.FK_OrderDetail_Resume" />
         <AssociationConnector Association="NewIspanProjectModel.FK_OrderDetail_TaskList" />
+        <EntityTypeShape EntityType="NewIspanProjectModel.ApplicationList" Width="1.5" PointX="5.25" PointY="14" />
+        <AssociationConnector Association="NewIspanProjectModel.FK_ApplicationList_CaseStatusList" />
+        <AssociationConnector Association="NewIspanProjectModel.FK_ApplicationList_Rating" />
+        <AssociationConnector Association="NewIspanProjectModel.FK_ApplicationList_Resume" />
+        <AssociationConnector Association="NewIspanProjectModel.FK_ApplicationList_TaskList" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

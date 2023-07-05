@@ -1,4 +1,4 @@
-﻿using rjWantWantWinForm;
+﻿using prjWantWantWinForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,25 +17,6 @@ namespace prjWantWantWinForm
         {
             InitializeComponent();
         }
-
-
-        /*
-        #region 表單加入Panel
-        private Form AddPanel(Form frm)
-        {
-            // 設置其他表單的屬性
-            frm.TopLevel = false;
-
-            // 將 Panel 加入 SplitContainer 的 Panel1 中
-            splitContainer1.Panel2.Controls.Add(frm);
-
-            // 顯示表單
-            frm.Show();
-
-            return frm;
-        }
-        #endregion
-        */
 
 
         private Form OpenForm(Form frm)
@@ -68,8 +49,7 @@ namespace prjWantWantWinForm
 
         private void btnMember_Click(object sender, EventArgs e)
         {
-            FrmMember frm = new FrmMember();
-            MessageBox.Show("2");
+            FrmBackMember frm = new FrmBackMember();            
             OpenForm(frm);
         }
 
@@ -84,14 +64,21 @@ namespace prjWantWantWinForm
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnOrder_Click(object sender, EventArgs e)
         {
             FrmOrderChart frm = new FrmOrderChart();
+            OpenForm(frm);
+        }
+
+        private void btnMessage_Click(object sender, EventArgs e)
+        {
+            FrmBackServiceContact frm = new FrmBackServiceContact();
+            OpenForm(frm);
+        }
+
+        private void btnGraphAnalysis_Click(object sender, EventArgs e)
+        {
+            FrmGraphAnalysis frm = new FrmGraphAnalysis();
             OpenForm(frm);
         }
     }

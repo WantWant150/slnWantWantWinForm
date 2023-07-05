@@ -18,6 +18,7 @@ namespace prjWantWantWinForm
         public int AccountID { get; set; }
         public string ComplaintTitle { get; set; }
         public string ComplaintContent { get; set; }
+        public bool ProcessStatus { get; set; }
     
         public virtual MemberAccount MemberAccount { get; set; }
     }

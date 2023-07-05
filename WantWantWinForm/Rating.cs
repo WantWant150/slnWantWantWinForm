@@ -17,9 +17,9 @@ namespace prjWantWantWinForm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Rating()
         {
-            this.ApplicationLists = new HashSet<ApplicationList>();
             this.ExpertApplications = new HashSet<ExpertApplication>();
             this.ExpertApplications1 = new HashSet<ExpertApplication>();
+            this.ApplicationLists = new HashSet<ApplicationList>();
         }
     
         public int RatingID { get; set; }
@@ -32,10 +32,10 @@ namespace prjWantWantWinForm
         public Nullable<int> TargetAccountID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ApplicationList> ApplicationLists { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExpertApplication> ExpertApplications { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExpertApplication> ExpertApplications1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ApplicationList> ApplicationLists { get; set; }
     }
 }
