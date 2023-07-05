@@ -163,12 +163,14 @@ namespace prjWantWantWinForm
         #region 點數商城
         private void toolStripButtonPoint_Click(object sender, EventArgs e)
         {
-            Form2Point frm = new Form2Point();
+            //Form2Point frm = new Form2Point();
+            //ShowForm(frm);
+            FrmShop frm = new FrmShop();
             ShowForm(frm);
         }
         private void 點數商城ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form2Point frm = new Form2Point();
+            FrmShop frm = new FrmShop();
             ShowForm(frm);
         }
         #endregion

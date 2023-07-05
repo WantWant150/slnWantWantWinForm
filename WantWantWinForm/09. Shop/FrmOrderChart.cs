@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace prjShop
+namespace prjWantWantWinForm
 {
    
     public partial class FrmOrderChart : Form

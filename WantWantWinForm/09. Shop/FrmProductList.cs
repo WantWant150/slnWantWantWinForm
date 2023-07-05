@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjShop
+namespace prjWantWantWinForm
 {
     public partial class FrmProductList : Form
     {
@@ -365,6 +365,11 @@ namespace prjShop
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }

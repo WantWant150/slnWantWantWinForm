@@ -1,4 +1,4 @@
-﻿namespace prjShop
+﻿namespace prjWantWantWinForm
 {
     partial class FrmPointShop
     {

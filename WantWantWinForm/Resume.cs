@@ -19,11 +19,11 @@ namespace prjWantWantWinForm
         {
             this.ApplicationLists = new HashSet<ApplicationList>();
             this.MemberCollections = new HashSet<MemberCollection>();
-            this.OrderDetails = new HashSet<OrderDetail>();
             this.ResumeApplications = new HashSet<ResumeApplication>();
             this.ResumeCertificates = new HashSet<ResumeCertificate>();
             this.ResumeKeywordLists = new HashSet<ResumeKeywordList>();
             this.ResumeSkills = new HashSet<ResumeSkill>();
+            this.OrderDetails = new HashSet<OrderDetail>();
         }
     
         public int AccountID { get; set; }
@@ -41,8 +41,6 @@ namespace prjWantWantWinForm
         public virtual ExpertResume ExpertResume { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MemberCollection> MemberCollections { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual Town Town { get; set; }
         public virtual WorkingTime WorkingTime { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -54,5 +52,8 @@ namespace prjWantWantWinForm
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ResumeSkill> ResumeSkills { get; set; }
         public virtual TaskNameList TaskNameList { get; set; }
+        public virtual MemberAccount MemberAccount { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

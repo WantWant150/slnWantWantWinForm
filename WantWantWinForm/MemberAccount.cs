@@ -28,6 +28,8 @@ namespace prjWantWantWinForm
             this.MemberRoleConns = new HashSet<MemberRoleConn>();
             this.MemberStatusLists = new HashSet<MemberStatusList>();
             this.Orders = new HashSet<Order>();
+            this.Resumes = new HashSet<Resume>();
+            this.ServiceContacts = new HashSet<ServiceContact>();
         }
     
         public int AccountID { get; set; }
@@ -66,5 +68,9 @@ namespace prjWantWantWinForm
         public virtual ICollection<MemberStatusList> MemberStatusLists { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Resume> Resumes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ServiceContact> ServiceContacts { get; set; }
     }
 }

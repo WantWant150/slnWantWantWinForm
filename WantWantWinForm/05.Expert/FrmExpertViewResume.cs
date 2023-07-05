@@ -17,8 +17,8 @@ namespace prjWantWantWinForm
         public FrmExpertViewResume()
         {
             InitializeComponent();
-            Load();
-            Work(workindex);
+            //Load();
+            //Work(workindex);
 
         }
         NewIspanProjectEntities db = new NewIspanProjectEntities();

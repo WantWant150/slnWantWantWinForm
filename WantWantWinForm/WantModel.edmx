@@ -280,6 +280,7 @@
           <Property Name="OrderPoint" Type="int" />
           <Property Name="CreateTime" Type="datetime" />
           <Property Name="OrderGetPoint" Type="int" />
+          <Property Name="OrderUsePoint" Type="int" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -340,7 +341,11 @@
           <Property Name="RatingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RatingStar" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="RatingContent" Type="nvarchar" MaxLength="50" />
-          <Property Name="RatingDate" Type="datetime" Nullable="false" />
+          <Property Name="RatingDate" Type="datetime" />
+          <Property Name="SourceRoleID" Type="int" />
+          <Property Name="SourceAccountID" Type="int" />
+          <Property Name="TargetRoleID" Type="int" />
+          <Property Name="TargetAccountID" Type="int" />
         </EntityType>
         <EntityType Name="Resume">
           <Key>
@@ -404,6 +409,15 @@
           <Property Name="Payment" Type="nvarchar" MaxLength="50" />
           <Property Name="PaymentDate" Type="date" />
         </EntityType>
+        <EntityType Name="ServiceContact">
+          <Key>
+            <PropertyRef Name="ServiceContactID" />
+          </Key>
+          <Property Name="ServiceContactID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountID" Type="int" Nullable="false" />
+          <Property Name="ComplaintTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="ComplaintContent" Type="nvarchar(max)" />
+        </EntityType>
         <EntityType Name="Skill">
           <Key>
             <PropertyRef Name="SkillID" />
@@ -452,7 +466,7 @@
           <Property Name="AccountID" Type="int" />
           <Property Name="TaskNameID" Type="int" />
           <Property Name="TaskTitle" Type="nvarchar" MaxLength="50" />
-          <Property Name="TaskDetail" Type="nvarchar" MaxLength="50" />
+          <Property Name="TaskDetail" Type="nvarchar" MaxLength="100" />
           <Property Name="TeachToID" Type="int" />
           <Property Name="WorkingHoursID" Type="int" />
           <Property Name="PayFrom" Type="nvarchar" MaxLength="50" />
@@ -675,7 +689,7 @@
               <PropertyRef Name="RatingID" />
             </Principal>
             <Dependent Role="ExpertApplication">
-              <PropertyRef Name="CaseStatusID" />
+              <PropertyRef Name="RatingID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1051,6 +1065,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Resume_MemberAccount">
+          <End Role="MemberAccount" Type="Self.MemberAccount" Multiplicity="1" />
+          <End Role="Resume" Type="Self.Resume" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemberAccount">
+              <PropertyRef Name="AccountID" />
+            </Principal>
+            <Dependent Role="Resume">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Resume_TaskNameList">
           <End Role="TaskNameList" Type="Self.TaskNameList" Multiplicity="0..1" />
           <End Role="Resume" Type="Self.Resume" Multiplicity="*" />
@@ -1168,6 +1194,18 @@
             </Principal>
             <Dependent Role="ResumeSkill">
               <PropertyRef Name="SkillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceContact_MemberAccount">
+          <End Role="MemberAccount" Type="Self.MemberAccount" Multiplicity="1" />
+          <End Role="ServiceContact" Type="Self.ServiceContact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemberAccount">
+              <PropertyRef Name="AccountID" />
+            </Principal>
+            <Dependent Role="ServiceContact">
+              <PropertyRef Name="AccountID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1355,6 +1393,7 @@
           <EntitySet Name="ResumeSkill" EntityType="Self.ResumeSkill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RoleInfo" EntityType="Self.RoleInfo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Salary" EntityType="Self.Salary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceContact" EntityType="Self.ServiceContact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SkillType" EntityType="Self.SkillType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StatusChangeReason" EntityType="Self.StatusChangeReason" Schema="dbo" store:Type="Tables" />
@@ -1551,6 +1590,10 @@
             <End Role="Product" EntitySet="Product" />
             <End Role="ProductPhoto" EntitySet="ProductPhoto" />
           </AssociationSet>
+          <AssociationSet Name="FK_Resume_MemberAccount" Association="Self.FK_Resume_MemberAccount">
+            <End Role="MemberAccount" EntitySet="MemberAccount" />
+            <End Role="Resume" EntitySet="Resume" />
+          </AssociationSet>
           <AssociationSet Name="FK_Resume_TaskNameList" Association="Self.FK_Resume_TaskNameList">
             <End Role="TaskNameList" EntitySet="TaskNameList" />
             <End Role="Resume" EntitySet="Resume" />
@@ -1590,6 +1633,10 @@
           <AssociationSet Name="FK_ResumeSkill_Skill" Association="Self.FK_ResumeSkill_Skill">
             <End Role="Skill" EntitySet="Skill" />
             <End Role="ResumeSkill" EntitySet="ResumeSkill" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceContact_MemberAccount" Association="Self.FK_ServiceContact_MemberAccount">
+            <End Role="MemberAccount" EntitySet="MemberAccount" />
+            <End Role="ServiceContact" EntitySet="ServiceContact" />
           </AssociationSet>
           <AssociationSet Name="FK_Skill_SkillType" Association="Self.FK_Skill_SkillType">
             <End Role="SkillType" EntitySet="SkillType" />
@@ -1671,8 +1718,6 @@
           <EntitySet Name="MemberCollections" EntityType="NewIspanProjectModel.MemberCollection" />
           <EntitySet Name="MemberRoleConns" EntityType="NewIspanProjectModel.MemberRoleConn" />
           <EntitySet Name="MemberStatusLists" EntityType="NewIspanProjectModel.MemberStatusList" />
-          <EntitySet Name="Orders" EntityType="NewIspanProjectModel.Order" />
-          <EntitySet Name="OrderDetails" EntityType="NewIspanProjectModel.OrderDetail" />
           <EntitySet Name="PayWays" EntityType="NewIspanProjectModel.PayWay" />
           <EntitySet Name="Products" EntityType="NewIspanProjectModel.Product" />
           <EntitySet Name="ProductPhotoes" EntityType="NewIspanProjectModel.ProductPhoto" />
@@ -1727,10 +1772,6 @@
           <AssociationSet Name="FK_TaskList_CaseStatusList" Association="NewIspanProjectModel.FK_TaskList_CaseStatusList">
             <End Role="CaseStatusList" EntitySet="CaseStatusLists" />
             <End Role="TaskList" EntitySet="TaskLists" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_TradeType" Association="NewIspanProjectModel.FK_Order_TradeType">
-            <End Role="Category" EntitySet="Categories" />
-            <End Role="Order" EntitySet="Orders" />
           </AssociationSet>
           <AssociationSet Name="FK_Product_Category" Association="NewIspanProjectModel.FK_Product_Category">
             <End Role="Category" EntitySet="Categories" />
@@ -1856,10 +1897,6 @@
             <End Role="MemberAccount" EntitySet="MemberAccounts" />
             <End Role="MemberStatusList" EntitySet="MemberStatusLists" />
           </AssociationSet>
-          <AssociationSet Name="FK_Order_MemberAccount" Association="NewIspanProjectModel.FK_Order_MemberAccount">
-            <End Role="MemberAccount" EntitySet="MemberAccounts" />
-            <End Role="Order" EntitySet="Orders" />
-          </AssociationSet>
           <AssociationSet Name="FK_MemberCollection_Resume" Association="NewIspanProjectModel.FK_MemberCollection_Resume">
             <End Role="Resume" EntitySet="Resumes" />
             <End Role="MemberCollection" EntitySet="MemberCollections" />
@@ -1871,26 +1908,6 @@
           <AssociationSet Name="FK_MemberRoleConn_RoleInfo" Association="NewIspanProjectModel.FK_MemberRoleConn_RoleInfo">
             <End Role="RoleInfo" EntitySet="RoleInfoes" />
             <End Role="MemberRoleConn" EntitySet="MemberRoleConns" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_PayWay" Association="NewIspanProjectModel.FK_Order_PayWay">
-            <End Role="PayWay" EntitySet="PayWays" />
-            <End Role="Order" EntitySet="Orders" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderDetail_Order" Association="NewIspanProjectModel.FK_OrderDetail_Order">
-            <End Role="Order" EntitySet="Orders" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderDetail_Product" Association="NewIspanProjectModel.FK_OrderDetail_Product">
-            <End Role="Product" EntitySet="Products" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderDetail_Resume" Association="NewIspanProjectModel.FK_OrderDetail_Resume">
-            <End Role="Resume" EntitySet="Resumes" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderDetail_TaskList" Association="NewIspanProjectModel.FK_OrderDetail_TaskList">
-            <End Role="TaskList" EntitySet="TaskLists" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
           <AssociationSet Name="FK_ProductPhoto_Product" Association="NewIspanProjectModel.FK_ProductPhoto_Product">
             <End Role="Product" EntitySet="Products" />
@@ -1968,6 +1985,49 @@
             <End Role="TaskNameList" EntitySet="TaskNameLists" />
             <End Role="Resume" EntitySet="Resumes" />
           </AssociationSet>
+          <EntitySet Name="Orders" EntityType="NewIspanProjectModel.Order" />
+          <EntitySet Name="OrderDetails" EntityType="NewIspanProjectModel.OrderDetail" />
+          <EntitySet Name="ServiceContacts" EntityType="NewIspanProjectModel.ServiceContact" />
+          <AssociationSet Name="FK_Order_TradeType" Association="NewIspanProjectModel.FK_Order_TradeType">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpertApplication_Rating1" Association="NewIspanProjectModel.FK_ExpertApplication_Rating1">
+            <End Role="Rating" EntitySet="Ratings" />
+            <End Role="ExpertApplication" EntitySet="ExpertApplications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_MemberAccount" Association="NewIspanProjectModel.FK_Order_MemberAccount">
+            <End Role="MemberAccount" EntitySet="MemberAccounts" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resume_MemberAccount" Association="NewIspanProjectModel.FK_Resume_MemberAccount">
+            <End Role="MemberAccount" EntitySet="MemberAccounts" />
+            <End Role="Resume" EntitySet="Resumes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceContact_MemberAccount" Association="NewIspanProjectModel.FK_ServiceContact_MemberAccount">
+            <End Role="MemberAccount" EntitySet="MemberAccounts" />
+            <End Role="ServiceContact" EntitySet="ServiceContacts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_PayWay" Association="NewIspanProjectModel.FK_Order_PayWay">
+            <End Role="PayWay" EntitySet="PayWays" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Order" Association="NewIspanProjectModel.FK_OrderDetail_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Product" Association="NewIspanProjectModel.FK_OrderDetail_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Resume" Association="NewIspanProjectModel.FK_OrderDetail_Resume">
+            <End Role="Resume" EntitySet="Resumes" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_TaskList" Association="NewIspanProjectModel.FK_OrderDetail_TaskList">
+            <End Role="TaskList" EntitySet="TaskLists" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="ApplicationList">
           <Key>
@@ -2009,8 +2069,8 @@
           </Key>
           <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Orders" Relationship="NewIspanProjectModel.FK_Order_TradeType" FromRole="Category" ToRole="Order" />
           <NavigationProperty Name="Products" Relationship="NewIspanProjectModel.FK_Product_Category" FromRole="Category" ToRole="Product" />
+          <NavigationProperty Name="Orders" Relationship="NewIspanProjectModel.FK_Order_TradeType" FromRole="Category" ToRole="Order" />
         </EntityType>
         <EntityType Name="Certificate">
           <Key>
@@ -2075,6 +2135,7 @@
           <NavigationProperty Name="MemberAccount" Relationship="NewIspanProjectModel.FK_ExpertApplication_MemberAccount" FromRole="ExpertApplication" ToRole="MemberAccount" />
           <NavigationProperty Name="Rating" Relationship="NewIspanProjectModel.FK_ExpertApplication_Rating" FromRole="ExpertApplication" ToRole="Rating" />
           <NavigationProperty Name="TaskList" Relationship="NewIspanProjectModel.FK_ExpertApplication_TaskList" FromRole="ExpertApplication" ToRole="TaskList" />
+          <NavigationProperty Name="Rating1" Relationship="NewIspanProjectModel.FK_ExpertApplication_Rating1" FromRole="ExpertApplication" ToRole="Rating" />
         </EntityType>
         <EntityType Name="ExpertResume">
           <Key>
@@ -2253,6 +2314,8 @@
           <NavigationProperty Name="MemberRoleConns" Relationship="NewIspanProjectModel.FK_MemberRoleConn_MemberAccount" FromRole="MemberAccount" ToRole="MemberRoleConn" />
           <NavigationProperty Name="MemberStatusLists" Relationship="NewIspanProjectModel.FK_MemberStatusList_MemberAccount" FromRole="MemberAccount" ToRole="MemberStatusList" />
           <NavigationProperty Name="Orders" Relationship="NewIspanProjectModel.FK_Order_MemberAccount" FromRole="MemberAccount" ToRole="Order" />
+          <NavigationProperty Name="Resumes" Relationship="NewIspanProjectModel.FK_Resume_MemberAccount" FromRole="MemberAccount" ToRole="Resume" />
+          <NavigationProperty Name="ServiceContacts" Relationship="NewIspanProjectModel.FK_ServiceContact_MemberAccount" FromRole="MemberAccount" ToRole="ServiceContact" />
         </EntityType>
         <EntityType Name="MemberCollection">
           <Key>
@@ -2288,45 +2351,6 @@
           <NavigationProperty Name="StatusChangeReason" Relationship="NewIspanProjectModel.FK_MemberStatusList_StatusChangeReason" FromRole="MemberStatusList" ToRole="StatusChangeReason" />
           <Property Name="AccountID" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="Order">
-          <Key>
-            <PropertyRef Name="OrderID" />
-          </Key>
-          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AccountID" Type="Int32" />
-          <Property Name="PayWayID" Type="Int32" />
-          <Property Name="CategoryID" Type="Int32" />
-          <Property Name="StatusID" Type="Int32" />
-          <Property Name="OrderPrice" Type="Int32" />
-          <Property Name="OrderPoint" Type="Int32" />
-          <Property Name="CreateTime" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Category" Relationship="NewIspanProjectModel.FK_Order_TradeType" FromRole="Order" ToRole="Category" />
-          <NavigationProperty Name="MemberAccount" Relationship="NewIspanProjectModel.FK_Order_MemberAccount" FromRole="Order" ToRole="MemberAccount" />
-          <NavigationProperty Name="PayWay" Relationship="NewIspanProjectModel.FK_Order_PayWay" FromRole="Order" ToRole="PayWay" />
-          <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
-          <Property Name="OrderGetPoint" Type="Int32" />
-        </EntityType>
-        <EntityType Name="OrderDetail">
-          <Key>
-            <PropertyRef Name="OrderdetailID" />
-          </Key>
-          <Property Name="OrderdetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="OrderID" Type="Int32" />
-          <Property Name="ProductID" Type="Int32" />
-          <Property Name="CaseID" Type="Int32" />
-          <Property Name="ResumeID" Type="Int32" />
-          <Property Name="UnitPrice" Type="Int32" />
-          <Property Name="Quantity" Type="Int32" />
-          <Property Name="Discount" Type="Single" />
-          <Property Name="TopDate" Type="Int32" />
-          <NavigationProperty Name="Order" Relationship="NewIspanProjectModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
-          <NavigationProperty Name="Product" Relationship="NewIspanProjectModel.FK_OrderDetail_Product" FromRole="OrderDetail" ToRole="Product" />
-          <NavigationProperty Name="Resume" Relationship="NewIspanProjectModel.FK_OrderDetail_Resume" FromRole="OrderDetail" ToRole="Resume" />
-          <NavigationProperty Name="TaskList" Relationship="NewIspanProjectModel.FK_OrderDetail_TaskList" FromRole="OrderDetail" ToRole="TaskList" />
-          <Property Name="TopType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="UnitPoint" Type="Int32" />
-          <Property Name="GetPoint" Type="Int32" />
-        </EntityType>
         <EntityType Name="PayWay">
           <Key>
             <PropertyRef Name="PayWayID" />
@@ -2352,10 +2376,10 @@
           <Property Name="TopDate" Type="Int32" />
           <Property Name="TopType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Category" Relationship="NewIspanProjectModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
-          <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_Product" FromRole="Product" ToRole="OrderDetail" />
           <NavigationProperty Name="ProductPhotoes" Relationship="NewIspanProjectModel.FK_ProductPhoto_Product" FromRole="Product" ToRole="ProductPhoto" />
           <Property Name="UnitPoint" Type="Int32" />
           <Property Name="GetPoint" Type="Int32" />
+          <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_Product" FromRole="Product" ToRole="OrderDetail" />
         </EntityType>
         <EntityType Name="ProductPhoto">
           <Key>
@@ -2374,9 +2398,14 @@
           <Property Name="RatingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RatingStar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="RatingContent" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="RatingDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RatingDate" Type="DateTime" Precision="3" />
           <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_Rating" FromRole="Rating" ToRole="ApplicationList" />
           <NavigationProperty Name="ExpertApplications" Relationship="NewIspanProjectModel.FK_ExpertApplication_Rating" FromRole="Rating" ToRole="ExpertApplication" />
+          <Property Name="SourceRoleID" Type="Int32" />
+          <Property Name="SourceAccountID" Type="Int32" />
+          <Property Name="TargetRoleID" Type="Int32" />
+          <Property Name="TargetAccountID" Type="Int32" />
+          <NavigationProperty Name="ExpertApplications1" Relationship="NewIspanProjectModel.FK_ExpertApplication_Rating1" FromRole="Rating" ToRole="ExpertApplication" />
         </EntityType>
         <EntityType Name="Resume">
           <Key>
@@ -2393,7 +2422,6 @@
           <NavigationProperty Name="ApplicationLists" Relationship="NewIspanProjectModel.FK_ApplicationList_Resume" FromRole="Resume" ToRole="ApplicationList" />
           <NavigationProperty Name="ExpertResume" Relationship="NewIspanProjectModel.FK_ExpertResume_Resume" FromRole="Resume" ToRole="ExpertResume" />
           <NavigationProperty Name="MemberCollections" Relationship="NewIspanProjectModel.FK_MemberCollection_Resume" FromRole="Resume" ToRole="MemberCollection" />
-          <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_Resume" FromRole="Resume" ToRole="OrderDetail" />
           <NavigationProperty Name="Town" Relationship="NewIspanProjectModel.FK_Resume_Town" FromRole="Resume" ToRole="Town" />
           <NavigationProperty Name="WorkingTime" Relationship="NewIspanProjectModel.FK_Resume_WorkingTime" FromRole="Resume" ToRole="WorkingTime" />
           <NavigationProperty Name="ResumeApplications" Relationship="NewIspanProjectModel.FK_ResumeApplication_Resume" FromRole="Resume" ToRole="ResumeApplication" />
@@ -2402,6 +2430,8 @@
           <NavigationProperty Name="ResumeSkills" Relationship="NewIspanProjectModel.FK_ResumeSkill_Resume" FromRole="Resume" ToRole="ResumeSkill" />
           <Property Name="TaskNameID" Type="Int32" />
           <NavigationProperty Name="TaskNameList" Relationship="NewIspanProjectModel.FK_Resume_TaskNameList" FromRole="Resume" ToRole="TaskNameList" />
+          <NavigationProperty Name="MemberAccount" Relationship="NewIspanProjectModel.FK_Resume_MemberAccount" FromRole="Resume" ToRole="MemberAccount" />
+          <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_Resume" FromRole="Resume" ToRole="OrderDetail" />
         </EntityType>
         <EntityType Name="ResumeApplication">
           <Key>
@@ -2516,7 +2546,7 @@
           <Property Name="AccountID" Type="Int32" />
           <Property Name="TaskNameID" Type="Int32" />
           <Property Name="TaskTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TaskDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TaskDetail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="TeachToID" Type="Int32" />
           <Property Name="WorkingHoursID" Type="Int32" />
           <Property Name="PayFrom" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -2550,7 +2580,6 @@
           <NavigationProperty Name="ExpertApplications" Relationship="NewIspanProjectModel.FK_ExpertApplication_TaskList" FromRole="TaskList" ToRole="ExpertApplication" />
           <NavigationProperty Name="ExpertTasks" Relationship="NewIspanProjectModel.FK_ExpertTask_TaskList" FromRole="TaskList" ToRole="ExpertTask" />
           <NavigationProperty Name="MemberCollections" Relationship="NewIspanProjectModel.FK_MemberCollection_TaskList" FromRole="TaskList" ToRole="MemberCollection" />
-          <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_TaskList" FromRole="TaskList" ToRole="OrderDetail" />
           <NavigationProperty Name="Salary" Relationship="NewIspanProjectModel.FK_TaskList_Salary" FromRole="TaskList" ToRole="Salary" />
           <NavigationProperty Name="StatusChangeReason" Relationship="NewIspanProjectModel.FK_TaskList_StatusChangeReason" FromRole="TaskList" ToRole="StatusChangeReason" />
           <NavigationProperty Name="TaskKeywordLists" Relationship="NewIspanProjectModel.FK_TaskKeywordList_TaskList" FromRole="TaskList" ToRole="TaskKeywordList" />
@@ -2561,6 +2590,7 @@
           <NavigationProperty Name="WorkingTime" Relationship="NewIspanProjectModel.FK_TaskList_WorkingTime" FromRole="TaskList" ToRole="WorkingTime" />
           <Property Name="WorkPlace" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PublishOrNot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_TaskList" FromRole="TaskList" ToRole="OrderDetail" />
         </EntityType>
         <EntityType Name="TaskNameList">
           <Key>
@@ -2714,18 +2744,6 @@
             </Principal>
             <Dependent Role="TaskList">
               <PropertyRef Name="CaseStatusID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Order_TradeType">
-          <End Type="NewIspanProjectModel.Category" Role="Category" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.Order" Role="Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Category">
-              <PropertyRef Name="CategoryID" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="CategoryID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3101,18 +3119,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Order_MemberAccount">
-          <End Type="NewIspanProjectModel.MemberAccount" Role="MemberAccount" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.Order" Role="Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="MemberAccount">
-              <PropertyRef Name="AccountID" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="AccountID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_MemberCollection_Resume">
           <End Type="NewIspanProjectModel.Resume" Role="Resume" Multiplicity="0..1" />
           <End Type="NewIspanProjectModel.MemberCollection" Role="MemberCollection" Multiplicity="*" />
@@ -3146,66 +3152,6 @@
             </Principal>
             <Dependent Role="MemberRoleConn">
               <PropertyRef Name="RoleID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Order_PayWay">
-          <End Type="NewIspanProjectModel.PayWay" Role="PayWay" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.Order" Role="Order" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="PayWay">
-              <PropertyRef Name="PayWayID" />
-            </Principal>
-            <Dependent Role="Order">
-              <PropertyRef Name="PayWayID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderDetail_Order">
-          <End Type="NewIspanProjectModel.Order" Role="Order" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Order">
-              <PropertyRef Name="OrderID" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="OrderID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderDetail_Product">
-          <End Type="NewIspanProjectModel.Product" Role="Product" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Product">
-              <PropertyRef Name="ProductID" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="ProductID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderDetail_Resume">
-          <End Type="NewIspanProjectModel.Resume" Role="Resume" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Resume">
-              <PropertyRef Name="ResumeID" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="ResumeID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_OrderDetail_TaskList">
-          <End Type="NewIspanProjectModel.TaskList" Role="TaskList" Multiplicity="0..1" />
-          <End Type="NewIspanProjectModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TaskList">
-              <PropertyRef Name="CaseID" />
-            </Principal>
-            <Dependent Role="OrderDetail">
-              <PropertyRef Name="CaseID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3434,6 +3380,176 @@
             </Principal>
             <Dependent Role="Resume">
               <PropertyRef Name="TaskNameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountID" Type="Int32" />
+          <Property Name="PayWayID" Type="Int32" />
+          <Property Name="CategoryID" Type="Int32" />
+          <Property Name="StatusID" Type="Int32" />
+          <Property Name="OrderPrice" Type="Int32" />
+          <Property Name="OrderPoint" Type="Int32" />
+          <Property Name="CreateTime" Type="DateTime" Precision="3" />
+          <Property Name="OrderGetPoint" Type="Int32" />
+          <Property Name="OrderUsePoint" Type="Int32" />
+          <NavigationProperty Name="Category" Relationship="NewIspanProjectModel.FK_Order_TradeType" FromRole="Order" ToRole="Category" />
+          <NavigationProperty Name="MemberAccount" Relationship="NewIspanProjectModel.FK_Order_MemberAccount" FromRole="Order" ToRole="MemberAccount" />
+          <NavigationProperty Name="PayWay" Relationship="NewIspanProjectModel.FK_Order_PayWay" FromRole="Order" ToRole="PayWay" />
+          <NavigationProperty Name="OrderDetails" Relationship="NewIspanProjectModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="OrderdetailID" />
+          </Key>
+          <Property Name="OrderdetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderID" Type="Int32" />
+          <Property Name="ProductID" Type="Int32" />
+          <Property Name="CaseID" Type="Int32" />
+          <Property Name="ResumeID" Type="Int32" />
+          <Property Name="UnitPrice" Type="Int32" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Discount" Type="Single" />
+          <Property Name="TopDate" Type="Int32" />
+          <Property Name="TopType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UnitPoint" Type="Int32" />
+          <Property Name="GetPoint" Type="Int32" />
+          <NavigationProperty Name="Order" Relationship="NewIspanProjectModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="NewIspanProjectModel.FK_OrderDetail_Product" FromRole="OrderDetail" ToRole="Product" />
+          <NavigationProperty Name="Resume" Relationship="NewIspanProjectModel.FK_OrderDetail_Resume" FromRole="OrderDetail" ToRole="Resume" />
+          <NavigationProperty Name="TaskList" Relationship="NewIspanProjectModel.FK_OrderDetail_TaskList" FromRole="OrderDetail" ToRole="TaskList" />
+        </EntityType>
+        <EntityType Name="ServiceContact">
+          <Key>
+            <PropertyRef Name="ServiceContactID" />
+          </Key>
+          <Property Name="ServiceContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountID" Type="Int32" Nullable="false" />
+          <Property Name="ComplaintTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ComplaintContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MemberAccount" Relationship="NewIspanProjectModel.FK_ServiceContact_MemberAccount" FromRole="ServiceContact" ToRole="MemberAccount" />
+        </EntityType>
+        <Association Name="FK_Order_TradeType">
+          <End Type="NewIspanProjectModel.Category" Role="Category" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpertApplication_Rating1">
+          <End Type="NewIspanProjectModel.Rating" Role="Rating" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.ExpertApplication" Role="ExpertApplication" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rating">
+              <PropertyRef Name="RatingID" />
+            </Principal>
+            <Dependent Role="ExpertApplication">
+              <PropertyRef Name="RatingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_MemberAccount">
+          <End Type="NewIspanProjectModel.MemberAccount" Role="MemberAccount" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemberAccount">
+              <PropertyRef Name="AccountID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resume_MemberAccount">
+          <End Type="NewIspanProjectModel.MemberAccount" Role="MemberAccount" Multiplicity="1" />
+          <End Type="NewIspanProjectModel.Resume" Role="Resume" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemberAccount">
+              <PropertyRef Name="AccountID" />
+            </Principal>
+            <Dependent Role="Resume">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceContact_MemberAccount">
+          <End Type="NewIspanProjectModel.MemberAccount" Role="MemberAccount" Multiplicity="1" />
+          <End Type="NewIspanProjectModel.ServiceContact" Role="ServiceContact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemberAccount">
+              <PropertyRef Name="AccountID" />
+            </Principal>
+            <Dependent Role="ServiceContact">
+              <PropertyRef Name="AccountID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_PayWay">
+          <End Type="NewIspanProjectModel.PayWay" Role="PayWay" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayWay">
+              <PropertyRef Name="PayWayID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="PayWayID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Order">
+          <End Type="NewIspanProjectModel.Order" Role="Order" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Product">
+          <End Type="NewIspanProjectModel.Product" Role="Product" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Resume">
+          <End Type="NewIspanProjectModel.Resume" Role="Resume" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resume">
+              <PropertyRef Name="ResumeID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="ResumeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_TaskList">
+          <End Type="NewIspanProjectModel.TaskList" Role="TaskList" Multiplicity="0..1" />
+          <End Type="NewIspanProjectModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskList">
+              <PropertyRef Name="CaseID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="CaseID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3719,39 +3835,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Orders">
-            <EntityTypeMapping TypeName="NewIspanProjectModel.Order">
-              <MappingFragment StoreEntitySet="Order">
-                <ScalarProperty Name="OrderGetPoint" ColumnName="OrderGetPoint" />
-                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
-                <ScalarProperty Name="OrderPoint" ColumnName="OrderPoint" />
-                <ScalarProperty Name="OrderPrice" ColumnName="OrderPrice" />
-                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
-                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-                <ScalarProperty Name="PayWayID" ColumnName="PayWayID" />
-                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="OrderDetails">
-            <EntityTypeMapping TypeName="NewIspanProjectModel.OrderDetail">
-              <MappingFragment StoreEntitySet="OrderDetail">
-                <ScalarProperty Name="GetPoint" ColumnName="GetPoint" />
-                <ScalarProperty Name="UnitPoint" ColumnName="UnitPoint" />
-                <ScalarProperty Name="TopType" ColumnName="TopType" />
-                <ScalarProperty Name="TopDate" ColumnName="TopDate" />
-                <ScalarProperty Name="Discount" ColumnName="Discount" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
-                <ScalarProperty Name="ResumeID" ColumnName="ResumeID" />
-                <ScalarProperty Name="CaseID" ColumnName="CaseID" />
-                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-                <ScalarProperty Name="OrderdetailID" ColumnName="OrderdetailID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="PayWays">
             <EntityTypeMapping TypeName="NewIspanProjectModel.PayWay">
               <MappingFragment StoreEntitySet="PayWay">
@@ -3793,6 +3876,10 @@
           <EntitySetMapping Name="Ratings">
             <EntityTypeMapping TypeName="NewIspanProjectModel.Rating">
               <MappingFragment StoreEntitySet="Rating">
+                <ScalarProperty Name="TargetAccountID" ColumnName="TargetAccountID" />
+                <ScalarProperty Name="TargetRoleID" ColumnName="TargetRoleID" />
+                <ScalarProperty Name="SourceAccountID" ColumnName="SourceAccountID" />
+                <ScalarProperty Name="SourceRoleID" ColumnName="SourceRoleID" />
                 <ScalarProperty Name="RatingDate" ColumnName="RatingDate" />
                 <ScalarProperty Name="RatingContent" ColumnName="RatingContent" />
                 <ScalarProperty Name="RatingStar" ColumnName="RatingStar" />
@@ -4007,6 +4094,50 @@
                 <ScalarProperty Name="CaseStatusID" ColumnName="CaseStatusID" />
                 <ScalarProperty Name="HumanListID" ColumnName="HumanListID" />
                 <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="NewIspanProjectModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="OrderUsePoint" ColumnName="OrderUsePoint" />
+                <ScalarProperty Name="OrderGetPoint" ColumnName="OrderGetPoint" />
+                <ScalarProperty Name="CreateTime" ColumnName="CreateTime" />
+                <ScalarProperty Name="OrderPoint" ColumnName="OrderPoint" />
+                <ScalarProperty Name="OrderPrice" ColumnName="OrderPrice" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="PayWayID" ColumnName="PayWayID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetails">
+            <EntityTypeMapping TypeName="NewIspanProjectModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="GetPoint" ColumnName="GetPoint" />
+                <ScalarProperty Name="UnitPoint" ColumnName="UnitPoint" />
+                <ScalarProperty Name="TopType" ColumnName="TopType" />
+                <ScalarProperty Name="TopDate" ColumnName="TopDate" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="ResumeID" ColumnName="ResumeID" />
+                <ScalarProperty Name="CaseID" ColumnName="CaseID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="OrderdetailID" ColumnName="OrderdetailID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceContacts">
+            <EntityTypeMapping TypeName="NewIspanProjectModel.ServiceContact">
+              <MappingFragment StoreEntitySet="ServiceContact">
+                <ScalarProperty Name="ComplaintContent" ColumnName="ComplaintContent" />
+                <ScalarProperty Name="ComplaintTitle" ColumnName="ComplaintTitle" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="ServiceContactID" ColumnName="ServiceContactID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

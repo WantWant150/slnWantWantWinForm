@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace prjShop
+namespace prjWantWantWinForm
 {
     public partial class FrmProductUpdate : Form
     {

@@ -12,18 +12,13 @@ namespace prjWantWantWinForm
     using System;
     using System.Collections.Generic;
     
-    public partial class ExpertApplication
+    public partial class ServiceContact
     {
-        public int ApplicationListID { get; set; }
-        public Nullable<int> CaseID { get; set; }
-        public Nullable<int> AccountID { get; set; }
-        public Nullable<int> CaseStatusID { get; set; }
-        public Nullable<int> RatingID { get; set; }
+        public int ServiceContactID { get; set; }
+        public int AccountID { get; set; }
+        public string ComplaintTitle { get; set; }
+        public string ComplaintContent { get; set; }
     
-        public virtual CaseStatusList CaseStatusList { get; set; }
         public virtual MemberAccount MemberAccount { get; set; }
-        public virtual Rating Rating { get; set; }
-        public virtual TaskList TaskList { get; set; }
-        public virtual Rating Rating1 { get; set; }
     }
 }

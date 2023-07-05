@@ -22,8 +22,8 @@ namespace prjWantWantWinForm
             this.ExpertApplications = new HashSet<ExpertApplication>();
             this.ExpertTasks = new HashSet<ExpertTask>();
             this.MemberCollections = new HashSet<MemberCollection>();
-            this.OrderDetails = new HashSet<OrderDetail>();
             this.TaskKeywordLists = new HashSet<TaskKeywordList>();
+            this.OrderDetails = new HashSet<OrderDetail>();
         }
     
         public int CaseID { get; set; }
@@ -72,8 +72,6 @@ namespace prjWantWantWinForm
         public virtual ICollection<ExpertTask> ExpertTasks { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MemberCollection> MemberCollections { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
         public virtual Salary Salary { get; set; }
         public virtual StatusChangeReason StatusChangeReason { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -83,5 +81,7 @@ namespace prjWantWantWinForm
         public virtual TeachToList TeachToList { get; set; }
         public virtual Town Town { get; set; }
         public virtual WorkingTime WorkingTime { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

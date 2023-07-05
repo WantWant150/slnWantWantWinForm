@@ -51,8 +51,6 @@ namespace prjWantWantWinForm
         public virtual DbSet<MemberCollection> MemberCollections { get; set; }
         public virtual DbSet<MemberRoleConn> MemberRoleConns { get; set; }
         public virtual DbSet<MemberStatusList> MemberStatusLists { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
         public virtual DbSet<PayWay> PayWays { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductPhoto> ProductPhotoes { get; set; }
@@ -76,5 +74,8 @@ namespace prjWantWantWinForm
         public virtual DbSet<Town> Towns { get; set; }
         public virtual DbSet<WorkingTime> WorkingTimes { get; set; }
         public virtual DbSet<HumanList> HumanLists { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; }
+        public virtual DbSet<ServiceContact> ServiceContacts { get; set; }
     }
 }

@@ -19,16 +19,23 @@ namespace prjWantWantWinForm
         {
             this.ApplicationLists = new HashSet<ApplicationList>();
             this.ExpertApplications = new HashSet<ExpertApplication>();
+            this.ExpertApplications1 = new HashSet<ExpertApplication>();
         }
     
         public int RatingID { get; set; }
         public string RatingStar { get; set; }
         public string RatingContent { get; set; }
-        public System.DateTime RatingDate { get; set; }
+        public Nullable<System.DateTime> RatingDate { get; set; }
+        public Nullable<int> SourceRoleID { get; set; }
+        public Nullable<int> SourceAccountID { get; set; }
+        public Nullable<int> TargetRoleID { get; set; }
+        public Nullable<int> TargetAccountID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ApplicationList> ApplicationLists { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ExpertApplication> ExpertApplications { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ExpertApplication> ExpertApplications1 { get; set; }
     }
 }

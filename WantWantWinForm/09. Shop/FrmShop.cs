@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-namespace prjShop
+namespace prjWantWantWinForm
 {
     public partial class FrmShop : Form
     {
@@ -59,13 +59,13 @@ namespace prjShop
             dataGridView1.DataSource = cartDataTable;
 
             //設定寬度
-            dataGridView1.Columns["ID"].Width = 50; 
+            dataGridView1.Columns["ID"].Width =80; 
             dataGridView1.Columns["商品"].Width = 100; 
-            dataGridView1.Columns["數量"].Width = 60; 
-            dataGridView1.Columns["購買點數"].Width = 60;
-            dataGridView1.Columns["購買總點數"].Width = 60;
-            dataGridView1.Columns["單價"].Width = 60;
-            dataGridView1.Columns["總價"].Width = 90; 
+            dataGridView1.Columns["數量"].Width = 100; 
+            dataGridView1.Columns["購買點數"].Width = 100;
+            dataGridView1.Columns["購買總點數"].Width = 120;
+            dataGridView1.Columns["單價"].Width = 100;
+            dataGridView1.Columns["總價"].Width = 100; 
         }
 
         //載入商品
@@ -84,7 +84,7 @@ namespace prjShop
                 ucProduct.PImage = GetProductImage(product.CoverPhoto);
                 ucProduct.onSelect += UcProduct_onSelect;
                 ucProduct.onCountChange += UcProduct_onCountChange;
-
+                
                 // 將商品控制項添加到flowLayoutPanel中
                 flowLayoutPanel1.Controls.Add(ucProduct);
             }

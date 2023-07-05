@@ -29,6 +29,7 @@ namespace prjWantWantWinForm
         public Nullable<int> OrderPoint { get; set; }
         public Nullable<System.DateTime> CreateTime { get; set; }
         public Nullable<int> OrderGetPoint { get; set; }
+        public Nullable<int> OrderUsePoint { get; set; }
     
         public virtual Category Category { get; set; }
         public virtual MemberAccount MemberAccount { get; set; }
