@@ -45,11 +45,13 @@ namespace prjWantWantWinForm
             //選擇對應的討論區，並且不顯示非父文章的回文、不是發文狀態的貼文也不顯示
             var posts = from p in dbContext.ForumPosts
                         where p.ForumPostCategories.Any(pc => pc.CategoryID == selectedCategoryId) && p.ParentID == null && p.Status == 1
+                        orderby p.Created descending
                         select new
                         {
                             p.Title,
                             p.MemberAccount.UserName,
-                            ParentIDCount = dbContext.ForumPostComments.Count(fp => fp.PostID == p.PostID&&fp.Status==1)//抓取回文的數量
+                            p.Created,
+                            ParentIDCount = dbContext.ForumPostComments.Count(fp => fp.PostID == p.PostID && fp.Status == 1)//抓取回文的數量
                         };
 
 
@@ -68,18 +70,26 @@ namespace prjWantWantWinForm
                 lblPostAuthor.Margin = new Padding(5);
                 lblPostAuthor.Text = post.UserName.ToString();
 
+                // 建立顯示發文時間的 Label
+                Label labReplyTime = new Label();
+                labReplyTime.AutoSize = true;
+                labReplyTime.Margin = new Padding(5);
+                labReplyTime.Text = post.Created.ToString();
+
                 // 建立顯示回覆數的 Label
                 Label lblReplyCount = new Label();
                 lblReplyCount.AutoSize = true;
                 lblReplyCount.Margin = new Padding(5);
                 lblReplyCount.Text = post.ParentIDCount.ToString();
 
+
                 // 將項目加入 TableLayoutPanel
                 tableLayoutPanel1.RowCount++;
                 tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.AutoSize));
                 tableLayoutPanel1.Controls.Add(lblPostTitle, 0, tableLayoutPanel1.RowCount - 1);
                 tableLayoutPanel1.Controls.Add(lblPostAuthor, 1, tableLayoutPanel1.RowCount - 1);
-                tableLayoutPanel1.Controls.Add(lblReplyCount, 2, tableLayoutPanel1.RowCount - 1);
+                tableLayoutPanel1.Controls.Add(lblReplyCount, 2, tableLayoutPanel1.RowCount - 1); 
+                tableLayoutPanel1.Controls.Add(labReplyTime, 3, tableLayoutPanel1.RowCount - 1);
             }
         }
 

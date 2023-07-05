@@ -210,9 +210,10 @@
             this.labLine.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labLine.Location = new System.Drawing.Point(42, 39);
             this.labLine.Name = "labLine";
-            this.labLine.Size = new System.Drawing.Size(610, 24);
+            this.labLine.Size = new System.Drawing.Size(698, 24);
             this.labLine.TabIndex = 1;
-            this.labLine.Text = "---------------------------------------------------------------------------";
+            this.labLine.Text = "---------------------------------------------------------------------------------" +
+    "-----";
             // 
             // tableLayoutPanel1
             // 

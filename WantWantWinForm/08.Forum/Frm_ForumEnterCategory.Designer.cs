@@ -34,6 +34,7 @@
             this.labTitle = new System.Windows.Forms.Label();
             this.labReplyCount = new System.Windows.Forms.Label();
             this.btnCreatePost = new System.Windows.Forms.Button();
+            this.labReplyTime = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,13 +60,15 @@
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.labAuthor, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.labTitle, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.labReplyCount, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labReplyTime, 3, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 47);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -99,7 +102,7 @@
             // 
             this.labReplyCount.AutoSize = true;
             this.labReplyCount.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labReplyCount.Location = new System.Drawing.Point(934, 1);
+            this.labReplyCount.Location = new System.Drawing.Point(760, 1);
             this.labReplyCount.Name = "labReplyCount";
             this.labReplyCount.Padding = new System.Windows.Forms.Padding(5);
             this.labReplyCount.Size = new System.Drawing.Size(77, 34);
@@ -121,6 +124,17 @@
             this.btnCreatePost.Text = "我要發文";
             this.btnCreatePost.UseVisualStyleBackColor = false;
             this.btnCreatePost.Click += new System.EventHandler(this.btnCreatePost_Click);
+            // 
+            // labReplyTime
+            // 
+            this.labReplyTime.AutoSize = true;
+            this.labReplyTime.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.labReplyTime.Location = new System.Drawing.Point(935, 1);
+            this.labReplyTime.Name = "labReplyTime";
+            this.labReplyTime.Padding = new System.Windows.Forms.Padding(5);
+            this.labReplyTime.Size = new System.Drawing.Size(96, 34);
+            this.labReplyTime.TabIndex = 0;
+            this.labReplyTime.Text = "發文時間";
             // 
             // Frm_ForumEnterCategory
             // 
@@ -154,5 +168,6 @@
         private System.Windows.Forms.Label labTitle;
         private System.Windows.Forms.Label labReplyCount;
         private System.Windows.Forms.Button btnCreatePost;
+        private System.Windows.Forms.Label labReplyTime;
     }
 }
