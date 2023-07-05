@@ -76,7 +76,7 @@ namespace prjWantWantWinForm
                     {
                         //因為在註冊帳號時就會有設定角色會員或客服了，所以有找到的話一定是First
                         MessageBox.Show("歡迎光臨會員");
-                        Form1TskSearch frm = new Form1TskSearch();
+                        FrmJobTool frm = new FrmJobTool();
                         ShowForm(frm);
                     }
                     else if (MemberRoleID == 2) //如果判斷是客服人員，要秀出FrmBackStage在mdi子表單
@@ -123,6 +123,7 @@ namespace prjWantWantWinForm
         private void toolStripButtonTask_Click(object sender, EventArgs e)
         {
             FrmTool frmtool = new FrmTool();
+
             ShowForm(frmtool);
         }
         private void 發任務ToolStripMenuItem_Click(object sender, EventArgs e)

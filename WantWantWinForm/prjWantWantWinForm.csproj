@@ -224,6 +224,42 @@
     <Compile Include="05.Expert\FrmExpertViewResume.Designer.cs">
       <DependentUpon>FrmExpertViewResume.cs</DependentUpon>
     </Compile>
+    <Compile Include="07.Job\FrmCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07.Job\FrmCollection.Designer.cs">
+      <DependentUpon>FrmCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07.Job\FrmFindJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07.Job\FrmFindJob.Designer.cs">
+      <DependentUpon>FrmFindJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07.Job\FrmHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07.Job\FrmHistory.Designer.cs">
+      <DependentUpon>FrmHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07.Job\FrmJobDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07.Job\FrmJobDetail.Designer.cs">
+      <DependentUpon>FrmJobDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07.Job\FrmJobTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07.Job\FrmJobTool.Designer.cs">
+      <DependentUpon>FrmJobTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="07.Job\FrmResume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07.Job\FrmResume.Designer.cs">
+      <DependentUpon>FrmResume.cs</DependentUpon>
+    </Compile>
     <Compile Include="08.Forum\Frm_CreatePost.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -620,6 +656,24 @@
     <EmbeddedResource Include="05.Expert\FrmExpertViewResume.resx">
       <DependentUpon>FrmExpertViewResume.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="07.Job\FrmCollection.resx">
+      <DependentUpon>FrmCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07.Job\FrmFindJob.resx">
+      <DependentUpon>FrmFindJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07.Job\FrmHistory.resx">
+      <DependentUpon>FrmHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07.Job\FrmJobDetail.resx">
+      <DependentUpon>FrmJobDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07.Job\FrmJobTool.resx">
+      <DependentUpon>FrmJobTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07.Job\FrmResume.resx">
+      <DependentUpon>FrmResume.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="08.Forum\Frm_CreatePost.resx">
       <DependentUpon>Frm_CreatePost.cs</DependentUpon>
     </EmbeddedResource>
@@ -737,7 +791,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="06.Task\" />
-    <Folder Include="07.Point\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
