@@ -21,17 +21,17 @@ namespace prjWantWantWinForm
         public FrmExpertViewResume()
         {
             InitializeComponent();
-            Loading();
+            Load();
             Work(workindex);
             this.timer1.Start();
 
         }
         NewIspanProjectEntities db = new NewIspanProjectEntities();
-        
-      int resumesid { get { return CExpert.FindR; } }
-   
+
+        int resumesid { get { return CExpert.FindR; } }
+
         int member = CMember.AccountID;
-        void Loading()
+        void Load()
         {
             try
             {
@@ -53,33 +53,35 @@ namespace prjWantWantWinForm
                 var qPhoto = from r in db.MemberAccounts
                              where r.AccountID == member
                              select r.MemberPhoto;
-                if (qPhoto.First() != null)
-                {
-                    Byte[] bytes = qPhoto.First();
-                    System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes);
-                    this.pictureBox1.Image = Image.FromStream(ms);
-                }
+                //if (qPhoto.First() != null)
+                //{
+                //    Byte[] bytes1 = qPhoto.First();
+                //    System.IO.MemoryStream ms1 = new System.IO.MemoryStream(bytes1);
+                //    this.pictureBox1.Image = Image.FromStream(ms1);
+
+                //}
             }
-            catch(Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
-                 }
-           
-            
+            }
+
+
         }
         int workindex = 0;
         int indexCount = 0;//作品數量
         List<byte[]> picturelist;
-        void Work(int index) 
+        void Work(int index)
         {
             //傳入作品
-                var q = from r in db.Resumes
-                        where r.ResumeID == resumesid
-                        join a in db.MemberAccounts on r.AccountID equals a.AccountID
-                        join er in db.ExpertResumes on r.ResumeID equals er.ResumeID
-                        join wl in db.ExpertWorkLists on er.ResumeID equals wl.ResumeID
-                        join wk in db.ExpertWorks on wl.WorksID equals wk.WorksID
-                        orderby wk.WorksID
-                        select wk.WorksPhoto;
+            var q = from r in db.Resumes
+                    where r.ResumeID == resumesid
+                    join a in db.MemberAccounts on r.AccountID equals a.AccountID
+                    join er in db.ExpertResumes on r.ResumeID equals er.ResumeID
+                    join wl in db.ExpertWorkLists on er.ResumeID equals wl.ResumeID
+                    join wk in db.ExpertWorks on wl.WorksID equals wk.WorksID
+                    orderby wk.WorksID
+                    select wk.WorksPhoto;
             indexCount = q.Count();
 
             //搜尋
@@ -91,7 +93,7 @@ namespace prjWantWantWinForm
                 picturelist.Add(bytes);
             }
 
-            
+
 
             //List<Byte[]> picturelist = new List<Byte[]>(); ;
             //foreach (var w in q.ToList())
@@ -143,14 +145,14 @@ namespace prjWantWantWinForm
             //            pictureBoxArray[i].Image = Image.FromStream(ms);
             //            pictureBoxArray[i].Refresh();
             //        }
-                    
+
 
             //    }
             //    if (i < indexCount) i++;
             //}
 
-            
-            
+
+
 
 
             //if (q.Count() > (index + 5) && index > 0)
@@ -225,11 +227,11 @@ namespace prjWantWantWinForm
 
         private void btnback_Click(object sender, EventArgs e)
         {
-           
-           FrmExpertSearch es = new FrmExpertSearch();
-         es.Show();
-            this.Close();
-          
+
+            FrmExpertSearch es = new FrmExpertSearch();
+            es.Show();
+            //this.Close();
+
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -248,7 +250,7 @@ namespace prjWantWantWinForm
         private void button1_Click_1(object sender, EventArgs e)
         {
             FrmExpertCase ea = new FrmExpertCase();
-            ea.Tag =resumesid;
+            ea.Tag = resumesid;
             ea.Show();
         }
 
@@ -273,21 +275,21 @@ namespace prjWantWantWinForm
                 for (int i = 0; i < 5; i++)
                 {
                     byte[] pictureData = picturelist[workindex];
-                        using (MemoryStream ms = new MemoryStream(pictureData))
-                        {
+                    using (MemoryStream ms = new MemoryStream(pictureData))
+                    {
                         pictureBoxArray[i].Image = Image.FromStream(ms);
                         pictureBoxArray[i].Refresh();
                         ms.Dispose();
                     }
 
-                        if (workindex >= pictureBoxArray.Length)
-                        {
-                            workindex = 0;
-                        }
-                        else
-                        {
-                            workindex++;
-                        }
+                    if (workindex >= pictureBoxArray.Length)
+                    {
+                        workindex = 0;
+                    }
+                    else
+                    {
+                        workindex++;
+                    }
                 }
 
             }
