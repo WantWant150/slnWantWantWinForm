@@ -1,4 +1,4 @@
-﻿namespace WinFormsMidSora
+﻿namespace prjWantWantWinForm
 {
     partial class Frm_CreatePost
     {

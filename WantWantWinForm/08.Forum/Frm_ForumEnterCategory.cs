@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WinFormsMidSora
+namespace prjWantWantWinForm
 {
     public partial class Frm_ForumEnterCategory : Form
     {

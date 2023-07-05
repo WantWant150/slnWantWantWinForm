@@ -65,9 +65,11 @@
             this.toolStripButtonExpert = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPoint = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonForum = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonService = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonMember = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonClose = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.討論區ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +86,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(12, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1006, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1006, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,11 +97,12 @@
             this.找專家ToolStripMenuItem,
             this.會員中心ToolStripMenuItem,
             this.點數商城ToolStripMenuItem,
+            this.討論區ToolStripMenuItem1,
             this.討論區ToolStripMenuItem,
             this.toolStripSeparator2,
             this.結束XToolStripMenuItem});
             this.檔案FToolStripMenuItem.Name = "檔案FToolStripMenuItem";
-            this.檔案FToolStripMenuItem.Size = new System.Drawing.Size(71, 23);
+            this.檔案FToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.檔案FToolStripMenuItem.Text = "檔案(&F)";
             // 
             // 發任務ToolStripMenuItem
@@ -134,8 +137,8 @@
             // 
             this.討論區ToolStripMenuItem.Name = "討論區ToolStripMenuItem";
             this.討論區ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.討論區ToolStripMenuItem.Text = "討論區";
-            this.討論區ToolStripMenuItem.Click += new System.EventHandler(this.討論區ToolStripMenuItem_Click);
+            this.討論區ToolStripMenuItem.Text = "聯絡客服";
+            this.討論區ToolStripMenuItem.Click += new System.EventHandler(this.聯絡客服ToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -160,7 +163,7 @@
             this.toolStripSeparator4,
             this.全選AToolStripMenuItem});
             this.編輯EToolStripMenuItem.Name = "編輯EToolStripMenuItem";
-            this.編輯EToolStripMenuItem.Size = new System.Drawing.Size(71, 23);
+            this.編輯EToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.編輯EToolStripMenuItem.Text = "編輯(&E)";
             // 
             // 復原UToolStripMenuItem
@@ -230,7 +233,7 @@
             this.關閉目前視窗ToolStripMenuItem,
             this.關閉所有視窗ToolStripMenuItem});
             this.視窗ToolStripMenuItem.Name = "視窗ToolStripMenuItem";
-            this.視窗ToolStripMenuItem.Size = new System.Drawing.Size(53, 23);
+            this.視窗ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.視窗ToolStripMenuItem.Text = "視窗";
             // 
             // 水平排序ToolStripMenuItem
@@ -277,7 +280,7 @@
             this.toolStripSeparator5,
             this.關於AToolStripMenuItem});
             this.說明HToolStripMenuItem.Name = "說明HToolStripMenuItem";
-            this.說明HToolStripMenuItem.Size = new System.Drawing.Size(74, 23);
+            this.說明HToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.說明HToolStripMenuItem.Text = "說明(&H)";
             // 
             // 內容CToolStripMenuItem
@@ -318,9 +321,10 @@
             this.toolStripButtonExpert,
             this.toolStripButtonPoint,
             this.toolStripButtonForum,
+            this.toolStripButtonService,
             this.toolStripButtonMember,
             this.toolStripButtonClose});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 29);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1006, 55);
@@ -363,6 +367,16 @@
             this.toolStripButtonForum.Text = "討論區";
             this.toolStripButtonForum.Click += new System.EventHandler(this.toolStripButtonForum_Click);
             // 
+            // toolStripButtonService
+            // 
+            this.toolStripButtonService.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonService.Image")));
+            this.toolStripButtonService.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonService.Name = "toolStripButtonService";
+            this.toolStripButtonService.Size = new System.Drawing.Size(121, 52);
+            this.toolStripButtonService.Text = "客服後台";
+            this.toolStripButtonService.ToolTipText = "聯絡客服";
+            this.toolStripButtonService.Click += new System.EventHandler(this.toolStripButtonService_Click);
+            // 
             // toolStripButtonMember
             // 
             this.toolStripButtonMember.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMember.Image")));
@@ -390,6 +404,13 @@
             this.label1.Size = new System.Drawing.Size(92, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "歡迎光臨";
+            // 
+            // 討論區ToolStripMenuItem1
+            // 
+            this.討論區ToolStripMenuItem1.Name = "討論區ToolStripMenuItem1";
+            this.討論區ToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.討論區ToolStripMenuItem1.Text = "討論區";
+            this.討論區ToolStripMenuItem1.Click += new System.EventHandler(this.討論區ToolStripMenuItem1_Click);
             // 
             // FrmIndex
             // 
@@ -450,7 +471,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonPoint;
         private System.Windows.Forms.ToolStripButton toolStripButtonExpert;
         private System.Windows.Forms.ToolStripButton toolStripButtonMember;
-        private System.Windows.Forms.ToolStripButton toolStripButtonForum;
+        private System.Windows.Forms.ToolStripButton toolStripButtonService;
         private System.Windows.Forms.ToolStripButton toolStripButtonClose;
         private System.Windows.Forms.ToolStripMenuItem 發任務ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 找專家ToolStripMenuItem;
@@ -458,6 +479,8 @@
         private System.Windows.Forms.ToolStripMenuItem 點數商城ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 討論區ToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonForum;
+        private System.Windows.Forms.ToolStripMenuItem 討論區ToolStripMenuItem1;
     }
 }
 

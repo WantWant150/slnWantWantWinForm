@@ -174,13 +174,13 @@ namespace prjWantWantWinForm
         #endregion
 
 
-        #region 討論區
-        private void toolStripButtonForum_Click(object sender, EventArgs e)
+        #region 主控台
+        private void toolStripButtonService_Click(object sender, EventArgs e)
         {
             FrmBackStage frm = new FrmBackStage();
             ShowForm(frm);
         }
-        private void 討論區ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 聯絡客服ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmBackStage frm = new FrmBackStage();
             ShowForm(frm);
@@ -223,5 +223,19 @@ namespace prjWantWantWinForm
             this.LayoutMdi(MdiLayout.Cascade);
         }
         #endregion
+
+        #region 討論區
+        private void toolStripButtonForum_Click(object sender, EventArgs e)
+        {
+            Frm_ForumMain frm = new Frm_ForumMain();
+            ShowForm(frm);
+        }
+        private void 討論區ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Frm_ForumMain frm = new Frm_ForumMain();
+            ShowForm(frm);
+        }
+        #endregion
+
     }
 }
