@@ -1,4 +1,4 @@
-﻿namespace 期中
+﻿namespace prjWantWantWinForm
 {
     partial class Frm_找工作
     {

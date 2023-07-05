@@ -122,8 +122,8 @@ namespace prjWantWantWinForm
         #region 發任務
         private void toolStripButtonTask_Click(object sender, EventArgs e)
         {
-            Form3Task frm = new Form3Task();
-            ShowForm(frm);
+            FrmTool frmtool = new FrmTool();
+            ShowForm(frmtool);
         }
         private void 發任務ToolStripMenuItem_Click(object sender, EventArgs e)
         {

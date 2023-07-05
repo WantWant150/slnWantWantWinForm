@@ -120,6 +120,66 @@
     </Compile>
     <Compile Include="03.MemberAccount\MemberInfo\CChangePassword.cs" />
     <Compile Include="03.MemberAccount\MemberInfo\CValidateCode.cs" />
+    <Compile Include="04.Task\Applicant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04.Task\Applicant.Designer.cs">
+      <DependentUpon>Applicant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\WithoutButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="04.Task\WithoutButton.Designer.cs">
+      <DependentUpon>WithoutButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\FrmTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Task\FrmTask.Designer.cs">
+      <DependentUpon>FrmTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\FrmTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Task\FrmTool.Designer.cs">
+      <DependentUpon>FrmTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\FrmPublished.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Task\FrmPublished.Designer.cs">
+      <DependentUpon>FrmPublished.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\FrmPublished_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Task\FrmPublished_New.Designer.cs">
+      <DependentUpon>FrmPublished_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\FrmNotPublish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Task\FrmNotPublish.Designer.cs">
+      <DependentUpon>FrmNotPublish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\FrmNotPublish_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Task\FrmNotPublish_New.Designer.cs">
+      <DependentUpon>FrmNotPublish_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\FrmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Task\FrmEmployee.Designer.cs">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="04.Task\FrmApproved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04.Task\FrmApproved.Designer.cs">
+      <DependentUpon>FrmApproved.cs</DependentUpon>
+    </Compile>
     <Compile Include="05.Expert\FrmCExpert.cs" />
     <Compile Include="05.Expert\FrmExpertCase.cs">
       <SubType>Form</SubType>
@@ -509,6 +569,36 @@
     <EmbeddedResource Include="03.MemberAccount\FrmSignUp.resx">
       <DependentUpon>FrmSignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\Applicant.resx">
+      <DependentUpon>Applicant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\WithoutButton.resx">
+      <DependentUpon>WithoutButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\FrmTask.resx">
+      <DependentUpon>FrmTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\FrmTool.resx">
+      <DependentUpon>FrmTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\FrmPublished.resx">
+      <DependentUpon>FrmPublished.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\FrmPublished_New.resx">
+      <DependentUpon>FrmPublished_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\FrmNotPublish.resx">
+      <DependentUpon>FrmNotPublish.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\FrmNotPublish_New.resx">
+      <DependentUpon>FrmNotPublish_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\FrmEmployee.resx">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04.Task\FrmApproved.resx">
+      <DependentUpon>FrmApproved.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="05.Expert\FrmExpertCase.resx">
       <DependentUpon>FrmExpertCase.cs</DependentUpon>
     </EmbeddedResource>
@@ -646,7 +736,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="04.MemberResume\" />
     <Folder Include="06.Task\" />
     <Folder Include="07.Point\" />
   </ItemGroup>

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace 期中
+namespace prjWantWantWinForm
 {
     public partial class Frm_找工作 : Form
     {
