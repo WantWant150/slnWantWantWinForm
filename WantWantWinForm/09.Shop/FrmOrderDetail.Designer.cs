@@ -1,4 +1,4 @@
-﻿namespace prjWantWantWinForm
+﻿namespace rjWantWantWinForm
 {
     partial class FrmOrderDetail
     {

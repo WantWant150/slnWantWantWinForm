@@ -1,4 +1,5 @@
 ﻿using Microsoft.Build.Framework.XamlTypes;
+using prjWantWantWinForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace prjWantWantWinForm
+namespace rjWantWantWinForm
 {
     public partial class FrmProduct : Form
     {

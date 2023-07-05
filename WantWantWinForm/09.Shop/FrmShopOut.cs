@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace prjWantWantWinForm
 {
-    public partial class FrmBackStage : Form
+    public partial class FrmShopOut : Form
     {
-        public FrmBackStage()
+        public FrmShopOut()
         {
             InitializeComponent();
         }
@@ -47,7 +47,7 @@ namespace prjWantWantWinForm
 
                 // 設置其他表單的屬性
                 frm.TopLevel = false;
-
+             
                 // 將 Panel 加入 SplitContainer 的 Panel1 中
                 splitContainer1.Panel2.Controls.Add(frm);
 
@@ -60,38 +60,29 @@ namespace prjWantWantWinForm
         } 
 
 
+       
+
         private void btnTask_Click(object sender, EventArgs e)
         {
-            
-            
+
+            FrmShop frm = new FrmShop();
+
+             OpenForm(frm);
         }
 
         private void btnMember_Click(object sender, EventArgs e)
         {
-            FrmMember frm = new FrmMember();
-            MessageBox.Show("2");
+           
+
+            FrmPointShop frm = new FrmPointShop();
+
             OpenForm(frm);
-        }
-
-        private void btnPoint_Click(object sender, EventArgs e)
-        {
-            FrmProductList frm = new FrmProductList();
-            OpenForm(frm);
-        }
-
-        private void btnFourm_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            FrmOrders frm = new FrmOrders();
 
-        }
-
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
-            FrmOrderChart frm = new FrmOrderChart();
             OpenForm(frm);
         }
     }

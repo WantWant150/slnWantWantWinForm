@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prjWantWantWinForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +14,11 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
-namespace prjWantWantWinForm
+namespace rjWantWantWinForm
 {
     public partial class FrmShop : Form
     {
-        
+
         ////抓到是哪一個AccountId登入
         //private int accountId;
         //public int AccountId
@@ -59,13 +60,13 @@ namespace prjWantWantWinForm
             dataGridView1.DataSource = cartDataTable;
 
             //設定寬度
-            dataGridView1.Columns["ID"].Width =80; 
-            dataGridView1.Columns["商品"].Width = 100; 
-            dataGridView1.Columns["數量"].Width = 100; 
+            dataGridView1.Columns["ID"].Width = 50; 
+            dataGridView1.Columns["商品"].Width = 120; 
+            dataGridView1.Columns["數量"].Width = 80; 
             dataGridView1.Columns["購買點數"].Width = 100;
             dataGridView1.Columns["購買總點數"].Width = 120;
-            dataGridView1.Columns["單價"].Width = 100;
-            dataGridView1.Columns["總價"].Width = 100; 
+            dataGridView1.Columns["單價"].Width = 120;
+            dataGridView1.Columns["總價"].Width = 120; 
         }
 
         //載入商品
@@ -84,7 +85,7 @@ namespace prjWantWantWinForm
                 ucProduct.PImage = GetProductImage(product.CoverPhoto);
                 ucProduct.onSelect += UcProduct_onSelect;
                 ucProduct.onCountChange += UcProduct_onCountChange;
-                
+
                 // 將商品控制項添加到flowLayoutPanel中
                 flowLayoutPanel1.Controls.Add(ucProduct);
             }

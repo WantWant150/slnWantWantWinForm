@@ -1,6 +1,6 @@
-﻿namespace prjWantWantWinForm
+﻿namespace rjWantWantWinForm
 {
-    partial class FrmProduct
+    partial class FrmProductUpdate
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,16 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.labPoint = new System.Windows.Forms.Label();
-            this.txtGetPoint = new System.Windows.Forms.TextBox();
             this.labDate = new System.Windows.Forms.Label();
+            this.txtGetPoint = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.labToptype = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBoxStatus = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.BtnInsert = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.picboxPro = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCount = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBoxCategory = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,15 +75,16 @@
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Snow;
             this.splitContainer1.Panel2.Controls.Add(this.labPoint);
-            this.splitContainer1.Panel2.Controls.Add(this.txtGetPoint);
             this.splitContainer1.Panel2.Controls.Add(this.labDate);
+            this.splitContainer1.Panel2.Controls.Add(this.txtGetPoint);
             this.splitContainer1.Panel2.Controls.Add(this.comboBox2);
             this.splitContainer1.Panel2.Controls.Add(this.labToptype);
+            this.splitContainer1.Panel2.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel2.Controls.Add(this.comboBoxStatus);
             this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.label13);
             this.splitContainer1.Panel2.Controls.Add(this.button4);
-            this.splitContainer1.Panel2.Controls.Add(this.BtnInsert);
+            this.splitContainer1.Panel2.Controls.Add(this.button3);
             this.splitContainer1.Panel2.Controls.Add(this.picboxPro);
             this.splitContainer1.Panel2.Controls.Add(this.label11);
             this.splitContainer1.Panel2.Controls.Add(this.txtCount);
@@ -91,7 +92,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.txtPrice);
             this.splitContainer1.Panel2.Controls.Add(this.label8);
             this.splitContainer1.Panel2.Controls.Add(this.label6);
-            this.splitContainer1.Panel2.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel2.Controls.Add(this.comboBoxCategory);
             this.splitContainer1.Panel2.Controls.Add(this.txtName);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
@@ -100,25 +100,18 @@
             this.splitContainer1.Size = new System.Drawing.Size(1092, 552);
             this.splitContainer1.SplitterDistance = 166;
             this.splitContainer1.SplitterWidth = 6;
-            this.splitContainer1.TabIndex = 4;
+            this.splitContainer1.TabIndex = 5;
             // 
             // labPoint
             // 
             this.labPoint.AutoSize = true;
             this.labPoint.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.labPoint.ForeColor = System.Drawing.Color.Black;
-            this.labPoint.Location = new System.Drawing.Point(235, 271);
+            this.labPoint.Location = new System.Drawing.Point(235, 270);
             this.labPoint.Name = "labPoint";
             this.labPoint.Size = new System.Drawing.Size(77, 20);
-            this.labPoint.TabIndex = 104;
+            this.labPoint.TabIndex = 108;
             this.labPoint.Text = "獲得點數:";
-            // 
-            // txtGetPoint
-            // 
-            this.txtGetPoint.Location = new System.Drawing.Point(318, 269);
-            this.txtGetPoint.Name = "txtGetPoint";
-            this.txtGetPoint.Size = new System.Drawing.Size(109, 22);
-            this.txtGetPoint.TabIndex = 103;
             // 
             // labDate
             // 
@@ -128,8 +121,15 @@
             this.labDate.Location = new System.Drawing.Point(626, 103);
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(45, 20);
-            this.labDate.TabIndex = 102;
+            this.labDate.TabIndex = 106;
             this.labDate.Text = "天數:";
+            // 
+            // txtGetPoint
+            // 
+            this.txtGetPoint.Location = new System.Drawing.Point(318, 268);
+            this.txtGetPoint.Name = "txtGetPoint";
+            this.txtGetPoint.Size = new System.Drawing.Size(109, 22);
+            this.txtGetPoint.TabIndex = 107;
             // 
             // comboBox2
             // 
@@ -151,7 +151,7 @@
             this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(145, 20);
-            this.comboBox2.TabIndex = 101;
+            this.comboBox2.TabIndex = 105;
             // 
             // labToptype
             // 
@@ -161,8 +161,23 @@
             this.labToptype.Location = new System.Drawing.Point(314, 103);
             this.labToptype.Name = "labToptype";
             this.labToptype.Size = new System.Drawing.Size(77, 20);
-            this.labToptype.TabIndex = 100;
+            this.labToptype.TabIndex = 104;
             this.labToptype.Text = "曝光管道:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "任務職缺置頂",
+            "專家履歷置頂"});
+            this.comboBox1.Location = new System.Drawing.Point(393, 103);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(145, 20);
+            this.comboBox1.TabIndex = 103;
             // 
             // comboBoxStatus
             // 
@@ -189,7 +204,7 @@
             this.button1.TabIndex = 98;
             this.button1.Text = "Browse...";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btnPic_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label13
             // 
@@ -211,26 +226,26 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(126, 53);
             this.button4.TabIndex = 92;
-            this.button4.Text = "離開";
+            this.button4.Text = "刪除";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // BtnInsert
+            // button3
             // 
-            this.BtnInsert.BackColor = System.Drawing.Color.White;
-            this.BtnInsert.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.BtnInsert.ForeColor = System.Drawing.Color.Black;
-            this.BtnInsert.Location = new System.Drawing.Point(594, 467);
-            this.BtnInsert.Name = "BtnInsert";
-            this.BtnInsert.Size = new System.Drawing.Size(126, 53);
-            this.BtnInsert.TabIndex = 89;
-            this.BtnInsert.Text = "新增";
-            this.BtnInsert.UseVisualStyleBackColor = false;
-            this.BtnInsert.Click += new System.EventHandler(this.button2_Click);
+            this.button3.BackColor = System.Drawing.Color.White;
+            this.button3.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(594, 467);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(126, 53);
+            this.button3.TabIndex = 90;
+            this.button3.Text = "更新";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // picboxPro
             // 
-            this.picboxPro.Location = new System.Drawing.Point(276, 297);
+            this.picboxPro.Location = new System.Drawing.Point(276, 296);
             this.picboxPro.Name = "picboxPro";
             this.picboxPro.Size = new System.Drawing.Size(151, 132);
             this.picboxPro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -268,7 +283,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(100, 269);
+            this.txtPrice.Location = new System.Drawing.Point(100, 268);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(109, 22);
             this.txtPrice.TabIndex = 84;
@@ -294,21 +309,6 @@
             this.label6.Size = new System.Drawing.Size(77, 20);
             this.label6.TabIndex = 82;
             this.label6.Text = "商品描述:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "任務職缺置頂",
-            "專家履歷置頂"});
-            this.comboBox1.Location = new System.Drawing.Point(393, 103);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 20);
-            this.comboBox1.TabIndex = 81;
             // 
             // comboBoxCategory
             // 
@@ -364,15 +364,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // FrmProduct
+            // FrmProductUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1092, 552);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "FrmProduct";
-            this.Text = "FrmProduct";
-            this.Load += new System.EventHandler(this.FrmProduct_Load);
+            this.Name = "FrmProductUpdate";
+            this.Text = "FrmProductUpdate";
+            this.Load += new System.EventHandler(this.FrmProductUpdate_Load);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -385,10 +385,11 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button BtnInsert;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox picboxPro;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCount;
@@ -401,7 +402,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDesc;
-        private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label labDate;
         private System.Windows.Forms.ComboBox comboBox2;

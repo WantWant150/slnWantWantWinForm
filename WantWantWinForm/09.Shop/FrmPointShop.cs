@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prjWantWantWinForm;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjWantWantWinForm
+namespace rjWantWantWinForm
 {
     public partial class FrmPointShop : Form
     {
@@ -167,11 +168,11 @@ namespace prjWantWantWinForm
 
             // 設定寬度
             dataGridView1.Columns["ID"].Width = 40;
-            dataGridView1.Columns["商品"].Width = 100;
-            dataGridView1.Columns["數量"].Width = 80;
-            dataGridView1.Columns["曝光天數"].Width = 80;
-            dataGridView1.Columns["單價(點數)"].Width = 80;    
-            dataGridView1.Columns["總點數"].Width = 80;
+            dataGridView1.Columns["商品"].Width = 120;
+            dataGridView1.Columns["數量"].Width = 100;
+            dataGridView1.Columns["曝光天數"].Width = 100;
+            dataGridView1.Columns["單價(點數)"].Width = 100;    
+            dataGridView1.Columns["總點數"].Width = 120;
 
         }
 

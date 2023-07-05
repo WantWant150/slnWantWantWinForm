@@ -4,12 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjWantWantWinForm
+namespace rjWantWantWinForm
 {
    
     public partial class ucProducts : UserControl
@@ -70,6 +69,5 @@ namespace prjWantWantWinForm
            PCount= PCount > 0 ? PCount-1: 0;
             onCountChange?.Invoke(this, EventArgs.Empty);
         }
-        
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace prjWantWantWinForm
 {
-    partial class FrmBackStage
+    partial class FrmShopOut
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnOrder = new System.Windows.Forms.Button();
-            this.btnFourm = new System.Windows.Forms.Button();
-            this.btnPoint = new System.Windows.Forms.Button();
             this.btnMember = new System.Windows.Forms.Button();
             this.btnTask = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -43,15 +41,13 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.GhostWhite;
-            this.splitContainer1.Panel1.Controls.Add(this.btnOrder);
-            this.splitContainer1.Panel1.Controls.Add(this.btnFourm);
-            this.splitContainer1.Panel1.Controls.Add(this.btnPoint);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.btnMember);
             this.splitContainer1.Panel1.Controls.Add(this.btnTask);
             // 
@@ -59,60 +55,22 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Snow;
-            this.splitContainer1.Size = new System.Drawing.Size(1006, 721);
-            this.splitContainer1.SplitterDistance = 194;
+            this.splitContainer1.Size = new System.Drawing.Size(1005, 721);
+            this.splitContainer1.SplitterDistance = 193;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 1;
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.Color.SeaShell;
-            this.btnOrder.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnOrder.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnOrder.Location = new System.Drawing.Point(12, 213);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(162, 35);
-            this.btnOrder.TabIndex = 213;
-            this.btnOrder.Text = "訂單管理";
-            this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
-            // btnFourm
-            // 
-            this.btnFourm.BackColor = System.Drawing.Color.SeaShell;
-            this.btnFourm.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnFourm.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnFourm.Location = new System.Drawing.Point(12, 262);
-            this.btnFourm.Name = "btnFourm";
-            this.btnFourm.Size = new System.Drawing.Size(162, 35);
-            this.btnFourm.TabIndex = 212;
-            this.btnFourm.Text = "討論區管理";
-            this.btnFourm.UseVisualStyleBackColor = false;
-            this.btnFourm.Click += new System.EventHandler(this.btnFourm_Click);
-            // 
-            // btnPoint
-            // 
-            this.btnPoint.BackColor = System.Drawing.Color.SeaShell;
-            this.btnPoint.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnPoint.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnPoint.Location = new System.Drawing.Point(12, 164);
-            this.btnPoint.Name = "btnPoint";
-            this.btnPoint.Size = new System.Drawing.Size(162, 35);
-            this.btnPoint.TabIndex = 212;
-            this.btnPoint.Text = "點數商品管理";
-            this.btnPoint.UseVisualStyleBackColor = false;
-            this.btnPoint.Click += new System.EventHandler(this.btnPoint_Click);
             // 
             // btnMember
             // 
             this.btnMember.BackColor = System.Drawing.Color.SeaShell;
             this.btnMember.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnMember.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnMember.Location = new System.Drawing.Point(12, 115);
+            this.btnMember.Location = new System.Drawing.Point(15, 261);
+            this.btnMember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMember.Name = "btnMember";
-            this.btnMember.Size = new System.Drawing.Size(162, 35);
+            this.btnMember.Size = new System.Drawing.Size(163, 35);
             this.btnMember.TabIndex = 212;
-            this.btnMember.Text = "會員管理";
+            this.btnMember.Text = "點數商城";
             this.btnMember.UseVisualStyleBackColor = false;
             this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
             // 
@@ -121,22 +79,38 @@
             this.btnTask.BackColor = System.Drawing.Color.SeaShell;
             this.btnTask.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnTask.ForeColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTask.Location = new System.Drawing.Point(12, 66);
+            this.btnTask.Location = new System.Drawing.Point(15, 211);
+            this.btnTask.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTask.Name = "btnTask";
-            this.btnTask.Size = new System.Drawing.Size(162, 35);
+            this.btnTask.Size = new System.Drawing.Size(163, 35);
             this.btnTask.TabIndex = 212;
-            this.btnTask.Text = "任務管理";
+            this.btnTask.Text = "點數儲值";
             this.btnTask.UseVisualStyleBackColor = false;
             this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
             // 
-            // FrmBackStage
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SeaShell;
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.ForeColor = System.Drawing.Color.PaleVioletRed;
+            this.button1.Location = new System.Drawing.Point(15, 314);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(163, 35);
+            this.button1.TabIndex = 213;
+            this.button1.Text = "您的訂單";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // FrmShopOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 721);
+            this.ClientSize = new System.Drawing.Size(1005, 721);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "FrmBackStage";
-            this.Text = "後台";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FrmShopOut";
+            this.Text = "購物";
             this.splitContainer1.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -148,9 +122,7 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnTask;
-        private System.Windows.Forms.Button btnFourm;
-        private System.Windows.Forms.Button btnPoint;
         private System.Windows.Forms.Button btnMember;
-        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button button1;
     }
 }
