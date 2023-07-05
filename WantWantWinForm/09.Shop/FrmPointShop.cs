@@ -38,7 +38,7 @@ namespace rjWantWantWinForm
 
             // 創建並配置一個TIMER控制項
             timer = new Timer();
-            timer.Interval = 30; // 設定間格時間
+            timer.Interval = 10; // 設定間格時間
             timer.Tick += Timer_Tick; // 绑定
             timer.Start(); // 啟動
         }

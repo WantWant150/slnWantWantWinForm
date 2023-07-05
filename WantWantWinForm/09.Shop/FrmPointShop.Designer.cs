@@ -33,11 +33,11 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboboxRC = new System.Windows.Forms.ComboBox();
             this.comboboxCa = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labDay = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,6 +46,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.labelDesc = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -55,13 +56,14 @@
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -81,15 +83,15 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.Controls.Add(this.panel2);
             this.splitContainer2.Panel1.Controls.Add(this.label2);
             this.splitContainer2.Panel1.Controls.Add(this.label3);
-            this.splitContainer2.Panel1.Controls.Add(this.dataGridView1);
             this.splitContainer2.Panel1.Controls.Add(this.comboboxRC);
             this.splitContainer2.Panel1.Controls.Add(this.comboboxCa);
             this.splitContainer2.Panel1.Controls.Add(this.flowLayoutPanel1);
@@ -112,9 +114,20 @@
             this.label2.Location = new System.Drawing.Point(-33, 459);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1418, 45);
+            this.label2.Size = new System.Drawing.Size(904, 45);
             this.label2.TabIndex = 56;
             this.label2.Text = "「將您的職缺置頂，引領招聘風潮！置頂廣告確保您的職位優先展示，擁有最大的曝光率和影響力。";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(227, 10);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "履歷/職缺";
             // 
             // dataGridView1
             // 
@@ -135,13 +148,13 @@
             this.dataGridView1.ColumnHeadersHeight = 29;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(663, 10);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(-21, 19);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(515, 480);
+            this.dataGridView1.Size = new System.Drawing.Size(432, 445);
             this.dataGridView1.TabIndex = 3;
             // 
             // comboboxRC
@@ -150,9 +163,9 @@
             this.comboboxRC.Font = new System.Drawing.Font("新細明體", 12F);
             this.comboboxRC.FormattingEnabled = true;
             this.comboboxRC.Location = new System.Drawing.Point(232, 40);
-            this.comboboxRC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboboxRC.Margin = new System.Windows.Forms.Padding(4);
             this.comboboxRC.Name = "comboboxRC";
-            this.comboboxRC.Size = new System.Drawing.Size(409, 28);
+            this.comboboxRC.Size = new System.Drawing.Size(332, 28);
             this.comboboxRC.TabIndex = 52;
             // 
             // comboboxCa
@@ -164,9 +177,9 @@
             "任務職缺置頂",
             "專家履歷置頂"});
             this.comboboxCa.Location = new System.Drawing.Point(9, 40);
-            this.comboboxCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboboxCa.Margin = new System.Windows.Forms.Padding(4);
             this.comboboxCa.Name = "comboboxCa";
-            this.comboboxCa.Size = new System.Drawing.Size(203, 28);
+            this.comboboxCa.Size = new System.Drawing.Size(126, 28);
             this.comboboxCa.TabIndex = 52;
             this.comboboxCa.SelectedIndexChanged += new System.EventHandler(this.coboxCa_SelectedIndexChanged);
             // 
@@ -174,21 +187,10 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 82);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(633, 373);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(522, 373);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(227, 10);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 25);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "履歷/職缺";
             // 
             // label1
             // 
@@ -219,16 +221,16 @@
             this.panel1.Controls.Add(this.labTotal);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(657, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(551, 144);
+            this.panel1.Size = new System.Drawing.Size(458, 144);
             this.panel1.TabIndex = 51;
             // 
             // labUserPoints
             // 
             this.labUserPoints.AutoSize = true;
             this.labUserPoints.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labUserPoints.Location = new System.Drawing.Point(37, 84);
+            this.labUserPoints.Location = new System.Drawing.Point(24, 86);
             this.labUserPoints.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labUserPoints.Name = "labUserPoints";
             this.labUserPoints.Size = new System.Drawing.Size(137, 25);
@@ -239,7 +241,7 @@
             // 
             this.labTotal.AutoSize = true;
             this.labTotal.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labTotal.Location = new System.Drawing.Point(37, 30);
+            this.labTotal.Location = new System.Drawing.Point(24, 32);
             this.labTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labTotal.Name = "labTotal";
             this.labTotal.Size = new System.Drawing.Size(177, 25);
@@ -251,10 +253,10 @@
             this.button3.BackColor = System.Drawing.Color.Snow;
             this.button3.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.button3.ForeColor = System.Drawing.Color.LightCoral;
-            this.button3.Location = new System.Drawing.Point(373, 75);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(263, 86);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(168, 66);
+            this.button3.Size = new System.Drawing.Size(153, 58);
             this.button3.TabIndex = 49;
             this.button3.Text = "結帳";
             this.button3.UseVisualStyleBackColor = false;
@@ -270,6 +272,14 @@
             this.labelDesc.TabIndex = 50;
             this.labelDesc.Text = "產品介紹:";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Location = new System.Drawing.Point(600, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(417, 396);
+            this.panel2.TabIndex = 57;
+            // 
             // FrmPointShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -277,7 +287,7 @@
             this.ClientSize = new System.Drawing.Size(1435, 641);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmPointShop";
             this.Text = "FrmPointShop";
             this.Load += new System.EventHandler(this.FrmPointShop_Load);
@@ -293,6 +303,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -315,5 +326,6 @@
         private System.Windows.Forms.Label labDay;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

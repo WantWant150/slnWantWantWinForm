@@ -80,7 +80,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -92,7 +92,7 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Snow;
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(1456, 690);
-            this.splitContainer1.SplitterDistance = 33;
+            this.splitContainer1.SplitterDistance = 43;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -100,7 +100,7 @@
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -132,7 +132,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.txtSerch);
             this.splitContainer2.Panel2.Controls.Add(this.labSerch);
             this.splitContainer2.Panel2.Controls.Add(this.button3);
-            this.splitContainer2.Size = new System.Drawing.Size(1418, 690);
+            this.splitContainer2.Size = new System.Drawing.Size(1408, 690);
             this.splitContainer2.SplitterDistance = 530;
             this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 0;
@@ -168,13 +168,13 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Top;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1418, 535);
+            this.dataGridView1.Size = new System.Drawing.Size(1408, 535);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -265,7 +265,7 @@
             this.button4.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.button4.ForeColor = System.Drawing.Color.LightCoral;
             this.button4.Location = new System.Drawing.Point(1024, 76);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(148, 58);
             this.button4.TabIndex = 49;
@@ -289,7 +289,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(587, 102);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(209, 25);
             this.dateTimePicker2.TabIndex = 111;
@@ -298,7 +298,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(587, 64);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(209, 25);
             this.dateTimePicker1.TabIndex = 111;
@@ -309,7 +309,7 @@
             this.coboSta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.coboSta.FormattingEnabled = true;
             this.coboSta.Location = new System.Drawing.Point(587, 22);
-            this.coboSta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coboSta.Margin = new System.Windows.Forms.Padding(4);
             this.coboSta.Name = "coboSta";
             this.coboSta.Size = new System.Drawing.Size(209, 23);
             this.coboSta.TabIndex = 110;
@@ -320,7 +320,7 @@
             this.button9.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.button9.ForeColor = System.Drawing.Color.LightCoral;
             this.button9.Location = new System.Drawing.Point(805, 74);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(117, 39);
             this.button9.TabIndex = 109;
@@ -334,7 +334,7 @@
             this.button8.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.button8.ForeColor = System.Drawing.Color.LightCoral;
             this.button8.Location = new System.Drawing.Point(805, 12);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(117, 39);
             this.button8.TabIndex = 109;
@@ -359,7 +359,7 @@
             this.coboCA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.coboCA.FormattingEnabled = true;
             this.coboCA.Location = new System.Drawing.Point(132, 62);
-            this.coboCA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.coboCA.Margin = new System.Windows.Forms.Padding(4);
             this.coboCA.Name = "coboCA";
             this.coboCA.Size = new System.Drawing.Size(209, 23);
             this.coboCA.TabIndex = 107;
@@ -370,7 +370,7 @@
             this.button7.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.button7.ForeColor = System.Drawing.Color.LightCoral;
             this.button7.Location = new System.Drawing.Point(351, 52);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(117, 39);
             this.button7.TabIndex = 106;
@@ -417,7 +417,7 @@
             // 
             this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox2.Location = new System.Drawing.Point(268, 94);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(73, 34);
             this.textBox2.TabIndex = 101;
@@ -427,7 +427,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(944, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(53, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -441,7 +441,7 @@
             this.button6.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.button6.ForeColor = System.Drawing.Color.LightCoral;
             this.button6.Location = new System.Drawing.Point(351, 94);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(117, 39);
             this.button6.TabIndex = 99;
@@ -455,7 +455,7 @@
             this.btnSerch.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.btnSerch.ForeColor = System.Drawing.Color.LightCoral;
             this.btnSerch.Location = new System.Drawing.Point(351, 12);
-            this.btnSerch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSerch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSerch.Name = "btnSerch";
             this.btnSerch.Size = new System.Drawing.Size(117, 39);
             this.btnSerch.TabIndex = 99;
@@ -467,7 +467,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox1.Location = new System.Drawing.Point(132, 94);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(73, 34);
             this.textBox1.TabIndex = 98;
@@ -476,7 +476,7 @@
             // 
             this.txtSerch.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtSerch.Location = new System.Drawing.Point(132, 15);
-            this.txtSerch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSerch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSerch.Name = "txtSerch";
             this.txtSerch.Size = new System.Drawing.Size(209, 34);
             this.txtSerch.TabIndex = 98;
@@ -499,7 +499,7 @@
             this.button3.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.button3.ForeColor = System.Drawing.Color.LightCoral;
             this.button3.Location = new System.Drawing.Point(1024, 15);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(148, 58);
             this.button3.TabIndex = 46;
@@ -513,8 +513,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1456, 690);
             this.Controls.Add(this.splitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmProductList";
             this.Text = "FrmProductList";
             this.Load += new System.EventHandler(this.FrmProductList_Load);
