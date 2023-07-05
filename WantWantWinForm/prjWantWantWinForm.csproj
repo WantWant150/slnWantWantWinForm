@@ -64,6 +64,12 @@
       <DependentUpon>FrmServiceContact.cs</DependentUpon>
     </Compile>
     <Compile Include="02.BackStage\Back.cs" />
+    <Compile Include="02.BackStage\FrmBackForum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.BackStage\FrmBackForum.designer.cs">
+      <DependentUpon>FrmBackForum.cs</DependentUpon>
+    </Compile>
     <Compile Include="02.BackStage\FrmBackServiceContact.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="02.BackStage\FrmBackMember.Designer.cs">
       <DependentUpon>FrmBackMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.BackStage\FrmBackTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.BackStage\FrmBackTask.designer.cs">
+      <DependentUpon>FrmBackTask.cs</DependentUpon>
     </Compile>
     <Compile Include="02.BackStage\FrmGraphAnalysis.cs">
       <SubType>Form</SubType>
@@ -548,42 +560,6 @@
     <Compile Include="TeachToList.cs">
       <DependentUpon>WantModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Test\ExpertSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test\ExpertSearch.designer.cs">
-      <DependentUpon>ExpertSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test\Form1TskSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test\Form1TskSearch.Designer.cs">
-      <DependentUpon>Form1TskSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test\Form2Point.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test\Form2Point.Designer.cs">
-      <DependentUpon>Form2Point.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test\Form3Task.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test\Form3Task.Designer.cs">
-      <DependentUpon>Form3Task.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test\FrmSearch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test\FrmSearch.Designer.cs">
-      <DependentUpon>FrmSearch.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test\Frm_找工作.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test\Frm_找工作.designer.cs">
-      <DependentUpon>Frm_找工作.cs</DependentUpon>
-    </Compile>
     <Compile Include="Town.cs">
       <DependentUpon>WantModel.tt</DependentUpon>
     </Compile>
@@ -608,6 +584,9 @@
     <EmbeddedResource Include="01.index\FrmServiceContact.resx">
       <DependentUpon>FrmServiceContact.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="02.BackStage\FrmBackForum.resx">
+      <DependentUpon>FrmBackForum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="02.BackStage\FrmBackServiceContact.resx">
       <DependentUpon>FrmBackServiceContact.cs</DependentUpon>
     </EmbeddedResource>
@@ -616,6 +595,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="02.BackStage\FrmBackMember.resx">
       <DependentUpon>FrmBackMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.BackStage\FrmBackTask.resx">
+      <DependentUpon>FrmBackTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="02.BackStage\FrmGraphAnalysis.resx">
       <DependentUpon>FrmGraphAnalysis.cs</DependentUpon>
@@ -780,24 +762,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Test\ExpertSearch.resx">
-      <DependentUpon>ExpertSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test\Form1TskSearch.resx">
-      <DependentUpon>Form1TskSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test\Form2Point.resx">
-      <DependentUpon>Form2Point.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test\Form3Task.resx">
-      <DependentUpon>Form3Task.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test\FrmSearch.resx">
-      <DependentUpon>FrmSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test\Frm_找工作.resx">
-      <DependentUpon>Frm_找工作.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -834,8 +798,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="06.Task\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

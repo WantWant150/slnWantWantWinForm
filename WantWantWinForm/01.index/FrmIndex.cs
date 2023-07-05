@@ -46,8 +46,7 @@ namespace prjWantWantWinForm
 
             }
 
-       // }
-          catch (Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -70,21 +69,30 @@ namespace prjWantWantWinForm
                 {
                     NewIspanProjectEntities dbContext = new NewIspanProjectEntities();
                     int MemberRoleID = (from mem in dbContext.MemberRoleConns
-                                       where mem.AccountID == CMember.AccountID
-                                       select mem.RoleID).FirstOrDefault();
-                    if (MemberRoleID==1)   //如果判斷是會員，要秀出Form1TskSearch在mdi子表單
+                                        where mem.AccountID == CMember.AccountID
+                                        select mem.RoleID).FirstOrDefault();
+                    if (MemberRoleID == 1)   //如果判斷是會員，要秀出Form1TskSearch在mdi子表單
                     {
                         //因為在註冊帳號時就會有設定角色會員或客服了，所以有找到的話一定是First
                         MessageBox.Show("歡迎光臨會員");
-                        FrmJobTool frm = new FrmJobTool();
-                        ShowForm(frm);
+                        //FrmJobTool frm = new FrmJobTool();
+                        //ShowForm(frm);
                     }
                     else if (MemberRoleID == 2) //如果判斷是客服人員，要秀出FrmBackStage在mdi子表單
                     {
                         MessageBox.Show("歡迎光臨客服人員");
 
+                        // 原後台顯示
                         FrmBackStage frm = new FrmBackStage();
                         ShowForm(frm);
+
+                        /*
+                        // 後台視窗最大化
+                        FrmBackStage frm = new FrmBackStage();
+                        frm.TopMost = true;
+                        frm.WindowState = FormWindowState.Maximized;
+                        frm.Show();
+                        */
                     }
                 }
                 else //如果尚未填寫會員資料(以Name判斷)，就跳出會員資料填寫
@@ -97,7 +105,7 @@ namespace prjWantWantWinForm
                         MemInfo.Dispose();
                     }
                 }
-                
+
                 CMember.getMemInfo(CMember.AccountID); //取得登入會員資料
                 if (CMember.Name != null) //歡迎字串建置
                 {
@@ -141,7 +149,8 @@ namespace prjWantWantWinForm
         }
         private void 找專家ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FrmExpertSearch frm = new FrmExpertSearch();
+            ShowForm(frm);
         }
         #endregion
 
@@ -160,9 +169,25 @@ namespace prjWantWantWinForm
         #endregion
 
 
+        #region 會員履歷
+        private void toolStripButtonResume_Click(object sender, EventArgs e)
+        {
+            FrmJobTool frm = new FrmJobTool();
+            ShowForm(frm);
+        }
+
+        private void 會員履歷ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmJobTool frm = new FrmJobTool();
+            ShowForm(frm);
+        }
+
+        #endregion
+
+
         #region 點數商城
         private void toolStripButtonPoint_Click(object sender, EventArgs e)
-        {      
+        {
             FrmShopOut frm = new FrmShopOut();
             ShowForm(frm);
         }
@@ -236,6 +261,7 @@ namespace prjWantWantWinForm
         {
             this.LayoutMdi(MdiLayout.Cascade);
         }
+
         #endregion
 
 

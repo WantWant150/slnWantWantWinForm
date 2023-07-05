@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjWantWantWinForm
+namespace prjWantWantWinForm._02.BackStage
 {
-    public partial class Form2Point : Form
+    public partial class FrmBackForum : Form
     {
-        public Form2Point()
+        public FrmBackForum()
         {
             InitializeComponent();
         }
