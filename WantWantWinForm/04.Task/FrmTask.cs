@@ -61,14 +61,14 @@ namespace prjWantWantWinForm
         NewIspanProjectEntities dbWantModel = new NewIspanProjectEntities();
 
 
-        void Read_RefreshDataGridView()
-        {
-            this.dataGridView1.DataSource = null;
-            this.dataGridView1.DataSource = this.dbWantModel.TaskLists.ToList();
-            //this.dataGridView1.DataSource = this.dbWantModel.CaseStatusList.ToList();
-            //this.dataGridView1.DataSource = this.dbWantModel.TaskNameList.ToList();
-           // this.dataGridView2.DataSource = this.dbWantModel.WorkingTimes.ToList();
-        }
+        //void Read_RefreshDataGridView()
+        //{
+        //    this.dataGridView1.DataSource = null;
+        //    this.dataGridView1.DataSource = this.dbWantModel.TaskLists.ToList();
+        //    //this.dataGridView1.DataSource = this.dbWantModel.CaseStatusList.ToList();
+        //    //this.dataGridView1.DataSource = this.dbWantModel.TaskNameList.ToList();
+        //   // this.dataGridView2.DataSource = this.dbWantModel.WorkingTimes.ToList();
+        //}
 
         
             //private void btn_ChoosePic_Click(object sender, EventArgs e)
@@ -196,9 +196,10 @@ namespace prjWantWantWinForm
                     //this.dbWantModel.Town.Add(town);
 
                     this.dbWantModel.SaveChanges();
-                    this.Read_RefreshDataGridView();
+                    //this.Read_RefreshDataGridView();
 
                     // this.splitContainer1.Panel2.Controls.Clear();
+                    MessageBox.Show("新增成功");
                 }
             }
             catch (DbEntityValidationException ex)

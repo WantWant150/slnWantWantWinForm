@@ -40,7 +40,6 @@
             this.cmb_Publish = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_Save = new System.Windows.Forms.Button();
             this.dTP_End = new System.Windows.Forms.DateTimePicker();
             this.dTP_Start = new System.Windows.Forms.DateTimePicker();
@@ -58,7 +57,6 @@
             this.txt_TimeEnd = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -203,16 +201,6 @@
             this.label17.Size = new System.Drawing.Size(110, 31);
             this.label17.TabIndex = 273;
             this.label17.Text = "工作地區";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(534, 668);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 268;
             // 
             // btn_Save
             // 
@@ -427,7 +415,6 @@
             this.Controls.Add(this.cmb_Publish);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.dTP_End);
             this.Controls.Add(this.dTP_Start);
@@ -450,7 +437,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmTask";
             this.Text = "出任務";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,7 +456,6 @@
         private System.Windows.Forms.ComboBox cmb_Publish;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.DateTimePicker dTP_End;
         private System.Windows.Forms.DateTimePicker dTP_Start;

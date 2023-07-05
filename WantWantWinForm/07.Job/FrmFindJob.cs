@@ -235,60 +235,60 @@ namespace prjWantWantWinForm
             //    dataGridView2.Rows.Add(item.CaseID, item.TaskTitle, item.TaskDetail, item.PayFrom, item.PayTo, item.RequiredNum, item.TaskStart, item.TaskEnd);
             //}
             #endregion
-            if (comboBox8.Text == null)
-            {
-                var q = from t in dbContext.TaskLists           //關鍵字模糊搜尋
-                        where t.PublishOrNot == "立刻上架" && (t.TaskTitle.Contains(textBox1.Text) || t.TaskDetail.Contains(textBox1.Text)) && t.Town.Town1 == comboBox9.Text && t.Town.City.City1 == comboBox8.Text
-                        select new
-                        {
-                            t.CaseID,
-                            t.TaskTitle,
-                            t.TaskDetail,
-                            t.Town.Town1,
-                            t.PayFrom,
-                            //t.PayTo,
-                            t.RequiredNum,
-                            t.TaskStart,
-                            t.TaskEnd
-                        };
-                ShowDataToDataGridView(q);
-            }
-            else if (textBox1.Text == null)
-                {
-                var q1 = from t in dbContext.TaskLists           //關鍵字模糊搜尋
-                         where t.PublishOrNot == "立刻上架" && (t.TaskTitle.Contains(textBox1.Text) || t.TaskDetail.Contains(textBox1.Text)) && t.Town.Town1 == comboBox9.Text && t.Town.City.City1 == comboBox8.Text
-                         select new
-                         {
-                             t.CaseID,
-                             t.TaskTitle,
-                             t.TaskDetail,
-                             t.Town.Town1,
-                             t.PayFrom,
-                             //t.PayTo,
-                             t.RequiredNum,
-                             t.TaskStart,
-                             t.TaskEnd
-                         };
-                ShowDataToDataGridView(q1);
-            }
-            else
-            {
-                var q1 = from t in dbContext.TaskLists           //關鍵字模糊搜尋
-                        where t.PublishOrNot == "立刻上架" && (t.TaskTitle.Contains(textBox1.Text) || t.TaskDetail.Contains(textBox1.Text)) && t.Town.Town1 == comboBox9.Text && t.Town.City.City1 == comboBox8.Text
-                        select new
-                        {
-                            t.CaseID,
-                            t.TaskTitle,
-                            t.TaskDetail,
-                            t.Town.Town1,
-                            t.PayFrom,
-                            //t.PayTo,
-                            t.RequiredNum,
-                            t.TaskStart,
-                            t.TaskEnd
-                        };
-                ShowDataToDataGridView(q1);
-            }
+            //if (comboBox8.Text == null)
+            //{
+            var q = from t in dbContext.TaskLists           //關鍵字模糊搜尋
+                    where t.PublishOrNot == "立刻上架" && t.Town.Town1 == comboBox9.Text && t.Town.City.City1 == comboBox8.Text
+                    select new
+                    {
+                        t.CaseID,
+                        t.TaskTitle,
+                        t.TaskDetail,
+                        t.Town.Town1,
+                        t.PayFrom,
+                        //t.PayTo,
+                        t.RequiredNum,
+                        t.TaskStart,
+                        t.TaskEnd
+                    };
+            ShowDataToDataGridView(q);
+            //}
+            //else if (textBox1.Text == null)
+            //    {
+            //    var q1 = from t in dbContext.TaskLists           //關鍵字模糊搜尋
+            //             where t.PublishOrNot == "立刻上架" && (t.TaskTitle.Contains(textBox1.Text) || t.TaskDetail.Contains(textBox1.Text)) && t.Town.Town1 == comboBox9.Text && t.Town.City.City1 == comboBox8.Text
+            //             select new
+            //             {
+            //                 t.CaseID,
+            //                 t.TaskTitle,
+            //                 t.TaskDetail,
+            //                 t.Town.Town1,
+            //                 t.PayFrom,
+            //                 //t.PayTo,
+            //                 t.RequiredNum,
+            //                 t.TaskStart,
+            //                 t.TaskEnd
+            //             };
+            //    ShowDataToDataGridView(q1);
+            //}
+            //else
+            //{
+            //    var q1 = from t in dbContext.TaskLists           //關鍵字模糊搜尋
+            //            where t.PublishOrNot == "立刻上架" && (t.TaskTitle.Contains(textBox1.Text) || t.TaskDetail.Contains(textBox1.Text)) && t.Town.Town1 == comboBox9.Text && t.Town.City.City1 == comboBox8.Text
+            //            select new
+            //            {
+            //                t.CaseID,
+            //                t.TaskTitle,
+            //                t.TaskDetail,
+            //                t.Town.Town1,
+            //                t.PayFrom,
+            //                //t.PayTo,
+            //                t.RequiredNum,
+            //                t.TaskStart,
+            //                t.TaskEnd
+            //            };
+            //    ShowDataToDataGridView(q1);
+            //}
             //var q = from t in dbContext.TaskList           //關鍵字模糊搜尋
             //        where t.PublishOrNot == "立刻上架" && (t.TaskTitle.Contains(textBox1.Text) || t.TaskDetail.Contains(textBox1.Text)) || t.Town.Town1 == comboBox9.Text && t.Town.City.City1 == comboBox8.Text
             //        //where t.PublishOrNot == "立刻上架" && (t.TaskTitle.Contains(textBox1.Text) || t.TaskDetail.Contains(textBox1.Text)) && t.Town.Town1 == comboBox9.Text && t.Town.City.City1 == comboBox8.Text
@@ -433,6 +433,25 @@ namespace prjWantWantWinForm
             工作詳細頁面.ID = id;
             工作詳細頁面.findjob = this;
             工作詳細頁面.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var q = from t in dbContext.TaskLists           //關鍵字模糊搜尋
+                    where t.PublishOrNot == "立刻上架" &&(t.TaskTitle.Contains(textBox1.Text) || t.TaskDetail.Contains(textBox1.Text))
+                    select new
+                    {
+                        t.CaseID,
+                        t.TaskTitle,
+                        t.TaskDetail,
+                        t.Town.Town1,
+                        t.PayFrom,
+                        //t.PayTo,
+                        t.RequiredNum,
+                        t.TaskStart,
+                        t.TaskEnd
+                    };
+            ShowDataToDataGridView(q);
         }
     }
 }

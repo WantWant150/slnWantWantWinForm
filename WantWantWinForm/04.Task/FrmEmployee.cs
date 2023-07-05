@@ -86,7 +86,7 @@ namespace prjWantWantWinForm
 
                         };
 
-                this.dataGridView1.DataSource = q.ToList();
+                //this.dataGridView1.DataSource = q.ToList();
                 //var result = q.ToList();
                 this.flowLayoutPanel1.Controls.Clear();
 

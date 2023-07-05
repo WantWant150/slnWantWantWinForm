@@ -102,21 +102,21 @@ namespace prjWantWantWinForm
             try
             {
                 //delete one product
-                var q = (from p in this.dbWantModel.TaskLists
+                var q = from p in this.dbWantModel.TaskLists
                         where p.PublishOrNot == "延後上架" && p.CaseID == ID
-                        select p).FirstOrDefault();
+                        select p/*).FirstOrDefault()*/;
 
-                q.CaseStatusID = 5;
+                //q.CaseStatusID = 5;
 
-                //foreach (var item in q)
-                //{
-                //    item.CaseID = ID;
-                //    item.CaseStatusID =5;
-                //    item.TaskStart = dTP_TaskStart.Text;
-                //    item.TaskEnd = dTP_TaskEnd.Text;
-                //    item.TaskTitle = txt_Title.Text;
-                //    item.TaskDetail = txt_Detail.Text;
-                //}
+                foreach (var item in q)
+                {
+                    item.CaseID = ID;
+                    item.CaseStatusID = 5;
+                    item.TaskStart = dTP_TaskStart.Text;
+                    item.TaskEnd = dTP_TaskEnd.Text;
+                    item.TaskTitle = txt_Title.Text;
+                    item.TaskDetail = txt_Detail.Text;
+                }
 
                 this.dbWantModel.SaveChanges();
 

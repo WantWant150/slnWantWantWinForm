@@ -75,6 +75,7 @@ namespace prjWantWantWinForm
 
                             where p.PublishOrNot == "延後上架" &&
                                         pp.TaskName == cmb_TaskNumberID.Text &&
+                                        p.CaseStatusID!=5 &&
                                         DateTime.Parse(p.TaskStart) >= dTP_TaskStart.Value &&
                                         DateTime.Parse(p.TaskEnd) <= dTP_TaskEnd.Value
 
