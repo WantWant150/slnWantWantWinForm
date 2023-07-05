@@ -62,6 +62,7 @@ namespace prjWantWantWinForm._08.Forum
                 dbContext.SaveChanges();
 
                 MessageBox.Show("發表成功!");
+                this.Close();
             }
             else
             {
@@ -94,9 +95,8 @@ namespace prjWantWantWinForm._08.Forum
                     dbContext.SaveChanges();
 
                     MessageBox.Show("儲存成功");
+                    this.Close();
                 }
-                
-
             }
             else
             {

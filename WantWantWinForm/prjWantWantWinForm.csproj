@@ -302,6 +302,12 @@
     <Compile Include="08.Forum\Frm_ForumMain.Designer.cs">
       <DependentUpon>Frm_ForumMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="08.Forum\Frm_ForumServiceCMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumServiceCMS.Designer.cs">
+      <DependentUpon>Frm_ForumServiceCMS.cs</DependentUpon>
+    </Compile>
     <Compile Include="08.Forum\Frm_ForumTopic.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -718,6 +724,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="08.Forum\Frm_ForumMain.resx">
       <DependentUpon>Frm_ForumMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08.Forum\Frm_ForumServiceCMS.resx">
+      <DependentUpon>Frm_ForumServiceCMS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="08.Forum\Frm_ForumTopic.resx">
       <DependentUpon>Frm_ForumTopic.cs</DependentUpon>

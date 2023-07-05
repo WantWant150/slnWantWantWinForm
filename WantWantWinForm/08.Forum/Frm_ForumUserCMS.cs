@@ -128,6 +128,7 @@ namespace prjWantWantWinForm
                                 status.FirstOrDefault().Status = 3;
                                 status.FirstOrDefault().Updated =DateTime.Now;
                                 dbContext.SaveChanges();
+                                LoadPost();
                             }
                         }
                     }

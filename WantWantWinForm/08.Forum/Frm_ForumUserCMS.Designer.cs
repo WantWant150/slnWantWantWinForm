@@ -36,9 +36,9 @@
             this.btnModify = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labLine = new System.Windows.Forms.Label();
+            this.btnModifyPost = new System.Windows.Forms.Button();
             this.comboxPostStatus = new System.Windows.Forms.ComboBox();
             this.btnCommentMGR = new System.Windows.Forms.Button();
-            this.btnModifyPost = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMGR)).BeginInit();
             this.panel1.SuspendLayout();
@@ -125,11 +125,27 @@
             this.labLine.AutoSize = true;
             this.labLine.BackColor = System.Drawing.Color.Transparent;
             this.labLine.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labLine.Location = new System.Drawing.Point(6, 120);
+            this.labLine.Location = new System.Drawing.Point(3, 120);
             this.labLine.Name = "labLine";
             this.labLine.Size = new System.Drawing.Size(154, 24);
             this.labLine.TabIndex = 6;
             this.labLine.Text = "------------------";
+            // 
+            // btnModifyPost
+            // 
+            this.btnModifyPost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.btnModifyPost.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(174)))), ((int)(((byte)(188)))));
+            this.btnModifyPost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModifyPost.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnModifyPost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
+            this.btnModifyPost.Location = new System.Drawing.Point(10, 20);
+            this.btnModifyPost.Margin = new System.Windows.Forms.Padding(4);
+            this.btnModifyPost.Name = "btnModifyPost";
+            this.btnModifyPost.Size = new System.Drawing.Size(142, 51);
+            this.btnModifyPost.TabIndex = 4;
+            this.btnModifyPost.Text = "個人發文管理";
+            this.btnModifyPost.UseVisualStyleBackColor = false;
+            this.btnModifyPost.Click += new System.EventHandler(this.btnModifyPost_Click);
             // 
             // comboxPostStatus
             // 
@@ -139,7 +155,7 @@
             this.comboxPostStatus.Items.AddRange(new object[] {
             "已發布發文",
             "未發布草稿"});
-            this.comboxPostStatus.Location = new System.Drawing.Point(12, 78);
+            this.comboxPostStatus.Location = new System.Drawing.Point(9, 78);
             this.comboxPostStatus.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.comboxPostStatus.Name = "comboxPostStatus";
             this.comboxPostStatus.Size = new System.Drawing.Size(143, 28);
@@ -154,7 +170,7 @@
             this.btnCommentMGR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCommentMGR.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnCommentMGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.btnCommentMGR.Location = new System.Drawing.Point(12, 148);
+            this.btnCommentMGR.Location = new System.Drawing.Point(9, 148);
             this.btnCommentMGR.Margin = new System.Windows.Forms.Padding(4);
             this.btnCommentMGR.Name = "btnCommentMGR";
             this.btnCommentMGR.Size = new System.Drawing.Size(142, 51);
@@ -162,22 +178,6 @@
             this.btnCommentMGR.Text = "個人留言管理";
             this.btnCommentMGR.UseVisualStyleBackColor = false;
             this.btnCommentMGR.Click += new System.EventHandler(this.btnCommentMGR_Click);
-            // 
-            // btnModifyPost
-            // 
-            this.btnModifyPost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.btnModifyPost.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(174)))), ((int)(((byte)(188)))));
-            this.btnModifyPost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModifyPost.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnModifyPost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.btnModifyPost.Location = new System.Drawing.Point(13, 20);
-            this.btnModifyPost.Margin = new System.Windows.Forms.Padding(4);
-            this.btnModifyPost.Name = "btnModifyPost";
-            this.btnModifyPost.Size = new System.Drawing.Size(142, 51);
-            this.btnModifyPost.TabIndex = 4;
-            this.btnModifyPost.Text = "個人發文管理";
-            this.btnModifyPost.UseVisualStyleBackColor = false;
-            this.btnModifyPost.Click += new System.EventHandler(this.btnModifyPost_Click);
             // 
             // Frm_ForumUserCMS
             // 
