@@ -39,8 +39,7 @@
             // 
             // labShow_CategoryTitle
             // 
-            this.labShow_CategoryTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.labShow_CategoryTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labShow_CategoryTitle.AutoSize = true;
             this.labShow_CategoryTitle.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -55,7 +54,10 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -68,14 +70,14 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(903, 36);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1165, 36);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // labAuthor
             // 
             this.labAuthor.AutoSize = true;
             this.labAuthor.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labAuthor.Location = new System.Drawing.Point(454, 1);
+            this.labAuthor.Location = new System.Drawing.Point(585, 1);
             this.labAuthor.Name = "labAuthor";
             this.labAuthor.Padding = new System.Windows.Forms.Padding(5);
             this.labAuthor.Size = new System.Drawing.Size(58, 34);
@@ -97,7 +99,7 @@
             // 
             this.labReplyCount.AutoSize = true;
             this.labReplyCount.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labReplyCount.Location = new System.Drawing.Point(724, 1);
+            this.labReplyCount.Location = new System.Drawing.Point(934, 1);
             this.labReplyCount.Name = "labReplyCount";
             this.labReplyCount.Padding = new System.Windows.Forms.Padding(5);
             this.labReplyCount.Size = new System.Drawing.Size(77, 34);
@@ -106,13 +108,15 @@
             // 
             // btnCreatePost
             // 
+            this.btnCreatePost.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreatePost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
             this.btnCreatePost.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(174)))), ((int)(((byte)(188)))));
             this.btnCreatePost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreatePost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.btnCreatePost.Location = new System.Drawing.Point(760, 5);
+            this.btnCreatePost.Location = new System.Drawing.Point(965, 5);
             this.btnCreatePost.Name = "btnCreatePost";
-            this.btnCreatePost.Size = new System.Drawing.Size(161, 36);
+            this.btnCreatePost.Size = new System.Drawing.Size(219, 36);
             this.btnCreatePost.TabIndex = 4;
             this.btnCreatePost.Text = "我要發文";
             this.btnCreatePost.UseVisualStyleBackColor = false;
@@ -124,8 +128,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(1817, 1061);
+            this.ClientSize = new System.Drawing.Size(1196, 438);
             this.Controls.Add(this.btnCreatePost);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.labShow_CategoryTitle);

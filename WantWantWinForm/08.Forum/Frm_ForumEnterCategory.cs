@@ -49,7 +49,7 @@ namespace prjWantWantWinForm
                         {
                             p.Title,
                             p.MemberAccount.UserName,
-                            ParentIDCount = dbContext.ForumPostComments.Count(fp => fp.PostID == p.PostID)//抓取回文的數量
+                            ParentIDCount = dbContext.ForumPostComments.Count(fp => fp.PostID == p.PostID&&fp.Status==1)//抓取回文的數量
                         };
 
 

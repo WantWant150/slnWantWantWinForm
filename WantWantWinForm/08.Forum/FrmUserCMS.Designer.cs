@@ -1,6 +1,6 @@
-﻿namespace prjWantWantWinForm
+﻿namespace WinFormsMidSora
 {
-    partial class Frm_ForumUserCMS
+    partial class FrmUserCMS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewMGR = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnModify = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labLine = new System.Windows.Forms.Label();
-            this.comboxPostStatus = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnCommentMGR = new System.Windows.Forms.Button();
             this.btnModifyPost = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
@@ -76,11 +76,11 @@
             // 
             // btnDelete
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnDelete.DefaultCellStyle = dataGridViewCellStyle13;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.HeaderText = "刪除";
             this.btnDelete.MinimumWidth = 8;
@@ -93,11 +93,11 @@
             // 
             // btnModify
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnModify.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnModify.DefaultCellStyle = dataGridViewCellStyle14;
             this.btnModify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModify.HeaderText = "修改";
             this.btnModify.MinimumWidth = 8;
@@ -111,9 +111,9 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.Controls.Add(this.labLine);
-            this.panel1.Controls.Add(this.btnModifyPost);
-            this.panel1.Controls.Add(this.comboxPostStatus);
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.btnCommentMGR);
+            this.panel1.Controls.Add(this.btnModifyPost);
             this.panel1.Location = new System.Drawing.Point(11, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
@@ -125,27 +125,20 @@
             this.labLine.AutoSize = true;
             this.labLine.BackColor = System.Drawing.Color.Transparent;
             this.labLine.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labLine.Location = new System.Drawing.Point(6, 120);
+            this.labLine.Location = new System.Drawing.Point(3, 90);
             this.labLine.Name = "labLine";
             this.labLine.Size = new System.Drawing.Size(154, 24);
             this.labLine.TabIndex = 6;
             this.labLine.Text = "------------------";
             // 
-            // comboxPostStatus
+            // comboBox1
             // 
-            this.comboxPostStatus.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.comboxPostStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.comboxPostStatus.FormattingEnabled = true;
-            this.comboxPostStatus.Items.AddRange(new object[] {
-            "已發布發文",
-            "未發布草稿"});
-            this.comboxPostStatus.Location = new System.Drawing.Point(12, 78);
-            this.comboxPostStatus.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.comboxPostStatus.Name = "comboxPostStatus";
-            this.comboxPostStatus.Size = new System.Drawing.Size(143, 28);
-            this.comboxPostStatus.TabIndex = 5;
-            this.comboxPostStatus.Tag = "";
-            this.comboxPostStatus.Text = "已發布發文";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(9, 62);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(143, 25);
+            this.comboBox1.TabIndex = 5;
             // 
             // btnCommentMGR
             // 
@@ -154,7 +147,7 @@
             this.btnCommentMGR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCommentMGR.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnCommentMGR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.btnCommentMGR.Location = new System.Drawing.Point(12, 148);
+            this.btnCommentMGR.Location = new System.Drawing.Point(9, 118);
             this.btnCommentMGR.Margin = new System.Windows.Forms.Padding(4);
             this.btnCommentMGR.Name = "btnCommentMGR";
             this.btnCommentMGR.Size = new System.Drawing.Size(142, 51);
@@ -170,7 +163,7 @@
             this.btnModifyPost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModifyPost.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnModifyPost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.btnModifyPost.Location = new System.Drawing.Point(13, 20);
+            this.btnModifyPost.Location = new System.Drawing.Point(9, 4);
             this.btnModifyPost.Margin = new System.Windows.Forms.Padding(4);
             this.btnModifyPost.Name = "btnModifyPost";
             this.btnModifyPost.Size = new System.Drawing.Size(142, 51);
@@ -179,7 +172,7 @@
             this.btnModifyPost.UseVisualStyleBackColor = false;
             this.btnModifyPost.Click += new System.EventHandler(this.btnModifyPost_Click);
             // 
-            // Frm_ForumUserCMS
+            // FrmUserCMS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -190,7 +183,7 @@
             this.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_ForumUserCMS";
+            this.Name = "FrmUserCMS";
             this.Text = "FrmUserCMS";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMGR)).EndInit();
@@ -204,7 +197,7 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboxPostStatus;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnCommentMGR;
         private System.Windows.Forms.Button btnModifyPost;
         private System.Windows.Forms.DataGridView dataGridViewMGR;

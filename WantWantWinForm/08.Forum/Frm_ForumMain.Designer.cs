@@ -57,12 +57,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.splitContainer1.Panel1.Controls.Add(this.comboxDisplay_CategoryTitle);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.btnRevisePost);
             this.splitContainer1.Panel1.Controls.Add(this.btnGotoForum);
+            this.splitContainer1.Panel1.Controls.Add(this.btnRevisePost);
             this.splitContainer1.Panel1.Controls.Add(this.labShow_FormCateDes);
             this.splitContainer1.Panel1.Controls.Add(this.labNoAct_ForumCategory);
-            this.splitContainer1.Panel1.Controls.Add(this.comboxDisplay_CategoryTitle);
             // 
             // splitContainer1.Panel2
             // 
