@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AF1BBB4-0CDB-4707-851F-4A619ECAC16C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>hyc_期中專題初稿_會員</RootNamespace>
+    <AssemblyName>hyc_期中專題初稿_會員</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="02.BackStage\Back.cs" />
+    <Compile Include="02.BackStage\FrmBackStage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.BackStage\FrmBackStage.Designer.cs">
+      <DependentUpon>FrmBackStage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02.BackStage\FrmMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02.BackStage\FrmMember.Designer.cs">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmForgetPassword.Designer.cs">
+      <DependentUpon>FrmForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmMainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmMainFrm.Designer.cs">
+      <DependentUpon>FrmMainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmMemberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmMemberInfo.Designer.cs">
+      <DependentUpon>FrmMemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmMemberMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmMemberMain.Designer.cs">
+      <DependentUpon>FrmMemberMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmRenewPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmRenewPassword.Designer.cs">
+      <DependentUpon>FrmRenewPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03.MemberAccount\FrmSignUp.Designer.cs">
+      <DependentUpon>FrmSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\MemberInfo\CChangePassword.cs" />
+    <Compile Include="03.MemberAccount\MemberInfo\CValidateCode.cs" />
+    <Compile Include="05.Expert\FrmCExpert.cs" />
+    <Compile Include="05.Expert\FrmExpertCase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertCase.Designer.cs">
+      <DependentUpon>FrmExpertCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertFind.cs" />
+    <Compile Include="05.Expert\FrmExpertHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertHistory.Designer.cs">
+      <DependentUpon>FrmExpertHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertNew.Designer.cs">
+      <DependentUpon>FrmExpertNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertR.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertR.Designer.cs">
+      <DependentUpon>FrmExpertR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertSearch.Designer.cs">
+      <DependentUpon>FrmExpertSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertView.Designer.cs">
+      <DependentUpon>FrmExpertView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertViewResume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05.Expert\FrmExpertViewResume.Designer.cs">
+      <DependentUpon>FrmExpertViewResume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseSkill.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaseStatusList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Certificate.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateType.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckIn.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="City.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DateSelecter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DateSelecter.Designer.cs">
+      <DependentUpon>DateSelecter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertAccount.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertApplication.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertResume.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertTask.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertWork.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExpertWorkList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForgetPassword.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForumCategory.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForumPost.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForumPostCategory.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForumPostComment.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ForumStatu.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="01.index\FrmIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.index\FrmIndex.designer.cs">
+      <DependentUpon>FrmIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HumanList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Keyword.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginHistory.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemberAccount.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemberCollection.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="03.MemberAccount\MemberInfo\CLoginInfo.cs" />
+    <Compile Include="03.MemberAccount\MemberInfo\CMember.cs" />
+    <Compile Include="03.MemberAccount\MemberInfo\CMemerInfo.cs" />
+    <Compile Include="03.MemberAccount\MemberInfo\CSignUp.cs" />
+    <Compile Include="MemberRoleConn.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MemberStatusList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayWay.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPhoto.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rating.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resume.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeApplication.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeCertificate.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeKeywordList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ResumeSkill.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleInfo.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Salary.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Skill.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SkillType.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatusChangeReason.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskKeywordList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskNameList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskPhoto.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeachToList.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Test\ExpertSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\ExpertSearch.designer.cs">
+      <DependentUpon>ExpertSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form1TskSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form1TskSearch.Designer.cs">
+      <DependentUpon>Form1TskSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form2Point.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form2Point.Designer.cs">
+      <DependentUpon>Form2Point.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Form3Task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Form3Task.Designer.cs">
+      <DependentUpon>Form3Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\FrmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\FrmSearch.Designer.cs">
+      <DependentUpon>FrmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Frm_找工作.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Frm_找工作.designer.cs">
+      <DependentUpon>Frm_找工作.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Town.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WantModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WantModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WantModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WantModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WantModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkingTime.cs">
+      <DependentUpon>WantModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="02.BackStage\FrmBackStage.resx">
+      <DependentUpon>FrmBackStage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02.BackStage\FrmMember.resx">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03.MemberAccount\FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03.MemberAccount\FrmForgetPassword.resx">
+      <DependentUpon>FrmForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03.MemberAccount\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03.MemberAccount\FrmMainFrm.resx">
+      <DependentUpon>FrmMainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03.MemberAccount\FrmMemberInfo.resx">
+      <DependentUpon>FrmMemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03.MemberAccount\FrmMemberMain.resx">
+      <DependentUpon>FrmMemberMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03.MemberAccount\FrmRenewPassword.resx">
+      <DependentUpon>FrmRenewPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03.MemberAccount\FrmSignUp.resx">
+      <DependentUpon>FrmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05.Expert\FrmExpertCase.resx">
+      <DependentUpon>FrmExpertCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05.Expert\FrmExpertHistory.resx">
+      <DependentUpon>FrmExpertHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05.Expert\FrmExpertNew.resx">
+      <DependentUpon>FrmExpertNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05.Expert\FrmExpertR.resx">
+      <DependentUpon>FrmExpertR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05.Expert\FrmExpertSearch.resx">
+      <DependentUpon>FrmExpertSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05.Expert\FrmExpertView.resx">
+      <DependentUpon>FrmExpertView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05.Expert\FrmExpertViewResume.resx">
+      <DependentUpon>FrmExpertViewResume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateSelecter.resx">
+      <DependentUpon>DateSelecter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01.index\FrmIndex.resx">
+      <DependentUpon>FrmIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Test\ExpertSearch.resx">
+      <DependentUpon>ExpertSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form1TskSearch.resx">
+      <DependentUpon>Form1TskSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form2Point.resx">
+      <DependentUpon>Form2Point.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Form3Task.resx">
+      <DependentUpon>Form3Task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\FrmSearch.resx">
+      <DependentUpon>FrmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Frm_找工作.resx">
+      <DependentUpon>Frm_找工作.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="WantModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>WantModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="WantModel.edmx.diagram">
+      <DependentUpon>WantModel.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="WantModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>WantModel.Context.cs</LastGenOutput>
+      <DependentUpon>WantModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="WantModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>WantModel.edmx</DependentUpon>
+      <LastGenOutput>WantModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="04.MemberResume\" />
+    <Folder Include="06.Task\" />
+    <Folder Include="07.Point\" />
+    <Folder Include="08.Fourm\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
