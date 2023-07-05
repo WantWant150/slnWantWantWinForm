@@ -10,7 +10,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Label = System.Windows.Forms.Label;
 
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
     public class CMemerInfo
     {

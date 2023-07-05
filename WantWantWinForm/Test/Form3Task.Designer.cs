@@ -1,4 +1,4 @@
-﻿namespace prjIspanWinForms
+﻿namespace prjWantWantWinForm
 {
     partial class Form3Task
     {

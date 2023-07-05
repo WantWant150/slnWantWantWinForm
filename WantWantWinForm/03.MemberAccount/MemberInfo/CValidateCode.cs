@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prjIspanWinForms.MemberInfo
+namespace prjWantWantWinForm.MemberInfo
 {
     internal class CValidateCode
     {

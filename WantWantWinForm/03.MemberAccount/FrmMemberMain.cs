@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
     public partial class FrmMemberMain : Form
     {

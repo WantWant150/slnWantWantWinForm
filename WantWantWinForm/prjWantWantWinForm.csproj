@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{4AF1BBB4-0CDB-4707-851F-4A619ECAC16C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>hyc_期中專題初稿_會員</RootNamespace>
-    <AssemblyName>hyc_期中專題初稿_會員</AssemblyName>
+    <RootNamespace>prjWantWantWinForm</RootNamespace>
+    <AssemblyName>prjWantWantWinForm</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -449,6 +449,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Test\ExpertSearch.resx">
       <DependentUpon>ExpertSearch.cs</DependentUpon>

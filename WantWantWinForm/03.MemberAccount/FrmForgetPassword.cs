@@ -1,4 +1,4 @@
-﻿using prjIspanWinForms.MemberInfo;
+﻿using prjWantWantWinForm.MemberInfo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
     public partial class FrmForgetPassword : Form
     {

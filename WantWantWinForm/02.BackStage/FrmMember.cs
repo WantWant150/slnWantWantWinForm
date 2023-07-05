@@ -1,5 +1,4 @@
-﻿using prjIspanWinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
     public partial class FrmMember : Form
     {

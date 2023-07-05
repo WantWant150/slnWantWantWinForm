@@ -11,9 +11,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using prjIspanWinForms.Properties;
+using prjWantWantWinForm.Properties;
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
     public partial class FrmMemberInfo : Form
     {

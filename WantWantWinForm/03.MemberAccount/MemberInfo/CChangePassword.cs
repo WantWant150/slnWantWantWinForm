@@ -11,7 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using Label = System.Windows.Forms.Label;
 using TextBox = System.Windows.Forms.TextBox;
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
     public static class CChangePassword
     {

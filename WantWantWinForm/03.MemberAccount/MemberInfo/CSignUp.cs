@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Label = System.Windows.Forms.Label;
 
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
     internal class CSignUp
     {

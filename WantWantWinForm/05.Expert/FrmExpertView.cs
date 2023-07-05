@@ -16,9 +16,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Drawing;
-using prjIspanWinForms;
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
 
     public partial class FrmExpertView : Form

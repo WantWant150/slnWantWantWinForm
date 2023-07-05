@@ -1,12 +1,12 @@
-﻿using prjIspanWinForms;
-using prjIspanWinForms;
+﻿using prjWantWantWinForm;
+using prjWantWantWinForm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prjIspanWinForms
+namespace prjWantWantWinForm
 {
     public static class CExpert
     {
