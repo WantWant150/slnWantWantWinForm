@@ -162,6 +162,36 @@
     <Compile Include="05.Expert\FrmExpertViewResume.Designer.cs">
       <DependentUpon>FrmExpertViewResume.cs</DependentUpon>
     </Compile>
+    <Compile Include="08.Forum\Frm_CreatePost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08.Forum\Frm_CreatePost.Designer.cs">
+      <DependentUpon>Frm_CreatePost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumEnterCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumEnterCategory.Designer.cs">
+      <DependentUpon>Frm_ForumEnterCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumMain.Designer.cs">
+      <DependentUpon>Frm_ForumMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumTopic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumTopic.Designer.cs">
+      <DependentUpon>Frm_ForumTopic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumUserCMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08.Forum\Frm_ForumUserCMS.Designer.cs">
+      <DependentUpon>Frm_ForumUserCMS.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationList.cs">
       <DependentUpon>WantModel.tt</DependentUpon>
     </Compile>
@@ -435,6 +465,21 @@
     <EmbeddedResource Include="05.Expert\FrmExpertViewResume.resx">
       <DependentUpon>FrmExpertViewResume.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="08.Forum\Frm_CreatePost.resx">
+      <DependentUpon>Frm_CreatePost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08.Forum\Frm_ForumEnterCategory.resx">
+      <DependentUpon>Frm_ForumEnterCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08.Forum\Frm_ForumMain.resx">
+      <DependentUpon>Frm_ForumMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08.Forum\Frm_ForumTopic.resx">
+      <DependentUpon>Frm_ForumTopic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08.Forum\Frm_ForumUserCMS.resx">
+      <DependentUpon>Frm_ForumUserCMS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DateSelecter.resx">
       <DependentUpon>DateSelecter.cs</DependentUpon>
     </EmbeddedResource>
@@ -509,7 +554,6 @@
     <Folder Include="04.MemberResume\" />
     <Folder Include="06.Task\" />
     <Folder Include="07.Point\" />
-    <Folder Include="08.Fourm\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
