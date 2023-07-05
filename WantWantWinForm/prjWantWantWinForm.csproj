@@ -192,6 +192,60 @@
     <Compile Include="08.Forum\Frm_ForumUserCMS.Designer.cs">
       <DependentUpon>Frm_ForumUserCMS.cs</DependentUpon>
     </Compile>
+    <Compile Include="09. Shop\FrmMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmMember.designer.cs">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09. Shop\FrmOrderChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmOrderChart.Designer.cs">
+      <DependentUpon>FrmOrderChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09. Shop\FrmOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmOrderDetail.Designer.cs">
+      <DependentUpon>FrmOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09. Shop\FrmOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmOrders.Designer.cs">
+      <DependentUpon>FrmOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09. Shop\FrmPointShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmPointShop.Designer.cs">
+      <DependentUpon>FrmPointShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09. Shop\FrmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmProduct.Designer.cs">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09. Shop\FrmProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmProductList.Designer.cs">
+      <DependentUpon>FrmProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09. Shop\FrmProductUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmProductUpdate.Designer.cs">
+      <DependentUpon>FrmProductUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="09. Shop\FrmShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09. Shop\FrmShop.Designer.cs">
+      <DependentUpon>FrmShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="ApplicationList.cs">
       <DependentUpon>WantModel.tt</DependentUpon>
     </Compile>
@@ -479,6 +533,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="08.Forum\Frm_ForumUserCMS.resx">
       <DependentUpon>Frm_ForumUserCMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmMember.resx">
+      <DependentUpon>FrmMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmOrderChart.resx">
+      <DependentUpon>FrmOrderChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmOrderDetail.resx">
+      <DependentUpon>FrmOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmOrders.resx">
+      <DependentUpon>FrmOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmPointShop.resx">
+      <DependentUpon>FrmPointShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmProduct.resx">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmProductList.resx">
+      <DependentUpon>FrmProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmProductUpdate.resx">
+      <DependentUpon>FrmProductUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09. Shop\FrmShop.resx">
+      <DependentUpon>FrmShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DateSelecter.resx">
       <DependentUpon>DateSelecter.cs</DependentUpon>
