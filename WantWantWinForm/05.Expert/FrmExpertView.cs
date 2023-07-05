@@ -15,6 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+//using System.Drawing;
 
 namespace prjWantWantWinForm
 {
@@ -28,16 +29,18 @@ namespace prjWantWantWinForm
             LoadData();
             workShow();
             LetSelect();
+            
         }
 
         bool modify = false;//為了判別修改新增控制項顯示
         NewIspanProjectEntities db = new NewIspanProjectEntities();
-
+        //確認現在的程式碼
         int member = CMember.AccountID;
+        //確認現在的履歷是哪個
         int resumes { get; set; }
         void NowResumes()
         {
-            resumes = db.Resumes.Where(x => x.AccountID == member && x.ExpertResume.Introduction != null).Select(x => x.ResumeID).First();
+            resumes = db.Resumes.Where(x =>x.AccountID==member&& x.ExpertResume.Introduction != null).Select(x => x.ResumeID).First();
         }
 
         //int nowR;
@@ -88,71 +91,71 @@ namespace prjWantWantWinForm
 
                 }
                 #endregion
+               
+                  # region 自我介紹們
+                    var introductionq = from x in db.ExpertResumes.AsEnumerable()
+                                        where x.Resume.AccountID == member&& x.Resume.ResumeID== resumes
+                                        select new
+                                        {
+                                            r = x.ResumeID,
+                                            IntroDuction = x.Introduction,
+                                            contact = x.ContactMethod,
+                                            payment = x.PaymentMethod,
+                                            Web = x.WorksUrl,
+                                            pay = x.CommonPrice,
+                                            service = x.ServiceMethod,
+                                            qa = x.Problem,
+                                        };
 
-                #region 自我介紹們
-                var introductionq = from x in db.ExpertResumes.AsEnumerable()
-                                    where x.Resume.AccountID == member && x.Resume.ResumeID == resumes
-                                    select new
-                                    {
-                                        r = x.ResumeID,
-                                        IntroDuction = x.Introduction,
-                                        contact = x.ContactMethod,
-                                        payment = x.PaymentMethod,
-                                        Web = x.WorksUrl,
-                                        pay = x.CommonPrice,
-                                        service = x.ServiceMethod,
-                                        qa = x.Problem,
-                                    };
-
-                if (introductionq == null) { lbName.Text = "尚未填自我介紹!"; }
-                else if (introductionq != null)
-                {
-                    foreach (var i in introductionq)
+                    if (introductionq == null) { lbName.Text = "尚未填自我介紹!"; }
+                    else if (introductionq != null)
                     {
+                        foreach (var i in introductionq)
+                        {
+                         
+                            txtIntroduction.Text =i.IntroDuction.ToString();
+                            int pay = Convert.ToInt32(i.pay);
+                            txtPay.Text = pay.ToString();
+                            txtWebsite.Text = i.Web.ToString();
+                            txtPayment.Text = i.payment.ToString();
+                            txtQA.Text = i.qa.ToString();
+                            txtService.Text = i.service.ToString();
 
-                        txtIntroduction.Text = i.IntroDuction.ToString();
-                        int pay = Convert.ToInt32(i.pay);
-                        txtPay.Text = pay.ToString();
-                        txtWebsite.Text = i.Web.ToString();
-                        txtPayment.Text = i.payment.ToString();
-                        txtQA.Text = i.qa.ToString();
-                        txtService.Text = i.service.ToString();
-
+                        }
                     }
-                }
-                else { MessageBox.Show("請洽客服"); }
+                    else { MessageBox.Show("請洽客服"); }
                 #endregion
 
                 //專長LOAD
+               
+                    var qskill = from x in db.ResumeSkills.AsEnumerable()
+                                 where x.Resume.ResumeID == resumes
+                                 select new
+                                 {
+                                     Myskilldetail = x.Skill.SkillName,
+                                     Myskill = x.Skill.SkillType.SkillTypeName
+                                 };
+                    foreach (var i in qskill)
+                    {
 
-                var qskill = from x in db.ResumeSkills.AsEnumerable()
-                             where x.Resume.ResumeID == resumes
-                             select new
-                             {
-                                 Myskilldetail = x.Skill.SkillName,
-                                 Myskill = x.Skill.SkillType.SkillTypeName
-                             };
-                foreach (var i in qskill)
-                {
-
-                    cbskillall.Text = i.Myskill.ToString();
-                    cbskilldetail.Text = i.Myskilldetail.ToString();
-                }
-
+                        cbskillall.Text = i.Myskill.ToString();
+                        cbskilldetail.Text = i.Myskilldetail.ToString();
+                    }
+                
                 //證照LOAD
-                var qCertificate = from x in db.ResumeCertificates.AsEnumerable()
-                                   where x.Resume.ResumeID == resumes
-                                   select new
-                                   {
-                                       MyCertificatedetail = x.Certificate.CertificateName,
-                                       Mycertificate = x.Certificate.CertificateType.CertificateTypeName
-                                   };
-                foreach (var i in qCertificate)
-                {
-                    cbCall.Text = i.Mycertificate.ToString();
-                    cbcdetaill.Text = i.MyCertificatedetail.ToString();
+                    var qCertificate = from x in db.ResumeCertificates.AsEnumerable()
+                                       where x.Resume.ResumeID == resumes
+                                       select new
+                                       {
+                                           MyCertificatedetail = x.Certificate.CertificateName,
+                                           Mycertificate = x.Certificate.CertificateType.CertificateTypeName
+                                       };
+                    foreach (var i in qCertificate)
+                    {
+                        cbCall.Text = i.Mycertificate.ToString();
+                        cbcdetaill.Text = i.MyCertificatedetail.ToString();
 
-                }
+                    }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
@@ -166,7 +169,7 @@ namespace prjWantWantWinForm
                 //城市
                 var qcity = from x in db.Cities.AsEnumerable()
                             select x.City1;
-                cbCity.Items.Clear();
+               // cbCity.Items.Clear();
                 foreach (var i in qcity)
                 {
                     cbCity.Items.Add(i.ToString());
@@ -175,7 +178,7 @@ namespace prjWantWantWinForm
                 //專長
                 var qskill = from x in db.SkillTypes.AsEnumerable()
                              select x.SkillTypeName;
-                cbskillall.Items.Clear();
+                //cbskillall.Items.Clear();
                 foreach (var i in qskill)
                 {
                     cbskillall.Items.Add(i.ToString());
@@ -184,7 +187,7 @@ namespace prjWantWantWinForm
                 //證照
                 var qc = from x in db.CertificateTypes.AsEnumerable()
                          select x.CertificateTypeName;
-                cbCall.Items.Clear();
+               // cbCall.Items.Clear();
                 foreach (var i in qc)
                 {
                     cbCall.Items.Add(i.ToString());
@@ -207,7 +210,7 @@ namespace prjWantWantWinForm
         {
             try
             {
-                //TODO...不知道為什麼按鈕不會關掉
+              //TODO...不知道為什麼按鈕不會關掉
                 if (modify)
                 {
                     btnModify.Enabled = false;
@@ -227,7 +230,7 @@ namespace prjWantWantWinForm
 
                     //其他
                     var qer = db.ExpertResumes.Where(x => x.ResumeID == resumes).FirstOrDefault();
-
+                 
                     qer.Introduction = txtIntroduction.Text;
                     qer.PaymentMethod = txtPayment.Text;
                     qer.WorksUrl = txtWebsite.Text;
@@ -251,7 +254,7 @@ namespace prjWantWantWinForm
         }
 
 
-
+  
         void workShow()
         {
             this.flowLayoutPanel2.Controls.Clear();
@@ -260,14 +263,14 @@ namespace prjWantWantWinForm
             int count = qname.Count();
             foreach (var x in qname)
             {
-                PictureBox pictureBox = new PictureBox();
+                    PictureBox pictureBox = new PictureBox();
                 pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 Byte[] bytes = null;
-                bytes = x.WorksPhoto;
+                  bytes = x.WorksPhoto;
                 using (System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes))
                 {
-
-                    pictureBox.Image = Image.FromStream(ms);
+                 
+                pictureBox.Image = Image.FromStream(ms);
                 }
                 pictureBox.Tag = x.Workname;
                 pictureBox.Click += PictureBox_Click;
@@ -295,6 +298,7 @@ namespace prjWantWantWinForm
 
         }
 
+
         private void NowpictureBox_Paint(object sender, PaintEventArgs e)
         {
             PictureBox pb = (PictureBox)sender;
@@ -303,19 +307,19 @@ namespace prjWantWantWinForm
         PictureBox picturebox;
         private void btnPictureUp_Click(object sender, EventArgs e)
         {
-            Byte[] bytes = null;
+            Byte[] bytes=null;
 
-            using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+        using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    // var findq = db.ExpertResumes.Where(x => x.Introduction != null).Select(x => x.ResumeID);
-                    string picname = Path.GetFileName(openFileDialog1.FileName) + DateTime.Now;
+                   // var findq = db.ExpertResumes.Where(x => x.Introduction != null).Select(x => x.ResumeID);
+                    string picname = Path.GetFileName(openFileDialog1.FileName)+DateTime.Now;
                     picturebox = new PictureBox();
-                    picturebox.Image = Image.FromFile(this.openFileDialog1.FileName);
+                   picturebox.Image = Image.FromFile(this.openFileDialog1.FileName);
                     picturebox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
                     bytes = ms.GetBuffer();
-
+         
                     this.flowLayoutPanel2.Controls.Clear();
                     ExpertWork works = new ExpertWork
                     {
@@ -335,12 +339,12 @@ namespace prjWantWantWinForm
                     this.db.ExpertWorkLists.Add(workList);
 
                     db.SaveChanges();
-
+            
                     workShow();
                 }
             }
         }
-
+        
         private void btndelect_Click(object sender, EventArgs e)
         {
             var q = from ew in db.ExpertWorks

@@ -119,59 +119,61 @@ namespace prjWantWantWinForm
       
         private void btnBeExpert_Click(object sender, EventArgs e)
         {
-            if (cbCall.Text == "請選擇" || cbcdetaill.Text == "請選擇" || cbCity.Text == "請選擇" || cbTown.Text == "請選擇" || cbskillall.Text == "請選擇" || cbskilldetail.Text == "請選擇")
-            { MessageBox.Show("地區或專長或證照沒有選擇喔"); }
-            else
+            try
             {
-                MemberRoleConn mrc = new MemberRoleConn()
+                if (cbCall.Text == "請選擇" || cbcdetaill.Text == "請選擇" || cbCity.Text == "請選擇" || cbTown.Text == "請選擇" || cbskillall.Text == "請選擇" || cbskilldetail.Text == "請選擇")
+                { MessageBox.Show("地區或專長或證照沒有選擇喔"); }
+                else
                 {
-                    AccountID = member,
-                    RoleID = 3
-                };
-                this.db.MemberRoleConns.Add(mrc);
+                    MemberRoleConn mrc = new MemberRoleConn()
+                    {
+                        AccountID = member,
+                        RoleID = 3
+                    };
+                    this.db.MemberRoleConns.Add(mrc);
 
-                var qt = db.Towns.Where(x => x.Town1 == cbTown.Text && x.City.City1 == cbCity.Text).Select(x => x.TownID).First();
-                var qs = db.Skills.Where(x => x.SkillName == cbskilldetail.Text && x.SkillType.SkillTypeName == cbskillall.Text).Select(x => x.SkillID).First();
-                var qc = db.Certificates.Where(x => x.CertificateName == cbcdetaill.Text && x.CertificateType.CertificateTypeName == cbCall.Text).Select(x => x.CertificateID).First();
-                townid = qt;                skillid = qs;                certid = qc;
-                Resume resume = new Resume { AccountID = member, TownID = townid };
-                this.db.Resumes.Add(resume);
-                this.db.SaveChanges();
-
-
-                var qr = db.Resumes.Where(x => x.AccountID == member).OrderByDescending(x=>x.ResumeID).Select(x => x.ResumeID).First();
-                MessageBox.Show(qr+"");
-                int resumeid = qr;
-
-                ExpertAccount ea = new ExpertAccount() { ResumeID=qr};
-                this.db.ExpertAccounts.Add(ea);
-                ResumeCertificate rc = new ResumeCertificate { ResumeID = qr,CertificateID = certid };
-                this.db.ResumeCertificates.Add(rc);
-                ResumeSkill rs = new ResumeSkill { ResumeID = qr, SkillID = skillid };
-                this.db.ResumeSkills.Add(rs);
-
-                ExpertResume expertResume = new ExpertResume
-                {
-                    ResumeID = qr,
-                    Introduction = txtIntroduction.Text,
-                    PaymentMethod = txtPayment.Text,
-                    WorksUrl = txtWebsite.Text,
-                    Problem = txtQA.Text,
-                    CommonPrice = Convert.ToDecimal(txtPay.Text),
-                    ServiceMethod = txtService.Text
-                };
-                this.db.ExpertResumes.Add(expertResume);
+                    var qt = db.Towns.Where(x => x.Town1 == cbTown.Text && x.City.City1 == cbCity.Text).Select(x => x.TownID).First();
+                    var qs = db.Skills.Where(x => x.SkillName == cbskilldetail.Text && x.SkillType.SkillTypeName == cbskillall.Text).Select(x => x.SkillID).First();
+                    var qc = db.Certificates.Where(x => x.CertificateName == cbcdetaill.Text && x.CertificateType.CertificateTypeName == cbCall.Text).Select(x => x.CertificateID).First();
+                    townid = qt; skillid = qs; certid = qc;
+                    Resume resume = new Resume { AccountID = member, TownID = townid };
+                    this.db.Resumes.Add(resume);
+                    this.db.SaveChanges();
 
 
-                //===========
-                this.db.SaveChanges();
-                
-         
-                MessageBox.Show("新增成功");
+                    var qr = db.Resumes.Where(x => x.AccountID == member).OrderByDescending(x => x.ResumeID).Select(x => x.ResumeID).First();
+
+                    //int resumeid = qr;
+
+                    ExpertAccount ea = new ExpertAccount() { ResumeID = qr };
+                    this.db.ExpertAccounts.Add(ea);
+                    ResumeCertificate rc = new ResumeCertificate { ResumeID = qr, CertificateID = certid };
+                    this.db.ResumeCertificates.Add(rc);
+                    ResumeSkill rs = new ResumeSkill { ResumeID = qr, SkillID = skillid };
+                    this.db.ResumeSkills.Add(rs);
+
+                    ExpertResume expertResume = new ExpertResume
+                    {
+                        ResumeID = qr,
+                        Introduction = txtIntroduction.Text,
+                        PaymentMethod = txtPayment.Text,
+                        WorksUrl = txtWebsite.Text,
+                        Problem = txtQA.Text,
+                        CommonPrice = Convert.ToDecimal(txtPay.Text),
+                        ServiceMethod = txtService.Text
+                    };
+                    this.db.ExpertResumes.Add(expertResume);
+                    //===========
+                    this.db.SaveChanges();
+                    MessageBox.Show("新增成功");
+                }
             }
+            catch (Exception ex)
+            { MessageBox.Show(ex.Message); }
         }
+    }
            
 
         
-    }
+    
 }

@@ -94,59 +94,103 @@ namespace prjWantWantWinForm
                      };
             this.dataGridView1.DataSource = q2.ToList();
         }
-
+        int row;
+        int column;
+        //bool dataGrStatus = false;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
             //第一排按鈕
             if (dataGridView1.Columns[e.ColumnIndex].Name == "check" && e.RowIndex >= 0)
             {
-
-
                 if (e.RowIndex < dataGridView1.Rows.Count)
                 {
                     //取得該行的第四個資料格
-                   DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[3];
-                    var qstatus = (from ea in db.ExpertApplications
 
-                                   where ea.CaseID == (int)cell.Value
-                                   select ea).FirstOrDefault();
-                
-                    qstatus.CaseStatusID = 17;
-                    db.SaveChanges();
-                    MessageBox.Show("成功接案");
+                    //DataGridViewCell check;
+                    column = e.ColumnIndex;
+                    row = e.RowIndex;
 
-                    Expertviewhistory();
+                    if ((int)dataGridView1.Rows[row].Cells[11].Value == 15)
+                    {
+
+                        DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[3];
+                        var qstatus = (from ea in db.ExpertApplications
+
+                                       where ea.CaseID == (int)cell.Value
+                                       select ea).FirstOrDefault();
+
+                        qstatus.CaseStatusID = 17;
+                        db.SaveChanges();
+                        MessageBox.Show("成功接案");
+
+                        Expertviewhistory();
+
+
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 16)
+                    {
+                        MessageBox.Show("已拒絕接本案件");
+
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 17)
+                    {
+                        MessageBox.Show("本案件已接受");
+
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 18)
+                    {
+                        MessageBox.Show("本案件已完成");
+
+                    }
+
                 }
-
-
-
 
             }
 
 
             //第二排按鈕
-                if (dataGridView1.Columns[e.ColumnIndex].Name == "No" && e.RowIndex >= 0)
+            if (dataGridView1.Columns[e.ColumnIndex].Name == "No" && e.RowIndex >= 0)
             {
 
 
                 if (e.RowIndex < dataGridView1.Rows.Count)
                 {
                     //取得該行的第四個資料格
-                   DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[3];
-                    var qstatus = (from ea in db.ExpertApplications
 
-                                   where ea.CaseID == (int)cell.Value
-                                   select ea).FirstOrDefault();
+                    if ((int)dataGridView1.Rows[row].Cells[11].Value == 15)
+                    {
+                        DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[3];
+                        var qstatus = (from ea in db.ExpertApplications
 
-                    qstatus.CaseStatusID = 16;
-                    db.SaveChanges();
-                    MessageBox.Show("拒絕接案");
+                                       where ea.CaseID == (int)cell.Value
+                                       select ea).FirstOrDefault();
 
-                    Expertviewhistory();
+                        qstatus.CaseStatusID = 16;
+                        db.SaveChanges();
+                        MessageBox.Show("拒絕接案");
+
+                        Expertviewhistory();
+
+
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 16)
+                    {
+                        MessageBox.Show("本已拒絕接本案件");
+
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 17)
+                    {
+                        MessageBox.Show("本案件已接受");
+
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 18)
+                    {
+                        MessageBox.Show("本案件已完成");
+
+                    }
 
                 }
-
             }
 
             //第三排按鈕
@@ -156,8 +200,12 @@ namespace prjWantWantWinForm
 
                 if (e.RowIndex < dataGridView1.Rows.Count)
                 {
-                    //取得該行的第四個資料格
-                    DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[3];
+
+                    if ((int)dataGridView1.Rows[row].Cells[11].Value == 17)
+                    {
+
+                        //取得該行的第四個資料格
+                        DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[3];
                     var qstatus = (from ea in db.ExpertApplications
 
                                    where ea.CaseID == (int)cell.Value
@@ -168,6 +216,23 @@ namespace prjWantWantWinForm
                     MessageBox.Show("案件完成");
 
                     Expertviewhistory();
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 16)
+                    {
+                        MessageBox.Show("已拒絕接本案件");
+
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 17)
+                    {
+                        MessageBox.Show("本案件已接受");
+
+                    }
+                    else if ((int)dataGridView1.Rows[row].Cells[11].Value == 18)
+                    {
+                        MessageBox.Show("本案件已完成");
+
+                    }
+
 
                 }
 
@@ -175,5 +240,25 @@ namespace prjWantWantWinForm
 
 
         }
+
+      
+
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+            {
+                var buttonCell = dataGridView1.Rows[row].Cells[column] as DataGridViewButtonCell;
+
+                //// 根據特定條件來設定按鈕的可見性或啟用狀態
+                //if (yourCondition)
+                //{
+                //    buttonCell.Visible = false; // 隱藏按鈕
+                //                                // 或者
+                //    buttonCell.ReadOnly = true; // 禁用按鈕
+                //}
+            }
+        }
+
     }
 }

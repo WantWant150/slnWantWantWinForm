@@ -79,6 +79,7 @@ namespace prjWantWantWinForm
                 x.findlaLocation = item.town;
                 x.finds = item.Resumesid.ToString();
                 this.flowLayoutPanel1.Controls.Add(x);
+                //this.panel3.Controls.Add(x);
 
             }
         }
