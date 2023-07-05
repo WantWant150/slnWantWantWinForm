@@ -61,8 +61,8 @@ namespace prjIspanWinForms
 
                     MessageBox.Show("帳號密碼不符", "Prompt message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    //如果連續五次的話，會強制修改密碼
-                    if(loghis.PasswordFailCount >= 5)
+                    //如果連續3次的話，會強制修改密碼
+                    if(loghis.PasswordFailCount >= 3)
                     {
                         FrmForgetPassword frmfp = new FrmForgetPassword(false);
                         frmfp.ShowDialog();
