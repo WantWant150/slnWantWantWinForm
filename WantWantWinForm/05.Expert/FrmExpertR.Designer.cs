@@ -82,7 +82,7 @@
             this.panel1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(571, 181);
+            this.panel1.Size = new System.Drawing.Size(539, 184);
             this.panel1.TabIndex = 0;
             // 
             // labPrice
@@ -134,7 +134,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(407, 98);
+            this.btnSearch.Location = new System.Drawing.Point(380, 98);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(141, 60);
             this.btnSearch.TabIndex = 1;
@@ -153,13 +153,13 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // ExpertR
+            // FrmExpertR
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "ExpertR";
-            this.Size = new System.Drawing.Size(571, 181);
+            this.Name = "FrmExpertR";
+            this.Size = new System.Drawing.Size(539, 184);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

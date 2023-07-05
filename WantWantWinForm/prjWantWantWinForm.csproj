@@ -284,6 +284,12 @@
     <Compile Include="08.Forum\Frm_CreatePost.Designer.cs">
       <DependentUpon>Frm_CreatePost.cs</DependentUpon>
     </Compile>
+    <Compile Include="08.Forum\Frm_EditPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08.Forum\Frm_EditPost.Designer.cs">
+      <DependentUpon>Frm_EditPost.cs</DependentUpon>
+    </Compile>
     <Compile Include="08.Forum\Frm_ForumEnterCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -703,6 +709,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="08.Forum\Frm_CreatePost.resx">
       <DependentUpon>Frm_CreatePost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08.Forum\Frm_EditPost.resx">
+      <DependentUpon>Frm_EditPost.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="08.Forum\Frm_ForumEnterCategory.resx">
       <DependentUpon>Frm_ForumEnterCategory.cs</DependentUpon>

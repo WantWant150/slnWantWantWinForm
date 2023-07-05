@@ -198,7 +198,7 @@
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Margin = new System.Windows.Forms.Padding(2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1904, 431);
+            this.panel7.Size = new System.Drawing.Size(1904, 395);
             this.panel7.TabIndex = 1;
             // 
             // panel12
@@ -223,7 +223,7 @@
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1904, 431);
+            this.panel6.Size = new System.Drawing.Size(1904, 395);
             this.panel6.TabIndex = 0;
             // 
             // pictureBox6
@@ -232,7 +232,7 @@
             this.pictureBox6.Location = new System.Drawing.Point(1499, 0);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(366, 431);
+            this.pictureBox6.Size = new System.Drawing.Size(366, 395);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
@@ -243,7 +243,7 @@
             this.pictureBox5.Location = new System.Drawing.Point(1133, 0);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(366, 431);
+            this.pictureBox5.Size = new System.Drawing.Size(366, 395);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
@@ -254,7 +254,7 @@
             this.pictureBox4.Location = new System.Drawing.Point(767, 0);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(366, 431);
+            this.pictureBox4.Size = new System.Drawing.Size(366, 395);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -265,7 +265,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(401, 0);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(366, 431);
+            this.pictureBox3.Size = new System.Drawing.Size(366, 395);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -276,7 +276,7 @@
             this.pictureBox2.Location = new System.Drawing.Point(35, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(366, 431);
+            this.pictureBox2.Size = new System.Drawing.Size(366, 395);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -288,7 +288,7 @@
             this.btnNext.Location = new System.Drawing.Point(1866, 0);
             this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(38, 431);
+            this.btnNext.Size = new System.Drawing.Size(38, 395);
             this.btnNext.TabIndex = 6;
             this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -301,7 +301,7 @@
             this.btnFront.Location = new System.Drawing.Point(0, 0);
             this.btnFront.Margin = new System.Windows.Forms.Padding(2);
             this.btnFront.Name = "btnFront";
-            this.btnFront.Size = new System.Drawing.Size(35, 431);
+            this.btnFront.Size = new System.Drawing.Size(35, 395);
             this.btnFront.TabIndex = 5;
             this.btnFront.Text = "<";
             this.btnFront.UseVisualStyleBackColor = false;
@@ -314,7 +314,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(46, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 137);
+            this.pictureBox1.Size = new System.Drawing.Size(174, 173);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -347,7 +347,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(46, 137);
+            this.panel3.Size = new System.Drawing.Size(46, 173);
             this.panel3.TabIndex = 3;
             // 
             // panel1
@@ -361,7 +361,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1904, 137);
+            this.panel1.Size = new System.Drawing.Size(1904, 173);
             this.panel1.TabIndex = 4;
             // 
             // panel5
@@ -373,7 +373,7 @@
             this.panel5.Location = new System.Drawing.Point(220, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(218, 137);
+            this.panel5.Size = new System.Drawing.Size(218, 173);
             this.panel5.TabIndex = 7;
             // 
             // labLocation
@@ -405,7 +405,7 @@
             this.panel8.Location = new System.Drawing.Point(1628, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(276, 137);
+            this.panel8.Size = new System.Drawing.Size(276, 173);
             this.panel8.TabIndex = 9;
             // 
             // btnback
@@ -440,16 +440,16 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 22);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1904, 137);
+            this.panel10.Size = new System.Drawing.Size(1904, 173);
             this.panel10.TabIndex = 10;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panel7);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 159);
+            this.panel11.Location = new System.Drawing.Point(0, 195);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1904, 431);
+            this.panel11.Size = new System.Drawing.Size(1904, 395);
             this.panel11.TabIndex = 11;
             // 
             // timer1
@@ -457,7 +457,7 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // ExpertViewResume
+            // FrmExpertViewResume
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -468,7 +468,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "ExpertViewResume";
+            this.Name = "FrmExpertViewResume";
             this.Text = "ExpertResume";
             this.panel2.ResumeLayout(false);
             this.gbQA.ResumeLayout(false);
