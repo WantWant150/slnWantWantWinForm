@@ -89,6 +89,37 @@ namespace prjWantWantWinForm
             //工作詳細頁面.ID = id;
             ////工作詳細頁面.findjob = this;
             //工作詳細頁面.ShowDialog();
+            string colName = dataGridView2.Columns[e.ColumnIndex].Name;
+            if (colName == "Delete")
+            {
+                int id = (int)(dataGridView2.Rows[e.RowIndex].Cells[0].Value);
+                var q = (from mc in dbContext.MemberCollections
+                         where mc.CaseID == id /*&& mc.AccountID == CMember.AccountID*/ && mc.CaseID != null
+                         select mc).FirstOrDefault();
+
+                this.dbContext.MemberCollections.Remove(q);
+                dbContext.SaveChanges();
+
+                MessageBox.Show("已刪除");
+
+                var q1 = from mc in dbContext.MemberCollections
+                             //where mc.CaseID == ID && mc.AccountID == CMember.AccountID
+                         where mc.AccountID == CMember.AccountID && mc.CaseID != null
+                         select new
+                         {
+                             mc.TaskList.CaseID,
+                             mc.TaskList.TaskTitle,
+                             mc.TaskList.TaskDetail,
+                             mc.TaskList.Town.Town1,
+                             mc.TaskList.PayFrom,
+                             //mc.TaskList.PayTo,
+                             mc.TaskList.RequiredNum,
+                             mc.TaskList.TaskStart,
+                             mc.TaskList.TaskEnd
+                         };
+                ShowDataToDataGridView(q1);
+
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
