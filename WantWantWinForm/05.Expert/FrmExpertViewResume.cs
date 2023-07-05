@@ -249,7 +249,7 @@ namespace prjWantWantWinForm
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            FrmExpertR ea = new FrmExpertR();
+            FrmExpertCase ea = new FrmExpertCase();
             ea.Tag = resumesid;
             ea.Show();
         }
