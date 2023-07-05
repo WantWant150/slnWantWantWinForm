@@ -33,10 +33,11 @@
             this.檔案FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.發任務ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.找專家ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.會員中心ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.會員履歷ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.點數商城ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.討論區ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.討論區ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.會員中心ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.結束XToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.視窗ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,11 +49,12 @@
             this.關閉所有視窗ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonTask = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonExpert = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonMember = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonResume = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPoint = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonForum = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonService = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonMember = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonClose = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -78,10 +80,11 @@
             this.檔案FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.發任務ToolStripMenuItem,
             this.找專家ToolStripMenuItem,
+            this.會員中心ToolStripMenuItem,
+            this.會員履歷ToolStripMenuItem,
             this.點數商城ToolStripMenuItem,
             this.討論區ToolStripMenuItem1,
             this.討論區ToolStripMenuItem,
-            this.會員中心ToolStripMenuItem,
             this.toolStripSeparator2,
             this.結束XToolStripMenuItem});
             this.檔案FToolStripMenuItem.Name = "檔案FToolStripMenuItem";
@@ -101,6 +104,20 @@
             this.找專家ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.找專家ToolStripMenuItem.Text = "找專家";
             this.找專家ToolStripMenuItem.Click += new System.EventHandler(this.找專家ToolStripMenuItem_Click);
+            // 
+            // 會員中心ToolStripMenuItem
+            // 
+            this.會員中心ToolStripMenuItem.Name = "會員中心ToolStripMenuItem";
+            this.會員中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.會員中心ToolStripMenuItem.Text = "會員中心";
+            this.會員中心ToolStripMenuItem.Click += new System.EventHandler(this.會員中心ToolStripMenuItem_Click);
+            // 
+            // 會員履歷ToolStripMenuItem
+            // 
+            this.會員履歷ToolStripMenuItem.Name = "會員履歷ToolStripMenuItem";
+            this.會員履歷ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
+            this.會員履歷ToolStripMenuItem.Text = "會員履歷";
+            this.會員履歷ToolStripMenuItem.Click += new System.EventHandler(this.會員履歷ToolStripMenuItem_Click);
             // 
             // 點數商城ToolStripMenuItem
             // 
@@ -122,13 +139,6 @@
             this.討論區ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.討論區ToolStripMenuItem.Text = "聯絡客服";
             this.討論區ToolStripMenuItem.Click += new System.EventHandler(this.聯絡客服ToolStripMenuItem_Click);
-            // 
-            // 會員中心ToolStripMenuItem
-            // 
-            this.會員中心ToolStripMenuItem.Name = "會員中心ToolStripMenuItem";
-            this.會員中心ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
-            this.會員中心ToolStripMenuItem.Text = "會員中心";
-            this.會員中心ToolStripMenuItem.Click += new System.EventHandler(this.會員中心ToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -157,40 +167,40 @@
             // 水平排序ToolStripMenuItem
             // 
             this.水平排序ToolStripMenuItem.Name = "水平排序ToolStripMenuItem";
-            this.水平排序ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.水平排序ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.水平排序ToolStripMenuItem.Text = "水平排序";
             this.水平排序ToolStripMenuItem.Click += new System.EventHandler(this.水平排序ToolStripMenuItem_Click);
             // 
             // 垂直排序ToolStripMenuItem
             // 
             this.垂直排序ToolStripMenuItem.Name = "垂直排序ToolStripMenuItem";
-            this.垂直排序ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.垂直排序ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.垂直排序ToolStripMenuItem.Text = "垂直排序";
             this.垂直排序ToolStripMenuItem.Click += new System.EventHandler(this.垂直排序ToolStripMenuItem_Click);
             // 
             // 階梯式排序ToolStripMenuItem
             // 
             this.階梯式排序ToolStripMenuItem.Name = "階梯式排序ToolStripMenuItem";
-            this.階梯式排序ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.階梯式排序ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.階梯式排序ToolStripMenuItem.Text = "階梯式排序";
             this.階梯式排序ToolStripMenuItem.Click += new System.EventHandler(this.階梯式排序ToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(179, 6);
             // 
             // 關閉目前視窗ToolStripMenuItem
             // 
             this.關閉目前視窗ToolStripMenuItem.Name = "關閉目前視窗ToolStripMenuItem";
-            this.關閉目前視窗ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.關閉目前視窗ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.關閉目前視窗ToolStripMenuItem.Text = "關閉目前視窗";
             this.關閉目前視窗ToolStripMenuItem.Click += new System.EventHandler(this.關閉目前視窗ToolStripMenuItem_Click);
             // 
             // 關閉所有視窗ToolStripMenuItem
             // 
             this.關閉所有視窗ToolStripMenuItem.Name = "關閉所有視窗ToolStripMenuItem";
-            this.關閉所有視窗ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.關閉所有視窗ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.關閉所有視窗ToolStripMenuItem.Text = "關閉所有視窗";
             this.關閉所有視窗ToolStripMenuItem.Click += new System.EventHandler(this.關閉所有視窗ToolStripMenuItem_Click);
             // 
@@ -200,11 +210,12 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(48, 48);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButtonTask,
-            this.toolStripButtonExpert,
+            this.toolStripButton1,
+            this.toolStripButtonMember,
+            this.toolStripButtonResume,
             this.toolStripButtonPoint,
             this.toolStripButtonForum,
             this.toolStripButtonService,
-            this.toolStripButtonMember,
             this.toolStripButtonClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 29);
             this.toolStrip1.Name = "toolStrip1";
@@ -222,14 +233,32 @@
             this.toolStripButtonTask.Text = "發任務";
             this.toolStripButtonTask.Click += new System.EventHandler(this.toolStripButtonTask_Click);
             // 
-            // toolStripButtonExpert
+            // toolStripButton1
             // 
-            this.toolStripButtonExpert.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonExpert.Image")));
-            this.toolStripButtonExpert.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonExpert.Name = "toolStripButtonExpert";
-            this.toolStripButtonExpert.Size = new System.Drawing.Size(106, 52);
-            this.toolStripButtonExpert.Text = "找專家";
-            this.toolStripButtonExpert.Click += new System.EventHandler(this.toolStripButtonExpert_Click);
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(106, 52);
+            this.toolStripButton1.Text = "找專家";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButtonExpert_Click);
+            // 
+            // toolStripButtonMember
+            // 
+            this.toolStripButtonMember.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMember.Image")));
+            this.toolStripButtonMember.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonMember.Name = "toolStripButtonMember";
+            this.toolStripButtonMember.Size = new System.Drawing.Size(121, 52);
+            this.toolStripButtonMember.Text = "會員中心";
+            this.toolStripButtonMember.Click += new System.EventHandler(this.toolStripButtonMember_Click);
+            // 
+            // toolStripButtonResume
+            // 
+            this.toolStripButtonResume.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonResume.Image")));
+            this.toolStripButtonResume.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonResume.Name = "toolStripButtonResume";
+            this.toolStripButtonResume.Size = new System.Drawing.Size(121, 52);
+            this.toolStripButtonResume.Text = "會員履歷";
+            this.toolStripButtonResume.Click += new System.EventHandler(this.toolStripButtonResume_Click);
             // 
             // toolStripButtonPoint
             // 
@@ -259,15 +288,6 @@
             this.toolStripButtonService.ToolTipText = "聯絡客服";
             this.toolStripButtonService.Click += new System.EventHandler(this.toolStripButtonService_Click);
             // 
-            // toolStripButtonMember
-            // 
-            this.toolStripButtonMember.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonMember.Image")));
-            this.toolStripButtonMember.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonMember.Name = "toolStripButtonMember";
-            this.toolStripButtonMember.Size = new System.Drawing.Size(121, 52);
-            this.toolStripButtonMember.Text = "會員中心";
-            this.toolStripButtonMember.Click += new System.EventHandler(this.toolStripButtonMember_Click);
-            // 
             // toolStripButtonClose
             // 
             this.toolStripButtonClose.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonClose.Image")));
@@ -281,7 +301,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(834, 41);
+            this.label1.Location = new System.Drawing.Point(902, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 25);
             this.label1.TabIndex = 3;
@@ -329,7 +349,7 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButtonTask;
         private System.Windows.Forms.ToolStripButton toolStripButtonPoint;
-        private System.Windows.Forms.ToolStripButton toolStripButtonExpert;
+        private System.Windows.Forms.ToolStripButton toolStripButtonResume;
         private System.Windows.Forms.ToolStripButton toolStripButtonMember;
         private System.Windows.Forms.ToolStripButton toolStripButtonService;
         private System.Windows.Forms.ToolStripButton toolStripButtonClose;
@@ -341,6 +361,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripButton toolStripButtonForum;
         private System.Windows.Forms.ToolStripMenuItem 討論區ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem 會員履歷ToolStripMenuItem;
     }
 }
 
