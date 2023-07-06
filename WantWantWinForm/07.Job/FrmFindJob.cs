@@ -408,17 +408,23 @@ namespace prjWantWantWinForm
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
-            FrmJobDetail 工作詳細頁面 = new FrmJobDetail();
-            工作詳細頁面.ID = id;
-            工作詳細頁面.findjob = this;
-            工作詳細頁面.ShowDialog();
+            try
+            {
+                int id = (int)dataGridView2.Rows[e.RowIndex].Cells[0].Value;
+                FrmJobDetail 工作詳細頁面 = new FrmJobDetail();
+                工作詳細頁面.ID = id;
+                工作詳細頁面.findjob = this;
+                工作詳細頁面.ShowDialog();
 
-            FrmCollection 收藏案件 = new FrmCollection();
-            
-            收藏案件.ID = id;
-            收藏案件.findjob = this;
-            
+                FrmCollection 收藏案件 = new FrmCollection();
+
+                收藏案件.ID = id;
+                收藏案件.findjob = this;
+            }
+            catch
+            {
+
+            }           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -428,11 +434,18 @@ namespace prjWantWantWinForm
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-            FrmJobDetail 工作詳細頁面 = new FrmJobDetail();
-            工作詳細頁面.ID = id;
-            工作詳細頁面.findjob = this;
-            工作詳細頁面.ShowDialog();
+            try
+            {
+                int id = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+                FrmJobDetail 工作詳細頁面 = new FrmJobDetail();
+                工作詳細頁面.ID = id;
+                工作詳細頁面.findjob = this;
+                工作詳細頁面.ShowDialog();
+            }
+            catch
+            {
+
+            }          
         }
 
         private void button3_Click(object sender, EventArgs e)
