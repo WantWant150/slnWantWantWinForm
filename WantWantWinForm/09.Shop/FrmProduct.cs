@@ -1,5 +1,4 @@
 ﻿using Microsoft.Build.Framework.XamlTypes;
-using prjWantWantWinForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

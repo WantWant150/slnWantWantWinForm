@@ -1,5 +1,4 @@
-﻿using prjWantWantWinForm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -98,6 +97,7 @@ namespace prjWantWantWinForm
                                where od.OrderID == orderId
                                select new
                                {
+                                   訂單編號 = od.OrderID,
                                    產品名稱 = od.Product.ProductName,
                                    數量 = od.Quantity,
                                    單價or點數 = (od.Order.CategoryID == 1) ? od.UnitPrice : od.UnitPoint,
@@ -186,18 +186,18 @@ namespace prjWantWantWinForm
 
             string selectedCategory = comboBox2.SelectedItem.ToString();
 
-            var orderDetails = from od in dbContext.OrderDetails
-                               where od.Order.Category.CategoryName == selectedCategory
+            var q= from o in dbContext.Orders
+                               where o.Category.CategoryName == selectedCategory
                                select new
                                {
-                                   產品名稱 = od.Product.ProductName,
-                                   數量 = od.Quantity,
-                                   單價or點數 = (od.Order.CategoryID == 1) ? od.UnitPrice : od.UnitPoint,
-                                   獲得點數 = od.GetPoint,
-                                   總價 = (od.Order.CategoryID == 1) ? od.UnitPrice * od.Quantity : od.UnitPoint * od.Quantity,
+                                   訂單編號 = o.OrderID,
+                                   訂單類別 = o.Category.CategoryName,
+                                   總金額或點數 = (o.CategoryID == 1) ? o.OrderPrice : o.OrderUsePoint,
+                                   付款方式 = o.PayWay.PayWayName,
+                                   購買日期 = o.CreateTime
                                };
 
-            dataGridView2.DataSource = orderDetails.ToList();
+            dataGridView2.DataSource = q.ToList();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -206,11 +206,11 @@ namespace prjWantWantWinForm
             var q = dbContext.OrderDetails.ToList();
 
             var q2 = q.GroupBy(od => od.Product.ProductName)
-                        .Select(g => new
-                        {
-                            產品名稱 = g.Key,
-                            銷量 = g.Sum(od => od.Quantity)
-                        }).ToList();
+             .Select(g => new
+             {
+                 產品名稱 = (g.Key.Length > 5) ? g.Key.Substring(0, 5)  : g.Key,
+                 銷量 = g.Sum(od => od.Quantity)
+             }).ToList();
 
             this.chart1.Series.Clear(); // 清除原有的資料序列
 

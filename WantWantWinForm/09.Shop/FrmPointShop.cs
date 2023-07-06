@@ -1,5 +1,4 @@
-﻿using prjWantWantWinForm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +37,7 @@ namespace prjWantWantWinForm
 
             // 創建並配置一個TIMER控制項
             timer = new Timer();
-            timer.Interval = 10; // 設定間格時間
+            timer.Interval = 30; // 設定間格時間
             timer.Tick += Timer_Tick; // 绑定
             timer.Start(); // 啟動
         }
@@ -168,11 +167,11 @@ namespace prjWantWantWinForm
 
             // 設定寬度
             dataGridView1.Columns["ID"].Width = 40;
-            dataGridView1.Columns["商品"].Width = 120;
-            dataGridView1.Columns["數量"].Width = 100;
-            dataGridView1.Columns["曝光天數"].Width = 100;
-            dataGridView1.Columns["單價(點數)"].Width = 100;    
-            dataGridView1.Columns["總點數"].Width = 120;
+            dataGridView1.Columns["商品"].Width = 100;
+            dataGridView1.Columns["數量"].Width = 80;
+            dataGridView1.Columns["曝光天數"].Width = 80;
+            dataGridView1.Columns["單價(點數)"].Width = 80;    
+            dataGridView1.Columns["總點數"].Width = 80;
 
         }
 
@@ -447,6 +446,25 @@ namespace prjWantWantWinForm
 
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FrmOrders frm = new FrmOrders();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmShop frm = new FrmShop();
+            frm.Show();
+            this.Close();
         }
     }
 }

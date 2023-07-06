@@ -1,5 +1,4 @@
 ﻿using Microsoft.Build.Framework.XamlTypes;
-using prjWantWantWinForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -366,11 +365,6 @@ namespace prjWantWantWinForm
         }
 
         private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
         {
 
         }

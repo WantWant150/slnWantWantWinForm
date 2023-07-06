@@ -1,5 +1,4 @@
 ﻿using Microsoft.Build.Framework.XamlTypes;
-using prjWantWantWinForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,6 +88,7 @@ namespace prjWantWantWinForm
                                    where od.OrderID == orderId && od.Order.CategoryID == 1
                                    select new
                                    {
+                                       訂單編號 = od.OrderID,
                                        產品名稱 = od.Product.ProductName,
                                        數量 = od.Quantity,
                                        單價or點數 = (od.Order.CategoryID == 1) ? od.UnitPrice : od.UnitPoint,
@@ -101,6 +101,7 @@ namespace prjWantWantWinForm
                                    where od.OrderID == orderId && od.Order.CategoryID == 2
                                    select new
                                    {
+                                       訂單編號 = od.OrderID,
                                        產品名稱 = od.Product.ProductName,
                                        數量 = od.Quantity,
                       
@@ -157,10 +158,17 @@ namespace prjWantWantWinForm
         private void button9_Click(object sender, EventArgs e)
         {
             var q = from o in dbContext.Orders
-                    where o.CreateTime >= this.dateTimePicker1.Value && o.CreateTime <= this.dateTimePicker2.Value
-                    select o;
+                    where o.CreateTime >= this.dateTimePicker1.Value && o.CreateTime <= this.dateTimePicker2.Value && o.AccountID == CMember.AccountID
+                     select new
+                    {
+                        訂單編號 = o.OrderID,
+                        訂單類別 = o.Category.CategoryName,
+                        總金額或點數 = (o.CategoryID == 1) ? o.OrderPrice : o.OrderUsePoint,
+                        付款方式 = o.PayWay.PayWayName,
+                        購買日期 = o.CreateTime,
+                    };
 
-            this.dataGridView1.DataSource = q.ToList();
+            this.dataGridView2.DataSource = q.ToList();
         }
 
         private void button1_Click(object sender, EventArgs e)

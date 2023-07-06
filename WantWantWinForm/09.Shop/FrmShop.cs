@@ -1,5 +1,4 @@
-﻿using prjWantWantWinForm;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +25,26 @@ namespace prjWantWantWinForm
         //    get { return accountId; }
         //    set { accountId = value; }
         //}
+        private Form OpenForm(Form frm)
+        {
+            if (splitContainer1.Panel2 != null)
+            {
 
+                splitContainer1.Panel2.Controls.Clear();
+
+                // 設置其他表單的屬性
+                frm.TopLevel = false;
+
+                // 將 Panel 加入 SplitContainer 的 Panel1 中
+                splitContainer1.Panel2.Controls.Add(frm);
+
+                // 顯示表單
+                frm.Show();
+
+                return frm;
+            }
+            return null;
+        }
 
         NewIspanProjectEntities dbContext = new NewIspanProjectEntities();
         // 購物車總金額
@@ -61,12 +79,12 @@ namespace prjWantWantWinForm
 
             //設定寬度
             dataGridView1.Columns["ID"].Width = 50; 
-            dataGridView1.Columns["商品"].Width = 120; 
-            dataGridView1.Columns["數量"].Width = 80; 
-            dataGridView1.Columns["購買點數"].Width = 100;
-            dataGridView1.Columns["購買總點數"].Width = 120;
-            dataGridView1.Columns["單價"].Width = 120;
-            dataGridView1.Columns["總價"].Width = 120; 
+            dataGridView1.Columns["商品"].Width = 100; 
+            dataGridView1.Columns["數量"].Width = 60; 
+            dataGridView1.Columns["購買點數"].Width = 60;
+            dataGridView1.Columns["購買總點數"].Width = 60;
+            dataGridView1.Columns["單價"].Width = 60;
+            dataGridView1.Columns["總價"].Width = 90; 
         }
 
         //載入商品
@@ -343,7 +361,24 @@ namespace prjWantWantWinForm
 
         private void button2_Click(object sender, EventArgs e)
         {
+            FrmPointShop frm = new FrmPointShop();
+            frm.Show();
+            this.Close();
 
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FrmOrders frm = new FrmOrders();
+            frm.Show();
+           
+            this.Close();
         }
     }
 

@@ -184,17 +184,28 @@ namespace prjWantWantWinForm
 
         #endregion
 
-
+        private void CloseOtherChildForms(Form currentChildForm)
+        {
+            foreach (Form childForm in this.MdiChildren)
+            {
+                if (childForm != currentChildForm)
+                {
+                    childForm.Close();
+                }
+            }
+        }
         #region 點數商城
         private void toolStripButtonPoint_Click(object sender, EventArgs e)
         {
-            FrmShopOut frm = new FrmShopOut();
+            FrmShop frm = new FrmShop();
             ShowForm(frm);
+            CloseOtherChildForms(frm);
         }
         private void 點數商城ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmShopOut frm = new FrmShopOut();
+            FrmShop frm = new FrmShop();
             ShowForm(frm);
+            CloseOtherChildForms(frm);
         }
         #endregion
 
