@@ -82,7 +82,7 @@ namespace prjWantWantWinForm
         {
             comboboxRC.DataSource = null;
             var cases = dbContext.TaskLists
-                .Where(t => t.AccountID == CMember.AccountID)
+                .Where(t => t.AccountID == CMember.AccountID&&t.PublishOrNot=="立刻上架")
                 .Select(t => new { t.CaseID, t.TaskTitle })
                 .ToList();
 

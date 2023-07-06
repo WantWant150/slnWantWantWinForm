@@ -62,7 +62,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -77,9 +77,9 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Snow;
-            this.splitContainer1.Size = new System.Drawing.Size(1433, 980);
-            this.splitContainer1.SplitterDistance = 183;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(1612, 1100);
+            this.splitContainer1.SplitterDistance = 205;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
             // panel1
@@ -88,9 +88,10 @@
             this.panel1.Controls.Add(this.tsp_GaveJob);
             this.panel1.Controls.Add(this.tsp_Saved);
             this.panel1.Controls.Add(this.toolStrip1);
-            this.panel1.Location = new System.Drawing.Point(12, 49);
+            this.panel1.Location = new System.Drawing.Point(14, 59);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(159, 426);
+            this.panel1.Size = new System.Drawing.Size(179, 511);
             this.panel1.TabIndex = 120;
             // 
             // toolStrip3
@@ -101,23 +102,23 @@
             this.toolStrip3.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton6});
-            this.toolStrip3.Location = new System.Drawing.Point(25, 42);
+            this.toolStrip3.Location = new System.Drawing.Point(12, 114);
             this.toolStrip3.Name = "toolStrip3";
             this.toolStrip3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStrip3.Size = new System.Drawing.Size(113, 32);
+            this.toolStrip3.Size = new System.Drawing.Size(136, 42);
             this.toolStrip3.TabIndex = 119;
             this.toolStrip3.Text = "toolStrip1";
             // 
             // toolStripButton6
             // 
             this.toolStripButton6.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.toolStripButton6.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripButton6.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripButton6.Size = new System.Drawing.Size(100, 29);
+            this.toolStripButton6.Size = new System.Drawing.Size(124, 39);
             this.toolStripButton6.Text = "找工作";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
@@ -129,9 +130,9 @@
             this.tsp_GaveJob.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_GaveJob.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton3});
-            this.tsp_GaveJob.Location = new System.Drawing.Point(25, 160);
+            this.tsp_GaveJob.Location = new System.Drawing.Point(12, 195);
             this.tsp_GaveJob.Name = "tsp_GaveJob";
-            this.tsp_GaveJob.Size = new System.Drawing.Size(113, 32);
+            this.tsp_GaveJob.Size = new System.Drawing.Size(136, 42);
             this.tsp_GaveJob.TabIndex = 114;
             this.tsp_GaveJob.Text = "toolStrip3";
             this.tsp_GaveJob.Click += new System.EventHandler(this.tsp_GaveJob_Click);
@@ -139,12 +140,12 @@
             // toolStripButton3
             // 
             this.toolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.toolStripButton3.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripButton3.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(100, 29);
+            this.toolStripButton3.Size = new System.Drawing.Size(124, 39);
             this.toolStripButton3.Text = "已投遞";
             // 
             // tsp_Saved
@@ -155,21 +156,21 @@
             this.tsp_Saved.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_Saved.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton5});
-            this.tsp_Saved.Location = new System.Drawing.Point(25, 222);
+            this.tsp_Saved.Location = new System.Drawing.Point(12, 269);
             this.tsp_Saved.Name = "tsp_Saved";
-            this.tsp_Saved.Size = new System.Drawing.Size(113, 32);
+            this.tsp_Saved.Size = new System.Drawing.Size(136, 42);
             this.tsp_Saved.TabIndex = 116;
             this.tsp_Saved.Text = "toolStrip5";
             // 
             // toolStripButton5
             // 
             this.toolStripButton5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.toolStripButton5.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripButton5.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(100, 29);
+            this.toolStripButton5.Size = new System.Drawing.Size(124, 39);
             this.toolStripButton5.Text = "已收藏";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
             // 
@@ -181,21 +182,21 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(25, 100);
+            this.toolStrip1.Location = new System.Drawing.Point(12, 46);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(93, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(109, 42);
             this.toolStrip1.TabIndex = 117;
             this.toolStrip1.Text = "履歷";
             // 
             // toolStripButton1
             // 
             this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.toolStripButton1.Font = new System.Drawing.Font("微軟正黑體", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.toolStripButton1.ForeColor = System.Drawing.Color.PaleVioletRed;
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(80, 29);
+            this.toolStripButton1.Size = new System.Drawing.Size(97, 39);
             this.toolStripButton1.Text = "履歷";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -209,9 +210,9 @@
             this.toolStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton2});
-            this.toolStrip2.Location = new System.Drawing.Point(39, 328);
+            this.toolStrip2.Location = new System.Drawing.Point(44, 394);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(113, 32);
+            this.toolStrip2.Size = new System.Drawing.Size(98, 31);
             this.toolStrip2.TabIndex = 118;
             this.toolStrip2.Text = "toolStrip4";
             this.toolStrip2.Visible = false;
@@ -224,7 +225,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(100, 29);
+            this.toolStripButton2.Size = new System.Drawing.Size(86, 28);
             this.toolStripButton2.Text = "出任務";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -238,9 +239,9 @@
             this.tsp_Chat.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_Chat.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton4});
-            this.tsp_Chat.Location = new System.Drawing.Point(39, 381);
+            this.tsp_Chat.Location = new System.Drawing.Point(44, 457);
             this.tsp_Chat.Name = "tsp_Chat";
-            this.tsp_Chat.Size = new System.Drawing.Size(113, 32);
+            this.tsp_Chat.Size = new System.Drawing.Size(98, 31);
             this.tsp_Chat.TabIndex = 115;
             this.tsp_Chat.Text = "toolStrip4";
             this.tsp_Chat.Visible = false;
@@ -253,7 +254,7 @@
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(100, 29);
+            this.toolStripButton4.Size = new System.Drawing.Size(86, 28);
             this.toolStripButton4.Text = "聊天室";
             // 
             // tsp_GiveJob
@@ -264,10 +265,10 @@
             this.tsp_GiveJob.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_GiveJob.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_GiveJob});
-            this.tsp_GiveJob.Location = new System.Drawing.Point(39, 36);
+            this.tsp_GiveJob.Location = new System.Drawing.Point(44, 43);
             this.tsp_GiveJob.Name = "tsp_GiveJob";
             this.tsp_GiveJob.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tsp_GiveJob.Size = new System.Drawing.Size(113, 32);
+            this.tsp_GiveJob.Size = new System.Drawing.Size(98, 31);
             this.tsp_GiveJob.TabIndex = 113;
             this.tsp_GiveJob.Text = "toolStrip1";
             this.tsp_GiveJob.Visible = false;
@@ -281,19 +282,19 @@
             this.btn_GiveJob.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_GiveJob.Name = "btn_GiveJob";
             this.btn_GiveJob.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_GiveJob.Size = new System.Drawing.Size(100, 29);
+            this.btn_GiveJob.Size = new System.Drawing.Size(86, 28);
             this.btn_GiveJob.Text = "找工作";
             this.btn_GiveJob.Click += new System.EventHandler(this.btn_GiveJob_Click);
             // 
             // FrmJobTool
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1433, 980);
+            this.ClientSize = new System.Drawing.Size(1612, 1100);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmJobTool";
             this.Text = "功能列";
             this.splitContainer1.Panel1.ResumeLayout(false);

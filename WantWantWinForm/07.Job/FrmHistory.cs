@@ -18,14 +18,20 @@ namespace prjWantWantWinForm
         {
             InitializeComponent();
 
-            try
-            {
+            ////依內容自動換行
+            //dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            ////自動調欄寬
+            //dataGridView1.AutoResizeColumns();
+
+            //自動調欄高
+            dataGridView2.AutoResizeRows();
+
+            // 設定標題的 AutoSizeMode 屬性為 AllCells
+            dataGridView2.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            // 設定自動調整模式為 ColumnHeader，以便自動調整標題寬度
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
 
         }
 
