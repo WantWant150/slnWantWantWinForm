@@ -57,7 +57,6 @@
             this.labLocation = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnback = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -89,10 +88,10 @@
             this.panel2.Controls.Add(this.gbintroduction);
             this.panel2.Controls.Add(this.panel9);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 270);
+            this.panel2.Location = new System.Drawing.Point(0, 337);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(784, 291);
+            this.panel2.Size = new System.Drawing.Size(1045, 364);
             this.panel2.TabIndex = 1;
             // 
             // gbQA
@@ -101,11 +100,11 @@
             this.gbQA.Controls.Add(this.txtQA);
             this.gbQA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbQA.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.gbQA.Location = new System.Drawing.Point(0, 186);
-            this.gbQA.Margin = new System.Windows.Forms.Padding(2);
+            this.gbQA.Location = new System.Drawing.Point(0, 232);
+            this.gbQA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbQA.Name = "gbQA";
-            this.gbQA.Padding = new System.Windows.Forms.Padding(2);
-            this.gbQA.Size = new System.Drawing.Size(784, 105);
+            this.gbQA.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbQA.Size = new System.Drawing.Size(1045, 132);
             this.gbQA.TabIndex = 5;
             this.gbQA.TabStop = false;
             this.gbQA.Text = "常見問題";
@@ -115,12 +114,12 @@
             this.txtQA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtQA.Enabled = false;
             this.txtQA.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtQA.Location = new System.Drawing.Point(2, 28);
-            this.txtQA.Margin = new System.Windows.Forms.Padding(2);
+            this.txtQA.Location = new System.Drawing.Point(3, 34);
+            this.txtQA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQA.Multiline = true;
             this.txtQA.Name = "txtQA";
             this.txtQA.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtQA.Size = new System.Drawing.Size(780, 75);
+            this.txtQA.Size = new System.Drawing.Size(1039, 96);
             this.txtQA.TabIndex = 129;
             // 
             // gbService
@@ -129,11 +128,11 @@
             this.gbService.Controls.Add(this.txtService);
             this.gbService.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbService.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.gbService.Location = new System.Drawing.Point(0, 101);
-            this.gbService.Margin = new System.Windows.Forms.Padding(2);
+            this.gbService.Location = new System.Drawing.Point(0, 126);
+            this.gbService.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbService.Name = "gbService";
-            this.gbService.Padding = new System.Windows.Forms.Padding(2);
-            this.gbService.Size = new System.Drawing.Size(784, 85);
+            this.gbService.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbService.Size = new System.Drawing.Size(1045, 106);
             this.gbService.TabIndex = 4;
             this.gbService.TabStop = false;
             this.gbService.Text = "服務";
@@ -143,12 +142,12 @@
             this.txtService.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtService.Enabled = false;
             this.txtService.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtService.Location = new System.Drawing.Point(2, 28);
-            this.txtService.Margin = new System.Windows.Forms.Padding(2);
+            this.txtService.Location = new System.Drawing.Point(3, 34);
+            this.txtService.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtService.Multiline = true;
             this.txtService.Name = "txtService";
             this.txtService.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtService.Size = new System.Drawing.Size(780, 55);
+            this.txtService.Size = new System.Drawing.Size(1039, 70);
             this.txtService.TabIndex = 133;
             // 
             // gbintroduction
@@ -157,11 +156,11 @@
             this.gbintroduction.Controls.Add(this.txtIntroduction);
             this.gbintroduction.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbintroduction.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.gbintroduction.Location = new System.Drawing.Point(0, 12);
-            this.gbintroduction.Margin = new System.Windows.Forms.Padding(2);
+            this.gbintroduction.Location = new System.Drawing.Point(0, 15);
+            this.gbintroduction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbintroduction.Name = "gbintroduction";
-            this.gbintroduction.Padding = new System.Windows.Forms.Padding(2);
-            this.gbintroduction.Size = new System.Drawing.Size(784, 89);
+            this.gbintroduction.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbintroduction.Size = new System.Drawing.Size(1045, 111);
             this.gbintroduction.TabIndex = 2;
             this.gbintroduction.TabStop = false;
             this.gbintroduction.Text = "專家介紹";
@@ -171,12 +170,12 @@
             this.txtIntroduction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtIntroduction.Enabled = false;
             this.txtIntroduction.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtIntroduction.Location = new System.Drawing.Point(2, 28);
-            this.txtIntroduction.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIntroduction.Location = new System.Drawing.Point(3, 34);
+            this.txtIntroduction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIntroduction.Multiline = true;
             this.txtIntroduction.Name = "txtIntroduction";
             this.txtIntroduction.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtIntroduction.Size = new System.Drawing.Size(780, 59);
+            this.txtIntroduction.Size = new System.Drawing.Size(1039, 75);
             this.txtIntroduction.TabIndex = 123;
             // 
             // panel9
@@ -184,9 +183,9 @@
             this.panel9.BackColor = System.Drawing.Color.MistyRose;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(784, 12);
+            this.panel9.Size = new System.Drawing.Size(1045, 15);
             this.panel9.TabIndex = 3;
             // 
             // panel7
@@ -196,17 +195,18 @@
             this.panel7.Controls.Add(this.panel6);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(784, 125);
+            this.panel7.Size = new System.Drawing.Size(1045, 155);
             this.panel7.TabIndex = 1;
             // 
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(784, 24);
+            this.panel12.Size = new System.Drawing.Size(1045, 30);
             this.panel12.TabIndex = 1;
             // 
             // panel6
@@ -221,18 +221,18 @@
             this.panel6.Controls.Add(this.btnFront);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(784, 125);
+            this.panel6.Size = new System.Drawing.Size(1045, 155);
             this.panel6.TabIndex = 0;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox6.Location = new System.Drawing.Point(877, 0);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Location = new System.Drawing.Point(1169, 0);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(192, 125);
+            this.pictureBox6.Size = new System.Drawing.Size(256, 155);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 4;
             this.pictureBox6.TabStop = false;
@@ -240,10 +240,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox5.Location = new System.Drawing.Point(692, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Location = new System.Drawing.Point(922, 0);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(185, 125);
+            this.pictureBox5.Size = new System.Drawing.Size(247, 155);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
@@ -251,10 +251,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox4.Location = new System.Drawing.Point(478, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(637, 0);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(214, 125);
+            this.pictureBox4.Size = new System.Drawing.Size(285, 155);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -262,10 +262,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Location = new System.Drawing.Point(264, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(352, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(214, 125);
+            this.pictureBox3.Size = new System.Drawing.Size(285, 155);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -273,10 +273,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Location = new System.Drawing.Point(35, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(47, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(229, 125);
+            this.pictureBox2.Size = new System.Drawing.Size(305, 155);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -285,10 +285,10 @@
             // 
             this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnNext.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnNext.Location = new System.Drawing.Point(746, 0);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Location = new System.Drawing.Point(994, 0);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(38, 125);
+            this.btnNext.Size = new System.Drawing.Size(51, 155);
             this.btnNext.TabIndex = 6;
             this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -299,9 +299,9 @@
             this.btnFront.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnFront.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnFront.Location = new System.Drawing.Point(0, 0);
-            this.btnFront.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFront.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFront.Name = "btnFront";
-            this.btnFront.Size = new System.Drawing.Size(35, 125);
+            this.btnFront.Size = new System.Drawing.Size(47, 155);
             this.btnFront.TabIndex = 5;
             this.btnFront.Text = "<";
             this.btnFront.UseVisualStyleBackColor = false;
@@ -311,10 +311,10 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(46, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(61, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(232, 154);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -323,10 +323,9 @@
             // 
             this.labName.AutoSize = true;
             this.labName.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labName.Location = new System.Drawing.Point(9, 11);
-            this.labName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labName.Location = new System.Drawing.Point(12, 14);
             this.labName.Name = "labName";
-            this.labName.Size = new System.Drawing.Size(62, 16);
+            this.labName.Size = new System.Drawing.Size(77, 20);
             this.labName.TabIndex = 2;
             this.labName.Text = "我是誰?";
             // 
@@ -335,9 +334,9 @@
             this.panel4.BackColor = System.Drawing.Color.MistyRose;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(784, 22);
+            this.panel4.Size = new System.Drawing.Size(1045, 28);
             this.panel4.TabIndex = 2;
             // 
             // panel3
@@ -345,9 +344,9 @@
             this.panel3.BackColor = System.Drawing.Color.MistyRose;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(46, 123);
+            this.panel3.Size = new System.Drawing.Size(61, 154);
             this.panel3.TabIndex = 3;
             // 
             // panel1
@@ -359,9 +358,9 @@
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 123);
+            this.panel1.Size = new System.Drawing.Size(1045, 154);
             this.panel1.TabIndex = 4;
             // 
             // panel5
@@ -370,19 +369,20 @@
             this.panel5.Controls.Add(this.labName);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(220, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Location = new System.Drawing.Point(293, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(218, 123);
+            this.panel5.Size = new System.Drawing.Size(291, 154);
             this.panel5.TabIndex = 7;
             // 
             // labLocation
             // 
             this.labLocation.AutoSize = true;
             this.labLocation.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labLocation.Location = new System.Drawing.Point(12, 61);
+            this.labLocation.Location = new System.Drawing.Point(16, 76);
+            this.labLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labLocation.Name = "labLocation";
-            this.labLocation.Size = new System.Drawing.Size(59, 16);
+            this.labLocation.Size = new System.Drawing.Size(74, 20);
             this.labLocation.TabIndex = 160;
             this.labLocation.Text = "所在地:";
             // 
@@ -390,45 +390,30 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(9, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 16);
+            this.label2.Size = new System.Drawing.Size(129, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "完成身分認證";
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.btnback);
             this.panel8.Controls.Add(this.button1);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(508, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Location = new System.Drawing.Point(677, 0);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(276, 123);
+            this.panel8.Size = new System.Drawing.Size(368, 154);
             this.panel8.TabIndex = 9;
-            // 
-            // btnback
-            // 
-            this.btnback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnback.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnback.Location = new System.Drawing.Point(91, 12);
-            this.btnback.Margin = new System.Windows.Forms.Padding(2);
-            this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(146, 42);
-            this.btnback.TabIndex = 9;
-            this.btnback.Text = "回上一頁";
-            this.btnback.UseVisualStyleBackColor = false;
-            this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.Font = new System.Drawing.Font("新細明體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(91, 70);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(121, 88);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 42);
+            this.button1.Size = new System.Drawing.Size(195, 52);
             this.button1.TabIndex = 8;
             this.button1.Text = "我要委託";
             this.button1.UseVisualStyleBackColor = false;
@@ -438,18 +423,20 @@
             // 
             this.panel10.Controls.Add(this.panel1);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 22);
+            this.panel10.Location = new System.Drawing.Point(0, 28);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(784, 123);
+            this.panel10.Size = new System.Drawing.Size(1045, 154);
             this.panel10.TabIndex = 10;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.panel7);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(0, 145);
+            this.panel11.Location = new System.Drawing.Point(0, 182);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(784, 125);
+            this.panel11.Size = new System.Drawing.Size(1045, 155);
             this.panel11.TabIndex = 11;
             // 
             // timer1
@@ -459,15 +446,15 @@
             // 
             // FrmExpertViewResume
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(1045, 701);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmExpertViewResume";
             this.Text = "ExpertResume";
             this.panel2.ResumeLayout(false);
@@ -523,7 +510,6 @@
         private System.Windows.Forms.TextBox txtQA;
         private System.Windows.Forms.TextBox txtIntroduction;
         private System.Windows.Forms.TextBox txtService;
-        private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;

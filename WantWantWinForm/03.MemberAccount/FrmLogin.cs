@@ -49,7 +49,7 @@ namespace prjWantWantWinForm
                         MessageBox.Show("帳號已被停權，請聯繫客服", "Prompt message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                else //當會員輸入密碼錯誤時，還是要記錄到資料表LoginHistory
+                else if (loginInfo != null) //當會員輸入密碼錯誤時，還是要記錄到資料表LoginHistory
                 {
                     CMember.getMemberID(loginInfo);
 
@@ -69,6 +69,10 @@ namespace prjWantWantWinForm
                         frmfp.MdiParent = this.MdiParent;
                     }
                     
+                }
+                else
+                {
+                    MessageBox.Show("此Email尚未註冊");
                 }
             }
             catch

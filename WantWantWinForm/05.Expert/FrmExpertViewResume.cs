@@ -293,7 +293,7 @@ namespace prjWantWantWinForm
                 }
 
             }
-            else
+            else if (picturelist.Count() > 0)
             {
                 PictureBox[] pictureBoxArray = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
 
@@ -317,6 +317,7 @@ namespace prjWantWantWinForm
                     }
                 }
             }
+            else { }
         }
     }
 }

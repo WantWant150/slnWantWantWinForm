@@ -54,6 +54,8 @@ namespace prjWantWantWinForm
             };
             this.db.ExpertApplications.Add(ea);
             db.SaveChanges();
+            MessageBox.Show("成功委託。");
+            this.Close();
 
         }
 
