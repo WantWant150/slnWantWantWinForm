@@ -87,8 +87,6 @@ namespace prjWantWantWinForm
         private void btnGoBack_Click(object sender, EventArgs e)
         {
             OnGoBack?.Invoke();
-            this.Refresh();
-
         }
 
         bool reply = true;//回覆留言開關

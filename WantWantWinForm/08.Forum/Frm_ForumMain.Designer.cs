@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ForumMain));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.comboxDisplay_CategoryTitle = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRevisePost = new System.Windows.Forms.Button();
             this.btnGotoForum = new System.Windows.Forms.Button();
+            this.btnServiceCMS = new System.Windows.Forms.Button();
+            this.btnRevisePost = new System.Windows.Forms.Button();
             this.labShow_FormCateDes = new System.Windows.Forms.Label();
             this.labNoAct_ForumCategory = new System.Windows.Forms.Label();
-            this.comboxDisplay_CategoryTitle = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -60,6 +61,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.comboxDisplay_CategoryTitle);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.btnGotoForum);
+            this.splitContainer1.Panel1.Controls.Add(this.btnServiceCMS);
             this.splitContainer1.Panel1.Controls.Add(this.btnRevisePost);
             this.splitContainer1.Panel1.Controls.Add(this.labShow_FormCateDes);
             this.splitContainer1.Panel1.Controls.Add(this.labNoAct_ForumCategory);
@@ -74,6 +76,18 @@
             this.splitContainer1.SplitterDistance = 136;
             this.splitContainer1.TabIndex = 0;
             // 
+            // comboxDisplay_CategoryTitle
+            // 
+            this.comboxDisplay_CategoryTitle.BackColor = System.Drawing.Color.White;
+            this.comboxDisplay_CategoryTitle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxDisplay_CategoryTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboxDisplay_CategoryTitle.FormattingEnabled = true;
+            this.comboxDisplay_CategoryTitle.Location = new System.Drawing.Point(85, 16);
+            this.comboxDisplay_CategoryTitle.Name = "comboxDisplay_CategoryTitle";
+            this.comboxDisplay_CategoryTitle.Size = new System.Drawing.Size(216, 28);
+            this.comboxDisplay_CategoryTitle.TabIndex = 0;
+            this.comboxDisplay_CategoryTitle.SelectedIndexChanged += new System.EventHandler(this.comboxDisplay_CategoryTitle_SelectedIndexChanged);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -84,6 +98,35 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnGotoForum
+            // 
+            this.btnGotoForum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.btnGotoForum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(174)))), ((int)(((byte)(188)))));
+            this.btnGotoForum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGotoForum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
+            this.btnGotoForum.Location = new System.Drawing.Point(311, 12);
+            this.btnGotoForum.Name = "btnGotoForum";
+            this.btnGotoForum.Size = new System.Drawing.Size(161, 36);
+            this.btnGotoForum.TabIndex = 3;
+            this.btnGotoForum.Text = "進入此討論區";
+            this.btnGotoForum.UseVisualStyleBackColor = false;
+            this.btnGotoForum.Click += new System.EventHandler(this.btnGotoForum_Click);
+            // 
+            // btnServiceCMS
+            // 
+            this.btnServiceCMS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnServiceCMS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
+            this.btnServiceCMS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(174)))), ((int)(((byte)(188)))));
+            this.btnServiceCMS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServiceCMS.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
+            this.btnServiceCMS.Location = new System.Drawing.Point(705, 68);
+            this.btnServiceCMS.Name = "btnServiceCMS";
+            this.btnServiceCMS.Size = new System.Drawing.Size(161, 36);
+            this.btnServiceCMS.TabIndex = 3;
+            this.btnServiceCMS.Text = "客服後台管理";
+            this.btnServiceCMS.UseVisualStyleBackColor = false;
+            this.btnServiceCMS.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnRevisePost
             // 
@@ -99,20 +142,6 @@
             this.btnRevisePost.Text = "個人發文管理";
             this.btnRevisePost.UseVisualStyleBackColor = false;
             this.btnRevisePost.Click += new System.EventHandler(this.btnRevisePost_Click);
-            // 
-            // btnGotoForum
-            // 
-            this.btnGotoForum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.btnGotoForum.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(174)))), ((int)(((byte)(188)))));
-            this.btnGotoForum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGotoForum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(63)))), ((int)(((byte)(49)))));
-            this.btnGotoForum.Location = new System.Drawing.Point(311, 12);
-            this.btnGotoForum.Name = "btnGotoForum";
-            this.btnGotoForum.Size = new System.Drawing.Size(161, 36);
-            this.btnGotoForum.TabIndex = 3;
-            this.btnGotoForum.Text = "進入此討論區";
-            this.btnGotoForum.UseVisualStyleBackColor = false;
-            this.btnGotoForum.Click += new System.EventHandler(this.btnGotoForum_Click);
             // 
             // labShow_FormCateDes
             // 
@@ -133,18 +162,6 @@
             this.labNoAct_ForumCategory.Size = new System.Drawing.Size(67, 24);
             this.labNoAct_ForumCategory.TabIndex = 1;
             this.labNoAct_ForumCategory.Text = "討論區";
-            // 
-            // comboxDisplay_CategoryTitle
-            // 
-            this.comboxDisplay_CategoryTitle.BackColor = System.Drawing.Color.White;
-            this.comboxDisplay_CategoryTitle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboxDisplay_CategoryTitle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboxDisplay_CategoryTitle.FormattingEnabled = true;
-            this.comboxDisplay_CategoryTitle.Location = new System.Drawing.Point(85, 16);
-            this.comboxDisplay_CategoryTitle.Name = "comboxDisplay_CategoryTitle";
-            this.comboxDisplay_CategoryTitle.Size = new System.Drawing.Size(216, 28);
-            this.comboxDisplay_CategoryTitle.TabIndex = 0;
-            this.comboxDisplay_CategoryTitle.SelectedIndexChanged += new System.EventHandler(this.comboxDisplay_CategoryTitle_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -207,6 +224,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnRevisePost;
+        private System.Windows.Forms.Button btnServiceCMS;
     }
 }
 
