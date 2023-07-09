@@ -27,7 +27,7 @@ namespace prjWantWantWinForm
             var role = from p in dbContext.MemberRoleConns
                        where p.AccountID == CMember.AccountID
                        select p;
-            if(role.FirstOrDefault().RoleID==2)
+            if (role.Any(r => r.RoleID == 2))//修改為只要有客服身份就能看到(有可能同時有其他身份)
                 this.btnServiceCMS.Visible = true;
         }
 
