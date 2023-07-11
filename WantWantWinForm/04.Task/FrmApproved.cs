@@ -25,9 +25,9 @@ namespace prjWantWantWinForm
             try {
                 if (cmb_YesOrNo.Text == "錄取")
                 {
-                    var q = from task in dbWantModel.TaskLists.AsEnumerable()
+                    var q = from app in dbWantModel.ApplicationLists.AsEnumerable()
 
-                                //join taskname in dbWantModel.TaskNameLists on task.TaskNameID equals taskname.TaskNameID
+                             join task in dbWantModel.TaskLists on app.CaseID equals task.CaseID
 
                             join resume in dbWantModel.Resumes on task.TaskNameID equals resume.TaskNameID
 
@@ -39,7 +39,7 @@ namespace prjWantWantWinForm
 
                             join member in dbWantModel.MemberAccounts on resume.AccountID equals member.AccountID
 
-                            where task.CaseStatusID == 1
+                            where app.CaseStatusID == 1
 
                             select new
                             {
@@ -80,9 +80,9 @@ namespace prjWantWantWinForm
 
                 else
                 {
-                    var q = from task in dbWantModel.TaskLists.AsEnumerable()
+                    var q = from app in dbWantModel.ApplicationLists.AsEnumerable()
 
-                                //join taskname in dbWantModel.TaskNameLists on task.TaskNameID equals taskname.TaskNameID
+                            join task in dbWantModel.TaskLists on app.CaseID equals task.CaseID
 
                             join resume in dbWantModel.Resumes on task.TaskNameID equals resume.TaskNameID
 
@@ -94,7 +94,7 @@ namespace prjWantWantWinForm
 
                             join member in dbWantModel.MemberAccounts on resume.AccountID equals member.AccountID
 
-                            where task.CaseStatusID == 2
+                            where app.CaseStatusID == 2
 
                             select new
                             {
