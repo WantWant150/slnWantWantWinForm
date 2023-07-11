@@ -92,13 +92,14 @@ namespace prjWantWantWinForm
             //// 從容器中移除自訂控制項
             this.flowLayoutPanel1.Controls.Remove(applicant);
            
-            var q = from p in dbWantModel.TaskLists.AsEnumerable()
+            var q = from app in dbWantModel.ApplicationLists.AsEnumerable()
+                   // join task in dbWantModel.TaskLists on app.CaseStatusID equals task.CaseStatusID
                         //join pp in dbWantModel.Resumes on p.TaskNameID equals pp.TaskNameID
                         //join ppp in dbWantModel.CaseStatusLists on p.CaseStatusID equals ppp.CaseStatusID
 
-                    where p.TaskNameID == (int)this.Tag && p.CaseStatusID == null
+                    where app.TaskList.TaskNameID == (int)this.Tag && app.CaseStatusID == 21
 
-                    select p;
+                    select app;
 
             foreach (var item in q)
             {
@@ -123,13 +124,13 @@ namespace prjWantWantWinForm
 
             this.flowLayoutPanel1.Controls.Remove(applicant);
 
-            var q = from p in dbWantModel.TaskLists.AsEnumerable()
+            var q = from app in dbWantModel.ApplicationLists.AsEnumerable()
                         //join pp in dbWantModel.Resumes on p.TaskNameID equals pp.TaskNameID
                         //join ppp in dbWantModel.CaseStatusLists on p.CaseStatusID equals ppp.CaseStatusID
 
-                    where p.TaskNameID == (int)this.Tag && p.CaseStatusID == null
+                    where app.TaskList.TaskNameID == (int)this.Tag && app.CaseStatusID == 21
 
-                    select p;
+                    select app;
 
             foreach (var item in q)
             {

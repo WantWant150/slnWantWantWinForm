@@ -80,7 +80,7 @@
             this.comboBox4.Location = new System.Drawing.Point(58, 165);
             this.comboBox4.Margin = new System.Windows.Forms.Padding(0);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(105, 33);
+            this.comboBox4.Size = new System.Drawing.Size(105, 28);
             this.comboBox4.TabIndex = 238;
             // 
             // button4
@@ -118,7 +118,7 @@
             this.label4.ForeColor = System.Drawing.Color.LightCoral;
             this.label4.Location = new System.Drawing.Point(32, 58);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 43);
+            this.label4.Size = new System.Drawing.Size(123, 35);
             this.label4.TabIndex = 237;
             this.label4.Text = "投遞紀錄";
             // 
@@ -128,15 +128,13 @@
             this.lab_Count.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lab_Count.Location = new System.Drawing.Point(202, 102);
             this.lab_Count.Name = "lab_Count";
-            this.lab_Count.Size = new System.Drawing.Size(0, 25);
+            this.lab_Count.Size = new System.Drawing.Size(0, 20);
             this.lab_Count.TabIndex = 236;
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeColumns = false;
-            this.dataGridView2.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
@@ -263,7 +261,7 @@
             // 
             // FrmHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(900, 727);

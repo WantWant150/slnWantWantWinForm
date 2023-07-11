@@ -42,13 +42,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 91);
+            this.chart1.Location = new System.Drawing.Point(9, 73);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "案件數";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(758, 450);
+            this.chart1.Size = new System.Drawing.Size(568, 360);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -56,21 +57,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(320, 38);
+            this.label1.Location = new System.Drawing.Point(240, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 25);
+            this.label1.Size = new System.Drawing.Size(89, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "會員案件數";
             // 
             // FrmGraphAnalysis
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Snow;
-            this.ClientSize = new System.Drawing.Size(782, 553);
+            this.ClientSize = new System.Drawing.Size(586, 442);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chart1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmGraphAnalysis";
             this.Text = "FrmGraphAnalysis";
             this.Load += new System.EventHandler(this.FrmGraphAnalysis_Load);

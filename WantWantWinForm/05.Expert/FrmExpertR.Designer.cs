@@ -48,20 +48,18 @@
             // cityIDLabel1
             // 
             cityIDLabel1.AutoSize = true;
-            cityIDLabel1.Location = new System.Drawing.Point(204, 54);
-            cityIDLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            cityIDLabel1.Location = new System.Drawing.Point(306, 81);
             cityIDLabel1.Name = "cityIDLabel1";
-            cityIDLabel1.Size = new System.Drawing.Size(77, 20);
+            cityIDLabel1.Size = new System.Drawing.Size(115, 30);
             cityIDLabel1.TabIndex = 155;
             cityIDLabel1.Text = "服務城區:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(180, 86);
-            label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label3.Location = new System.Drawing.Point(270, 129);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(109, 20);
+            label3.Size = new System.Drawing.Size(163, 30);
             label3.TabIndex = 157;
             label3.Text = "預估提供價格:";
             // 
@@ -81,34 +79,38 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(539, 184);
+            this.panel1.Size = new System.Drawing.Size(757, 274);
             this.panel1.TabIndex = 0;
             // 
             // labPrice
             // 
             this.labPrice.AutoSize = true;
-            this.labPrice.Location = new System.Drawing.Point(297, 86);
+            this.labPrice.Location = new System.Drawing.Point(446, 129);
+            this.labPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labPrice.Name = "labPrice";
-            this.labPrice.Size = new System.Drawing.Size(77, 20);
+            this.labPrice.Size = new System.Drawing.Size(115, 30);
             this.labPrice.TabIndex = 156;
             this.labPrice.Text = "專家姓名:";
             // 
             // labLocation
             // 
             this.labLocation.AutoSize = true;
-            this.labLocation.Location = new System.Drawing.Point(297, 54);
+            this.labLocation.Location = new System.Drawing.Point(446, 81);
+            this.labLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labLocation.Name = "labLocation";
-            this.labLocation.Size = new System.Drawing.Size(77, 20);
+            this.labLocation.Size = new System.Drawing.Size(115, 30);
             this.labLocation.TabIndex = 156;
             this.labLocation.Text = "專家姓名:";
             // 
             // labun
             // 
             this.labun.AutoSize = true;
-            this.labun.Location = new System.Drawing.Point(466, 20);
+            this.labun.Location = new System.Drawing.Point(650, 30);
+            this.labun.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labun.Name = "labun";
-            this.labun.Size = new System.Drawing.Size(57, 20);
+            this.labun.Size = new System.Drawing.Size(85, 30);
             this.labun.TabIndex = 3;
             this.labun.Text = "已認證";
             this.labun.Visible = false;
@@ -116,27 +118,30 @@
             // labname
             // 
             this.labname.AutoSize = true;
-            this.labname.Location = new System.Drawing.Point(297, 20);
+            this.labname.Location = new System.Drawing.Point(446, 30);
+            this.labname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labname.Name = "labname";
-            this.labname.Size = new System.Drawing.Size(77, 20);
+            this.labname.Size = new System.Drawing.Size(115, 30);
             this.labname.TabIndex = 2;
             this.labname.Text = "專家姓名:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(204, 20);
+            this.label1.Location = new System.Drawing.Point(306, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 20);
+            this.label1.Size = new System.Drawing.Size(115, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "專家姓名:";
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSearch.Location = new System.Drawing.Point(380, 98);
+            this.btnSearch.Location = new System.Drawing.Point(538, 163);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(141, 60);
+            this.btnSearch.Size = new System.Drawing.Size(197, 80);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "查看";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -146,20 +151,22 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(27, 30);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(157, 138);
+            this.pictureBox1.Size = new System.Drawing.Size(234, 206);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // FrmExpertR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmExpertR";
-            this.Size = new System.Drawing.Size(539, 184);
+            this.Size = new System.Drawing.Size(757, 274);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

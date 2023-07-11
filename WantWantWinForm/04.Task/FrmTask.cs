@@ -213,6 +213,30 @@ namespace prjWantWantWinForm
                     }
                 }
             }
+
+            foreach (Control control in this.Controls)
+            {
+                if (control is System.Windows.Forms.TextBox textbox)
+                {
+                    textbox.Text = string.Empty;
+                }
+                if (control is System.Windows.Forms.ComboBox combobox)
+                {
+                    combobox.SelectedItem = null;
+                }
+                if (control is System.Windows.Forms.DateTimePicker datetime)
+                {
+                    datetime.Value = DateTime.Now;
+                }
+                txt_TimeStart.Text = "開始時間";
+                txt_TimeEnd.Text = "結束時間";
+                txt_WorkPlace.Text = "例：台北市大安區";
+                txt_PayFrom.Text = "請輸入金額";
+                txt_People.Text = "請輸入人數";
+                cmb_TaskNumberID.SelectedIndex = -1;
+                cmb_Publish.SelectedIndex = -1;
+            }
+
         }
 
         private void cmb_City_SelectedIndexChanged_1(object sender, EventArgs e)

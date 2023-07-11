@@ -117,45 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column9.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column7.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Column8.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAZtJREFUOE9jGPpARkZLSE5ROwWEQWyoMGlAXV2d10/XqtpPz7LVVN1wg6+uVTsI
-        A9nrQWIgOVEtLR6ocvzAW888M0DP8vQBv7j/xwPiMfDt0NT/ZwIT/wfrWZ8EqYVqww7k5bUkuu2932Az
-        CBvusvN+DdID1Y4dyMlpusyJzPl5Iqf5Pz48JzL7J1CtM1QbbqCkpCe2Krb49ee6Gf/X+cT8v5nX9v9w
-        dD4Y3ypo+7/eJ/o/SG5FbOFrFRUDUag2fCCUeWpoxkOQJpC3TqTV/D8enQvGd/JawWIguSnB6Q9BaqGa
-        8IOewJRr2Ay8hWRgb2DyVahywqDdL/4UNgPBbKiBbX4JJ6HKCYMGn5j9hAxs8I7ZB1VOGFR6RG5GN/BS
-        XBGKgZWeUZugygmDApfg5egGvk6vRjGwwDVkGVQ5YZDm4DcbpGmXb8z/C5kN/49G5YLx+az6/7uBYiC5
-        NAf/WVDlhEGguUvbq6op/+8XdYE1v6yYCMYgNkgMJAdSA1VOGKioqPBFWXnOyHUOWYwNR1t7TAepgSof
-        2YCBAQD/AFRYq7ViggAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

@@ -43,7 +43,6 @@
             this.btn_Save = new System.Windows.Forms.Button();
             this.dTP_End = new System.Windows.Forms.DateTimePicker();
             this.dTP_Start = new System.Windows.Forms.DateTimePicker();
-            this.txt_Title = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Detail = new System.Windows.Forms.TextBox();
@@ -57,6 +56,7 @@
             this.txt_TimeEnd = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.txt_Title = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -68,7 +68,7 @@
             this.label2.Location = new System.Drawing.Point(59, 260);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 31);
+            this.label2.Size = new System.Drawing.Size(86, 24);
             this.label2.TabIndex = 275;
             this.label2.Text = "任務類型";
             // 
@@ -82,7 +82,7 @@
             this.cmb_TaskNumberID.Location = new System.Drawing.Point(225, 260);
             this.cmb_TaskNumberID.Margin = new System.Windows.Forms.Padding(0);
             this.cmb_TaskNumberID.Name = "cmb_TaskNumberID";
-            this.cmb_TaskNumberID.Size = new System.Drawing.Size(135, 33);
+            this.cmb_TaskNumberID.Size = new System.Drawing.Size(172, 28);
             this.cmb_TaskNumberID.TabIndex = 274;
             this.cmb_TaskNumberID.Text = "請選擇";
             // 
@@ -93,7 +93,7 @@
             this.cmb_Town.FormattingEnabled = true;
             this.cmb_Town.Location = new System.Drawing.Point(360, 423);
             this.cmb_Town.Name = "cmb_Town";
-            this.cmb_Town.Size = new System.Drawing.Size(121, 33);
+            this.cmb_Town.Size = new System.Drawing.Size(121, 28);
             this.cmb_Town.TabIndex = 284;
             // 
             // cmb_City
@@ -103,7 +103,7 @@
             this.cmb_City.FormattingEnabled = true;
             this.cmb_City.Location = new System.Drawing.Point(224, 423);
             this.cmb_City.Name = "cmb_City";
-            this.cmb_City.Size = new System.Drawing.Size(121, 33);
+            this.cmb_City.Size = new System.Drawing.Size(121, 28);
             this.cmb_City.TabIndex = 283;
             this.cmb_City.SelectedIndexChanged += new System.EventHandler(this.cmb_City_SelectedIndexChanged_1);
             // 
@@ -113,7 +113,7 @@
             this.txt_WorkPlace.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_WorkPlace.Location = new System.Drawing.Point(496, 422);
             this.txt_WorkPlace.Name = "txt_WorkPlace";
-            this.txt_WorkPlace.Size = new System.Drawing.Size(230, 34);
+            this.txt_WorkPlace.Size = new System.Drawing.Size(230, 29);
             this.txt_WorkPlace.TabIndex = 285;
             this.txt_WorkPlace.Text = "例：台北市大安區";
             this.txt_WorkPlace.Click += new System.EventHandler(this.txt_WorkPlace_Click_1);
@@ -123,7 +123,7 @@
             this.dTP_TaskDateEnd.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dTP_TaskDateEnd.Location = new System.Drawing.Point(461, 315);
             this.dTP_TaskDateEnd.Name = "dTP_TaskDateEnd";
-            this.dTP_TaskDateEnd.Size = new System.Drawing.Size(205, 34);
+            this.dTP_TaskDateEnd.Size = new System.Drawing.Size(205, 29);
             this.dTP_TaskDateEnd.TabIndex = 280;
             // 
             // dTP_TaskDateStart
@@ -131,7 +131,7 @@
             this.dTP_TaskDateStart.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dTP_TaskDateStart.Location = new System.Drawing.Point(225, 315);
             this.dTP_TaskDateStart.Name = "dTP_TaskDateStart";
-            this.dTP_TaskDateStart.Size = new System.Drawing.Size(205, 34);
+            this.dTP_TaskDateStart.Size = new System.Drawing.Size(205, 29);
             this.dTP_TaskDateStart.TabIndex = 279;
             // 
             // label7
@@ -143,7 +143,7 @@
             this.label7.ForeColor = System.Drawing.Color.LightCoral;
             this.label7.Location = new System.Drawing.Point(59, 318);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 31);
+            this.label7.Size = new System.Drawing.Size(86, 24);
             this.label7.TabIndex = 277;
             this.label7.Text = "任務期間";
             // 
@@ -155,7 +155,7 @@
             this.label10.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label10.Location = new System.Drawing.Point(432, 321);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 25);
+            this.label10.Size = new System.Drawing.Size(21, 20);
             this.label10.TabIndex = 278;
             this.label10.Text = "~";
             // 
@@ -172,7 +172,7 @@
             this.cmb_Publish.Location = new System.Drawing.Point(225, 653);
             this.cmb_Publish.Margin = new System.Windows.Forms.Padding(0);
             this.cmb_Publish.Name = "cmb_Publish";
-            this.cmb_Publish.Size = new System.Drawing.Size(172, 33);
+            this.cmb_Publish.Size = new System.Drawing.Size(172, 28);
             this.cmb_Publish.TabIndex = 290;
             this.cmb_Publish.Text = "請選擇";
             // 
@@ -185,7 +185,7 @@
             this.label23.ForeColor = System.Drawing.Color.LightCoral;
             this.label23.Location = new System.Drawing.Point(62, 655);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(110, 31);
+            this.label23.Size = new System.Drawing.Size(86, 24);
             this.label23.TabIndex = 276;
             this.label23.Text = "是否上架";
             // 
@@ -198,7 +198,7 @@
             this.label17.ForeColor = System.Drawing.Color.LightCoral;
             this.label17.Location = new System.Drawing.Point(59, 427);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(110, 31);
+            this.label17.Size = new System.Drawing.Size(86, 24);
             this.label17.TabIndex = 273;
             this.label17.Text = "工作地區";
             // 
@@ -220,7 +220,7 @@
             this.dTP_End.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dTP_End.Location = new System.Drawing.Point(461, 593);
             this.dTP_End.Name = "dTP_End";
-            this.dTP_End.Size = new System.Drawing.Size(205, 34);
+            this.dTP_End.Size = new System.Drawing.Size(205, 29);
             this.dTP_End.TabIndex = 289;
             // 
             // dTP_Start
@@ -228,16 +228,8 @@
             this.dTP_Start.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dTP_Start.Location = new System.Drawing.Point(227, 593);
             this.dTP_Start.Name = "dTP_Start";
-            this.dTP_Start.Size = new System.Drawing.Size(205, 34);
+            this.dTP_Start.Size = new System.Drawing.Size(205, 29);
             this.dTP_Start.TabIndex = 288;
-            // 
-            // txt_Title
-            // 
-            this.txt_Title.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txt_Title.Location = new System.Drawing.Point(224, 90);
-            this.txt_Title.Name = "txt_Title";
-            this.txt_Title.Size = new System.Drawing.Size(533, 34);
-            this.txt_Title.TabIndex = 257;
             // 
             // label4
             // 
@@ -248,7 +240,7 @@
             this.label4.ForeColor = System.Drawing.Color.LightCoral;
             this.label4.Location = new System.Drawing.Point(57, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 31);
+            this.label4.Size = new System.Drawing.Size(86, 24);
             this.label4.TabIndex = 256;
             this.label4.Text = "任務標題";
             // 
@@ -261,7 +253,7 @@
             this.label5.ForeColor = System.Drawing.Color.LightCoral;
             this.label5.Location = new System.Drawing.Point(58, 144);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 31);
+            this.label5.Size = new System.Drawing.Size(86, 24);
             this.label5.TabIndex = 258;
             this.label5.Text = "任務內容";
             // 
@@ -285,7 +277,7 @@
             this.label8.ForeColor = System.Drawing.Color.LightCoral;
             this.label8.Location = new System.Drawing.Point(59, 478);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(110, 31);
+            this.label8.Size = new System.Drawing.Size(86, 24);
             this.label8.TabIndex = 260;
             this.label8.Text = "支付金額";
             // 
@@ -295,7 +287,7 @@
             this.txt_PayFrom.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_PayFrom.Location = new System.Drawing.Point(225, 475);
             this.txt_PayFrom.Name = "txt_PayFrom";
-            this.txt_PayFrom.Size = new System.Drawing.Size(150, 34);
+            this.txt_PayFrom.Size = new System.Drawing.Size(150, 29);
             this.txt_PayFrom.TabIndex = 286;
             this.txt_PayFrom.Text = "請輸入金額";
             this.txt_PayFrom.Click += new System.EventHandler(this.txt_PayFrom_Click_1);
@@ -309,7 +301,7 @@
             this.label12.ForeColor = System.Drawing.Color.LightCoral;
             this.label12.Location = new System.Drawing.Point(58, 373);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 31);
+            this.label12.Size = new System.Drawing.Size(86, 24);
             this.label12.TabIndex = 261;
             this.label12.Text = "任務時段";
             // 
@@ -319,7 +311,7 @@
             this.txt_TimeStart.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_TimeStart.Location = new System.Drawing.Point(225, 368);
             this.txt_TimeStart.Name = "txt_TimeStart";
-            this.txt_TimeStart.Size = new System.Drawing.Size(150, 34);
+            this.txt_TimeStart.Size = new System.Drawing.Size(150, 29);
             this.txt_TimeStart.TabIndex = 281;
             this.txt_TimeStart.Text = "開始時間";
             this.txt_TimeStart.Click += new System.EventHandler(this.txt_TimeStart_Click_1);
@@ -330,7 +322,7 @@
             this.txt_People.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_People.Location = new System.Drawing.Point(225, 533);
             this.txt_People.Name = "txt_People";
-            this.txt_People.Size = new System.Drawing.Size(256, 34);
+            this.txt_People.Size = new System.Drawing.Size(256, 29);
             this.txt_People.TabIndex = 287;
             this.txt_People.Text = "請輸入人數";
             this.txt_People.Click += new System.EventHandler(this.txt_People_Click_1);
@@ -343,7 +335,7 @@
             this.label11.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label11.Location = new System.Drawing.Point(377, 371);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 25);
+            this.label11.Size = new System.Drawing.Size(21, 20);
             this.label11.TabIndex = 262;
             this.label11.Text = "~";
             // 
@@ -356,7 +348,7 @@
             this.label16.ForeColor = System.Drawing.Color.LightCoral;
             this.label16.Location = new System.Drawing.Point(60, 536);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(110, 31);
+            this.label16.Size = new System.Drawing.Size(86, 24);
             this.label16.TabIndex = 265;
             this.label16.Text = "需求人數";
             // 
@@ -366,7 +358,7 @@
             this.txt_TimeEnd.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txt_TimeEnd.Location = new System.Drawing.Point(404, 367);
             this.txt_TimeEnd.Name = "txt_TimeEnd";
-            this.txt_TimeEnd.Size = new System.Drawing.Size(150, 34);
+            this.txt_TimeEnd.Size = new System.Drawing.Size(150, 29);
             this.txt_TimeEnd.TabIndex = 282;
             this.txt_TimeEnd.Text = "結束時間";
             this.txt_TimeEnd.Click += new System.EventHandler(this.txt_TimeEnd_Click_1);
@@ -380,7 +372,7 @@
             this.label14.ForeColor = System.Drawing.Color.LightCoral;
             this.label14.Location = new System.Drawing.Point(61, 596);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(110, 31);
+            this.label14.Size = new System.Drawing.Size(86, 24);
             this.label14.TabIndex = 263;
             this.label14.Text = "刊登期間";
             // 
@@ -392,17 +384,26 @@
             this.label13.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label13.Location = new System.Drawing.Point(433, 600);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(27, 25);
+            this.label13.Size = new System.Drawing.Size(21, 20);
             this.label13.TabIndex = 264;
             this.label13.Text = "~";
             // 
+            // txt_Title
+            // 
+            this.txt_Title.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txt_Title.Location = new System.Drawing.Point(224, 90);
+            this.txt_Title.Name = "txt_Title";
+            this.txt_Title.Size = new System.Drawing.Size(533, 29);
+            this.txt_Title.TabIndex = 257;
+            // 
             // FrmTask
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Snow;
             this.ClientSize = new System.Drawing.Size(822, 872);
+            this.Controls.Add(this.txt_Title);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmb_TaskNumberID);
             this.Controls.Add(this.cmb_Town);
@@ -418,7 +419,6 @@
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.dTP_End);
             this.Controls.Add(this.dTP_Start);
-            this.Controls.Add(this.txt_Title);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_Detail);
@@ -459,7 +459,6 @@
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.DateTimePicker dTP_End;
         private System.Windows.Forms.DateTimePicker dTP_Start;
-        private System.Windows.Forms.TextBox txt_Title;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_Detail;
@@ -473,5 +472,6 @@
         private System.Windows.Forms.TextBox txt_TimeEnd;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txt_Title;
     }
 }

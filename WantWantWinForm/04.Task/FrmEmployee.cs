@@ -33,15 +33,13 @@ namespace prjWantWantWinForm
             try
             { //string selectedTaskName = cmb_TaskNumberID.Text; // 從 ComboBox 中獲取選取的任務類別
 
-                //DateTime selectedStartDate = monthCalendar1.SelectionStart; // 從 MonthCalendar 中獲取選取的開始日期
-                //DateTime selectedEndDate = monthCalendar1.SelectionEnd; // 從 MonthCalendar 中獲取選取的結束日期
+            
+                var q = from app in dbWantModel.ApplicationLists.AsEnumerable()
 
+                        join task in dbWantModel.TaskLists on app.CaseID equals task.CaseID
+                        // join app in dbWantModel.ApplicationLists on task.CaseStatusID equals app.CaseStatusID
 
-                var q = from task in dbWantModel.TaskLists.AsEnumerable()
-
-                            // join app in dbWantModel.ApplicationLists on task.CaseStatusID equals app.CaseStatusID
-
-                        join taskname in dbWantModel.TaskNameLists on task.TaskNameID equals taskname.TaskNameID
+                        //join taskname in dbWantModel.TaskNameLists on task.TaskNameID equals taskname.TaskNameID
 
                         join resume in dbWantModel.Resumes on task.TaskNameID equals resume.TaskNameID
 
@@ -57,7 +55,7 @@ namespace prjWantWantWinForm
 
                         where //task.PublishOrNot == "立刻上架" 
                               //app.CaseStatusID==21  &&
-                          task.CaseStatusID == null
+                          app.CaseStatusID == 21
                         && task.TaskNameList.TaskName == cmb_TaskNumberID.Text
 
                         //||  (DateTime.MinValue== )
@@ -72,7 +70,7 @@ namespace prjWantWantWinForm
                             task.CaseID,
                             resume.ResumeID,
                             task.TaskNameID,
-                            // app.CaseStatusID,
+                            app.CaseStatusID,
 
                             member.Name,
                             skill.SkillName,

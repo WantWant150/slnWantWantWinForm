@@ -54,7 +54,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -71,9 +71,9 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Snow;
-            this.splitContainer1.Size = new System.Drawing.Size(1433, 980);
-            this.splitContainer1.SplitterDistance = 213;
-            this.splitContainer1.SplitterWidth = 5;
+            this.splitContainer1.Size = new System.Drawing.Size(1612, 1100);
+            this.splitContainer1.SplitterDistance = 239;
+            this.splitContainer1.SplitterWidth = 6;
             this.splitContainer1.TabIndex = 0;
             // 
             // tsp_Acc1
@@ -84,9 +84,9 @@
             this.tsp_Acc1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_Acc1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsp_Acc});
-            this.tsp_Acc1.Location = new System.Drawing.Point(29, 398);
+            this.tsp_Acc1.Location = new System.Drawing.Point(33, 479);
             this.tsp_Acc1.Name = "tsp_Acc1";
-            this.tsp_Acc1.Size = new System.Drawing.Size(162, 50);
+            this.tsp_Acc1.Size = new System.Drawing.Size(136, 42);
             this.tsp_Acc1.TabIndex = 117;
             this.tsp_Acc1.Text = "toolStrip4";
             // 
@@ -98,7 +98,7 @@
             this.tsp_Acc.Image = ((System.Drawing.Image)(resources.GetObject("tsp_Acc.Image")));
             this.tsp_Acc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsp_Acc.Name = "tsp_Acc";
-            this.tsp_Acc.Size = new System.Drawing.Size(149, 47);
+            this.tsp_Acc.Size = new System.Drawing.Size(124, 39);
             this.tsp_Acc.Text = "錄取者";
             this.tsp_Acc.Click += new System.EventHandler(this.tsp_Acc_Click);
             // 
@@ -110,9 +110,9 @@
             this.tsp_App1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_App1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsp_App});
-            this.tsp_App1.Location = new System.Drawing.Point(29, 316);
+            this.tsp_App1.Location = new System.Drawing.Point(33, 379);
             this.tsp_App1.Name = "tsp_App1";
-            this.tsp_App1.Size = new System.Drawing.Size(162, 50);
+            this.tsp_App1.Size = new System.Drawing.Size(136, 42);
             this.tsp_App1.TabIndex = 115;
             this.tsp_App1.Text = "toolStrip4";
             // 
@@ -124,7 +124,7 @@
             this.tsp_App.Image = ((System.Drawing.Image)(resources.GetObject("tsp_App.Image")));
             this.tsp_App.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsp_App.Name = "tsp_App";
-            this.tsp_App.Size = new System.Drawing.Size(149, 47);
+            this.tsp_App.Size = new System.Drawing.Size(124, 39);
             this.tsp_App.Text = "求職表";
             this.tsp_App.Click += new System.EventHandler(this.tsp_App_Click);
             // 
@@ -136,10 +136,10 @@
             this.tsp_GiveJob.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_GiveJob.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_GiveJob});
-            this.tsp_GiveJob.Location = new System.Drawing.Point(29, 62);
+            this.tsp_GiveJob.Location = new System.Drawing.Point(33, 74);
             this.tsp_GiveJob.Name = "tsp_GiveJob";
             this.tsp_GiveJob.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tsp_GiveJob.Size = new System.Drawing.Size(162, 50);
+            this.tsp_GiveJob.Size = new System.Drawing.Size(136, 42);
             this.tsp_GiveJob.TabIndex = 113;
             this.tsp_GiveJob.Text = "toolStrip1";
             // 
@@ -153,7 +153,7 @@
             this.btn_GiveJob.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_GiveJob.Name = "btn_GiveJob";
             this.btn_GiveJob.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btn_GiveJob.Size = new System.Drawing.Size(149, 47);
+            this.btn_GiveJob.Size = new System.Drawing.Size(124, 39);
             this.btn_GiveJob.Text = "出任務";
             this.btn_GiveJob.Click += new System.EventHandler(this.btn_GiveJob_Click);
             // 
@@ -165,9 +165,9 @@
             this.tsp_Saved1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_Saved1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsp_Saved});
-            this.tsp_Saved1.Location = new System.Drawing.Point(29, 231);
+            this.tsp_Saved1.Location = new System.Drawing.Point(33, 277);
             this.tsp_Saved1.Name = "tsp_Saved1";
-            this.tsp_Saved1.Size = new System.Drawing.Size(162, 50);
+            this.tsp_Saved1.Size = new System.Drawing.Size(136, 42);
             this.tsp_Saved1.TabIndex = 116;
             this.tsp_Saved1.Text = "toolStrip5";
             // 
@@ -179,7 +179,7 @@
             this.tsp_Saved.Image = ((System.Drawing.Image)(resources.GetObject("tsp_Saved.Image")));
             this.tsp_Saved.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsp_Saved.Name = "tsp_Saved";
-            this.tsp_Saved.Size = new System.Drawing.Size(149, 47);
+            this.tsp_Saved.Size = new System.Drawing.Size(124, 39);
             this.tsp_Saved.Text = "未上架";
             this.tsp_Saved.Click += new System.EventHandler(this.tsp_Saved_Click);
             // 
@@ -191,9 +191,9 @@
             this.tsp_GaveJob1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.tsp_GaveJob1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsp_GaveJob});
-            this.tsp_GaveJob1.Location = new System.Drawing.Point(29, 145);
+            this.tsp_GaveJob1.Location = new System.Drawing.Point(33, 174);
             this.tsp_GaveJob1.Name = "tsp_GaveJob1";
-            this.tsp_GaveJob1.Size = new System.Drawing.Size(162, 50);
+            this.tsp_GaveJob1.Size = new System.Drawing.Size(136, 42);
             this.tsp_GaveJob1.TabIndex = 114;
             this.tsp_GaveJob1.Text = "toolStrip3";
             // 
@@ -205,19 +205,19 @@
             this.tsp_GaveJob.Image = ((System.Drawing.Image)(resources.GetObject("tsp_GaveJob.Image")));
             this.tsp_GaveJob.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsp_GaveJob.Name = "tsp_GaveJob";
-            this.tsp_GaveJob.Size = new System.Drawing.Size(149, 47);
+            this.tsp_GaveJob.Size = new System.Drawing.Size(124, 39);
             this.tsp_GaveJob.Text = "已上架";
             this.tsp_GaveJob.Click += new System.EventHandler(this.tsp_GaveJob_Click_1);
             // 
             // FrmTool
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1433, 980);
+            this.ClientSize = new System.Drawing.Size(1612, 1100);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmTool";
             this.Text = "功能列";
             this.splitContainer1.Panel1.ResumeLayout(false);
