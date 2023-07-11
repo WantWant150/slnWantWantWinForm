@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prjWantWantWinForm._08.Forum;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,9 +23,14 @@ namespace prjWantWantWinForm
         {
             InitializeComponent();
             LoadFormCategoryTitle();//讀取論壇討論區標題
-
+            this.btnServiceCMS.Visible = false;
+            var role = from p in dbContext.MemberRoleConns
+                       where p.AccountID == CMember.AccountID
+                       select p;
+            if (role.Any(r => r.RoleID == 2))//修改為只要有客服身份就能看到(有可能同時有其他身份)
+                this.btnServiceCMS.Visible = true;
         }
-        
+
         private void LoadFormCategoryTitle()
         {
             var q=from p in dbContext.ForumCategories
@@ -121,6 +127,16 @@ namespace prjWantWantWinForm
             splitContainer1.Panel2.Controls.Add(frmUserCMS);
             frmUserCMS.Show();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_ForumServiceCMS frmServiceCMS = new Frm_ForumServiceCMS();
+            frmServiceCMS.TopLevel = false;
+            frmServiceCMS.Dock = DockStyle.Fill;
+            splitContainer1.Panel2.Controls.Clear();
+            splitContainer1.Panel2.Controls.Add(frmServiceCMS);
+            frmServiceCMS.Show();
         }
     }
 

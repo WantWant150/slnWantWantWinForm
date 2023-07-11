@@ -191,7 +191,7 @@ namespace prjWantWantWinForm
         //當使用dataGridView1_CellEndEdit事件，且用滑鼠從儲存格A移至儲存格，會導致A還未完成編輯時，又進入B的情況，導致迴圈發生。
         //可改用CellValueChanged事件代替，但可能會一直亂觸發
         //或者不要用clickRow(自己記憶的參數)，直接用e.RowIndex(因為現在有綁定一次只能修改單行，其他會關閉)
-        //屁哩沒有用 總之 小心 不要 不小心 換到別行
+        //沒有用 總之 小心 不要 不小心 換到別行
 
         #endregion
 
