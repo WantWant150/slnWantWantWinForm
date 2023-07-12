@@ -143,8 +143,7 @@ namespace prjWantWantWinForm
 
                     var qr = db.Resumes.Where(x => x.AccountID == member).OrderByDescending(x => x.ResumeID).Select(x => x.ResumeID).First();
 
-                    //int resumeid = qr;
-
+                 
                     ExpertAccount ea = new ExpertAccount() { ResumeID = qr };
                     this.db.ExpertAccounts.Add(ea);
                     ResumeCertificate rc = new ResumeCertificate { ResumeID = qr, CertificateID = certid };

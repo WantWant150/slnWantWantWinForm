@@ -42,18 +42,18 @@ namespace prjWantWantWinForm
 
             this.db.TaskLists.Add(task);
             db.SaveChanges();
-            
+            //-----
+            int newcaseid = task.CaseID;
             //======
-            var qcaseid=db.TaskLists.Where(x=>x.AccountID == qe).
-                OrderByDescending(x=>x.DataCreateDate).Select(x=>x.CaseID).FirstOrDefault();
-            ExpertApplication ea = new ExpertApplication()
+           ExpertApplication ea = new ExpertApplication()
             {
-                CaseID = qcaseid,
+                CaseID = newcaseid,
                 AccountID = member,
                 CaseStatusID = 15,
             };
+          
             this.db.ExpertApplications.Add(ea);
-            db.SaveChanges();
+          db.SaveChanges();
             MessageBox.Show("成功委託。");
             this.Close();
 

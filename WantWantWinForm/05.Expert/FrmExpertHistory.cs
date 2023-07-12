@@ -96,7 +96,7 @@ namespace prjWantWantWinForm
         }
         int row;
         int column;
-        //bool dataGrStatus = false;
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -105,9 +105,7 @@ namespace prjWantWantWinForm
             {
                 if (e.RowIndex < dataGridView1.Rows.Count)
                 {
-                    //取得該行的第四個資料格
-
-                    //DataGridViewCell check;
+        
                     column = e.ColumnIndex;
                     row = e.RowIndex;
 
@@ -156,8 +154,7 @@ namespace prjWantWantWinForm
 
                 if (e.RowIndex < dataGridView1.Rows.Count)
                 {
-                    //取得該行的第四個資料格
-
+       
                     if ((int)dataGridView1.Rows[row].Cells[11].Value == 15)
                     {
                         DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[3];
@@ -176,7 +173,7 @@ namespace prjWantWantWinForm
                     }
                     else if ((int)dataGridView1.Rows[row].Cells[11].Value == 16)
                     {
-                        MessageBox.Show("本已拒絕接本案件");
+                        MessageBox.Show("已拒絕接本案件");
 
                     }
                     else if ((int)dataGridView1.Rows[row].Cells[11].Value == 17)

@@ -210,7 +210,7 @@ namespace prjWantWantWinForm
         {
             try
             {
-              //TODO...不知道為什麼按鈕不會關掉
+            
                 if (modify)
                 {
                     btnModify.Enabled = false;
@@ -283,7 +283,7 @@ namespace prjWantWantWinForm
         string imageName;
 
         //private PictureBox selectedPictureBox;
-        //讓被選到的圖片有紅框框
+        //讓被選到的圖片有紅框框，但為什麼不能取消
         private void PictureBox_Click(object sender, EventArgs e)
         {
 
@@ -313,7 +313,7 @@ namespace prjWantWantWinForm
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                   // var findq = db.ExpertResumes.Where(x => x.Introduction != null).Select(x => x.ResumeID);
+                
                     string picname = Path.GetFileName(openFileDialog1.FileName)+DateTime.Now;
                     picturebox = new PictureBox();
                    picturebox.Image = Image.FromFile(this.openFileDialog1.FileName);
@@ -417,10 +417,6 @@ namespace prjWantWantWinForm
 
         #endregion
 
-        private void btnHistoru_Click(object sender, EventArgs e)
-        {
-            FrmExpertHistory expertHistory = new FrmExpertHistory();
-            expertHistory.Show();
-        }
+     
     }
 }

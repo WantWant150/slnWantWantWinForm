@@ -53,13 +53,13 @@ namespace prjWantWantWinForm
                 var qPhoto = from r in db.MemberAccounts
                              where r.AccountID == member
                              select r.MemberPhoto;
-                //if (qPhoto.First() != null)
-                //{
-                //    Byte[] bytes1 = qPhoto.First();
-                //    System.IO.MemoryStream ms1 = new System.IO.MemoryStream(bytes1);
-                //    this.pictureBox1.Image = Image.FromStream(ms1);
+                if (qPhoto.First() != null)
+                {
+                    Byte[] bytes1 = qPhoto.First();
+                    System.IO.MemoryStream ms1 = new System.IO.MemoryStream(bytes1);
+                    this.pictureBox1.Image = Image.FromStream(ms1);
 
-                //}
+                }
             }
             catch (Exception ex)
             {
@@ -94,133 +94,6 @@ namespace prjWantWantWinForm
             }
 
 
-
-            //List<Byte[]> picturelist = new List<Byte[]>(); ;
-            //foreach (var w in q.ToList())
-            //{
-            //    Byte[] bytes = w;
-            //    picturelist.Add(bytes); 
-
-            //}
-            //PictureBox[] pictureBoxArray = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
-
-
-            //using (System.IO.MemoryStream ms = new System.IO.MemoryStream(picturelist[workindex]))
-            //{
-            //    //for (int j = 0; j < p.Length; j++)
-            //    //{
-            //    //    pictureBoxArray[i].Image = Image.FromStream(ms);
-            //    //    pictureBoxArray[i].Refresh();
-            //    //}
-            //    foreach (var p in picturelist)
-            //    {
-            //        int i = 0;
-
-            //        using (System.IO.MemoryStream ms = new System.IO.MemoryStream(p[i]))
-            //        {
-            //            for (int j = 0; j < p.Length; j++)
-            //            {
-            //                pictureBoxArray[i].Image = Image.FromStream(ms);
-            //                pictureBoxArray[i].Refresh();
-            //            }
-
-
-            //        }
-            //        if (i < indexCount) i++;
-            //    }
-
-            //}
-
-
-
-
-
-            //foreach (var p in picturelist)
-            //{
-            //    int i = 0;
-
-            //    using (System.IO.MemoryStream ms = new System.IO.MemoryStream(p[i])) 
-            //    {
-            //        for(int j = 0; j < p.Length; j++) {
-            //            pictureBoxArray[i].Image = Image.FromStream(ms);
-            //            pictureBoxArray[i].Refresh();
-            //        }
-
-
-            //    }
-            //    if (i < indexCount) i++;
-            //}
-
-
-
-
-
-            //if (q.Count() > (index + 5) && index > 0)
-            //{
-            //    var resultpicture = q.Skip(index).Take(5);
-            //    int i = 0;
-            //    PictureBox[] pictureBoxArray = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
-
-            //    foreach (var w in resultpicture)
-            //    {
-
-            //        Byte[] bytes = w;
-            //        System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes);
-            //        pictureBoxArray[i].Image = Image.FromStream(ms);
-            //        pictureBoxArray[i].Refresh();
-            //        if (i < 5) i++;
-
-            //    }
-            //    panel6.Refresh();
-            //}
-
-            //else if (index+5 <= q.Count())
-            //{
-            //    index = q.Count()-5;
-            //    var resultpicture = q.Skip(index).Take(5);
-            //    int i = 0;
-            //    PictureBox[] pictureBoxArray = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
-
-            //    foreach (var w in resultpicture)
-            //    {
-
-            //        Byte[] bytes = w;
-            //        System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes);
-            //        pictureBoxArray[i].Image = Image.FromStream(ms);
-            //        pictureBoxArray[i].Refresh();
-            //        if (i < 5) i++;
-
-            //    }
-
-
-            //}
-
-            //else {
-            //    index = 0;
-            //    var resultpicture = q.Skip(index).Take(5);
-            //    int i = 0;
-            //    PictureBox[] pictureBoxArray = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
-
-            //    foreach (var w in resultpicture)
-            //    {
-
-            //        Byte[] bytes = w;
-            //        System.IO.MemoryStream ms = new System.IO.MemoryStream(bytes);
-            //        pictureBoxArray[i].Image = Image.FromStream(ms);
-            //        pictureBoxArray[i].Refresh();
-            //        if (i < 5) i++;
-
-            //    }
-            //上面是本來的
-
-            //    for (int j = 0; j < 5; j++)
-            //    {
-            //        if (pictureBoxArray[i] != null)
-            //        {
-            //            pictureBoxArray[i].Refresh();
-            //        }
-            // }
-            //}
         }
 
 
@@ -256,22 +129,12 @@ namespace prjWantWantWinForm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //if(workindex + 5 <= indexCount)
-            //{
-            //    workindex++;
-            //    Work(workindex);
-            //}
-            //else if (workindex + 5> indexCount){ workindex=0; Work(workindex); }
+           
 
             if (picturelist.Count() > 5)
             {
                 PictureBox[] pictureBoxArray = new PictureBox[] { pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
-
-
-
-                //foreach (var pictureBox in pictureBoxArray)
-                //{
-
+             
                 for (int i = 0; i < 5; i++)
                 {
                     byte[] pictureData = picturelist[workindex];

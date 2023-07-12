@@ -41,9 +41,6 @@ namespace prjWantWantWinForm
             er.Show();
             er.BringToFront();
 
-
-
-            //base.FindForm().Close();
         }
      
     }
